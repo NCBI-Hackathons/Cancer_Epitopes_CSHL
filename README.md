@@ -44,7 +44,65 @@ chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Ge
 - Use ClinVar
 
 
-## Installation
+## Requirements 
+* Phyton 3.5 
+* Ensembl's [Variant Effect Predictor](http://uswest.ensembl.org/info/docs/tools/vep/index.html)
+
+
+### Variant Effect Predictor installation  
+Variant Effect Predictor requires a few modules and programs which are currently not installed on the AWS instance. Here's how you install them [notes](http://uswest.ensembl.org/info/docs/tools/vep/script/vep_download.html):
+
+~~~~ 
+    sudo -u root -s 
+    cpanm File::Copy::Recursive   
+    cpanm Bio::Root::Version
+    cpanm Archive::Zip 
+    cpanm  Class::HPLOO::Base
+    apt-get install mysql-server 
+    apt-get install libmysqlclient-dev  (for mysql_config)
+    cpanm DBD::mysql
+    wget 'https://github.com/Ensembl/ensembl-tools/archive/release/86.zip'  
+    unzip 86.zip 
+    cd  ensembl-tools-release-86/variant_effect_predictor/ 
+    perl INSTALL.pl  
+    
+~~~~  
+** TODO: copy vep + libraries to /usr/local 
+** setup PERL5LIB so VEP libs are included  
+
+
+#### Test your installation  
+
+     cp  head -1000 /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  > $HOME/test.vcf  
+
+     perl variant_effect_predictor.pl --input_file $HOME/test.vcf \
+      --format vcf --output_file test.output --vcf --symbol --terms SO --database \
+      --force_overwrite 
+
+
+#### Install cache files for better peformance 
+
+    cd $HOME/.vep 
+    wget ftp://ftp.ensembl.org/pub/release-86/variation/VEP/homo_sapiens_vep_86_GRCh38.tar.gz    
+    tar -xzvf homo_sapiens_vep_86_GRCh38.tar.gz 
+
+    perl variant_effect_predictor.pl --input_file $HOME/test.vcf \
+     --format vcf --output_file test.output --vcf --symbol --terms SO --offline \
+      --force_overwrite 
+
+
+**TODO** : install chache files globally -  in data dir ? 
+
+#### Install pvacSeq's WT plugin  
+
+    mkdir $HOME/tmp 
+    cd $HOME/tmp   
+    wget 'https://github.com/griffithlab/pVAC-Seq/archive/master.zip' 
+    unzip master.zip
+    mkdir -p $HOME/.vep/Plugins
+    cp Bio/EnsEMBL/Variation/Utils//Wildtype.pm /home/devsci7/.vep/Plugins/
+
+#### Test WT-Plugin 
 
 ### Install all python packages
 
