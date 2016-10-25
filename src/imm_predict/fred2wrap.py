@@ -74,7 +74,7 @@ def valid_predictors():
 
     dt = dt[[9 in elems for elems in dt["supportedLength"]]]
     dt = dt[dt["type"].notnull()]
-    dt = dt[dt["is_in_path"].isnull()]
+    dt = dt[dt["is_in_path"].isnull() | dt["is_in_path"]]
     dt = dt[dt["name"] != "epidemix"]
     dt = dt[dt["name"] != "unitope"] # too long runtime
 
