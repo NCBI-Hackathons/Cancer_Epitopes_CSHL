@@ -10,6 +10,7 @@ from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
 from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
 import sys
+import time
 
 # import pepdata
 import pandas as pd
@@ -73,8 +74,9 @@ def valid_predictors():
 
     dt = dt[[9 in elems for elems in dt["supportedLength"]]]
     dt = dt[dt["type"].notnull()]
-    dt = dt[dt["is_in_path"].isnull()]
+    dt = dt[dt["is_in_path"].isnull() | dt["is_in_path"]]
     dt = dt[dt["name"] != "epidemix"]
+    dt = dt[dt["name"] != "unitope"] # too long runtime
 
     return dt
 
@@ -116,14 +118,20 @@ def predict_peptide_effects(peptides, alleles=None):
         else:
             valid_alleles = None
         method = dt.iloc[i]["name"]
+        print("running for method: ", method)
         # TODO - use try, except
+        t0 = time.time()
+
         try:
             results.append(EpitopePredictorFactory(method).predict(peptides, alleles=valid_alleles))
         except:
-            print("Unable to run ", method, ": ", sys.exc_info()[0])
+            print("Error! Unable to run ", method, ": ", sys.exc_info()[0])
+        t1 = time.time()
+        print("  - runtime: ", str(t1 - t0))
 
     df = results[0].merge_results(results[1:]).reset_index()
     dfm = pd.melt(df, id_vars=["Seq", "Method"], var_name="allele", value_name="score")
     dfm = dfm[dfm["score"].notnull()]
+    dfm.rename(columns={'Seq': 'peptide', 'Method': 'method'}, inplace=True)
     return dfm
 

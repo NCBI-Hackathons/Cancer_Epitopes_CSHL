@@ -16,26 +16,25 @@ Goal: given a SRA ID, prioritize and quantify variants with respect to immunogen
 
 SRA_ID -1> RNAseq -2> BAM -3> vcf 
 
-taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL)
-
+taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL) 
 
 ### Getting the peptide sequences: `VCF-to-FASTA`
 
 vcf -> peptide sequences (mutated and unmutated)
 
-1. annotate VCF using VEP
-2. focus on variants with non-synonymosu changes
-3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide
+1. annotate VCF using VEP **done** 
+2. focus on variants with non-synonymosu changes **done** 
+3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide **done**
 
 ##### Output:
-chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID
+chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID **running**
 
 ### Predict the immunogenicity change introduced by the mutation (`FRED2`)
 
 ### Variant prioritization
 
-- check the MAF's of variants (shouldn't be frequent)
-- filter on expression
+- check the MAF's of variants (shouldn't be frequent) - can be done with VEP
+- filter on expression 
 - filter/sort on the delta
 - OptiTope as implemented in FRED2
     * OptiTope tries to _identify peptides that elicit a broad and potent immune response in the target population_, therefore a common allele weighs more than an uncommon allele
@@ -150,8 +149,16 @@ Tools for HLA genotyping typically re-align the raw reads in order to identify t
 To obtain the reads roughly aligned to these genes we need to define the region and specify it during the alignment process.
 The MHC complex consists of more than 200 genes located close together on chromosome 6.
 
-    chr6 29600000 33500000
+      BAM=/home/data/hisat_tags_output_SRR1616919.sorted.bam
+      REGION=NC_000006.12:29600000-33500000
+      OUT=`basename "$BAM" .sorted.bam`
+      
+      # extract reads overlapping with MHC locus and turn them into two fastq files
+      samtools view -h $BAM $REGION | samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq -
 
+This is now all done using a bash script.
+
+      ./hla_typing_prep.sh -b /home/data/hisat_tags_output_SRR1616919.sorted.bam -r NC_000006.12:29600000-33500000 -o test --path /opt/samtools/1.3.1/bin/
 
 ### Install all python packages
 
@@ -161,29 +168,14 @@ The MHC complex consists of more than 200 genes located close together on chromo
 
 ### Download and Install Binding Prediction Software to run with FRED2
 
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHC
-
-http://www.cbs.dtu.dk/services/doc/netMHC-4.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan
-
-http://www.cbs.dtu.dk/services/doc/netMHCpan-3.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCII
-
-http://www.cbs.dtu.dk/services/doc/netMHCII-2.2.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan
-
-http://www.cbs.dtu.dk/services/doc/netMHCIIpan-3.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?pickpocket
-
-http://www.cbs.dtu.dk/services/doc/pickpocket-1.1.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan
-
-http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
+|Software|Download Link|Installation Instructions|
+|--------|-------------|-------------------------|
+|netMHC|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHC|http://www.cbs.dtu.dk/services/doc/netMHC-4.0.readme|
+|netMHCpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan|http://www.cbs.dtu.dk/services/doc/netMHCpan-3.0.readme|
+|netMHCII|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCII|http://www.cbs.dtu.dk/services/doc/netMHCII-2.2.readme|
+|netMHCIIpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan|http://www.cbs.dtu.dk/services/doc/netMHCIIpan-3.0.readme|
+|PickPocket|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?pickpocket|http://www.cbs.dtu.dk/services/doc/pickpocket-1.1.readme|
+|netCTLpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan|http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme|
 
 ### Install all R packages
 
@@ -202,7 +194,7 @@ http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
              --output_file /home/data/imm/hisat_tags_output_SRR1616919.sorted.annotated.vcf  & 
 
 
-### 2) Generate FASTA with pVACSeq 
+### 2) Generate FASTA with pVACSeq and write to csv
 
     cd $HOME  
     git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
@@ -210,14 +202,7 @@ http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
     source activate python3 
     
     cd $HOME/Cancer_Epitopes_CSHL/src   
-    python -c 'import generate_fasta; print(generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2",21,9))'  
-
-
-### 2B) Write to file 
-
-    python -c 'import generate_fasta; \
-     generate_fasta.generate_fasta("/home/devsci7/test.output.2", \
-     "/home/devsci7/step2.fasta", 21, 9)' 
+    python -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2", "/home/devsci7/step2.csv", 21,9)'  
 
 
 ### Copy file over 
