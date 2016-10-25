@@ -16,26 +16,25 @@ Goal: given a SRA ID, prioritize and quantify variants with respect to immunogen
 
 SRA_ID -1> RNAseq -2> BAM -3> vcf 
 
-taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL)
-
+taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL) 
 
 ### Getting the peptide sequences: `VCF-to-FASTA`
 
 vcf -> peptide sequences (mutated and unmutated)
 
-1. annotate VCF using VEP (&#x1F534;)
-2. focus on variants with non-synonymosu changes
-3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide
+1. annotate VCF using VEP *done* 
+2. focus on variants with non-synonymosu changes *done* 
+3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide *done* 
 
 ##### Output:
-chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID
+chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID *running* 
 
 ### Predict the immunogenicity change introduced by the mutation (`FRED2`)
 
 ### Variant prioritization
 
-- check the MAF's of variants (shouldn't be frequent)
-- filter on expression
+- check the MAF's of variants (shouldn't be frequent) - can be done with VEP
+- filter on expression 
 - filter/sort on the delta
 - OptiTope as implemented in FRED2
     * OptiTope tries to _identify peptides that elicit a broad and potent immune response in the target population_, therefore a common allele weighs more than an uncommon allele
