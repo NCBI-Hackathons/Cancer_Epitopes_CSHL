@@ -156,6 +156,10 @@ The MHC complex consists of more than 200 genes located close together on chromo
       # extract reads overlapping with MHC locus and turn them into two fastq files
       samtools view -h $BAM $REGION | samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq -
 
+This is now all done using a bash script.
+
+      ./hla_typing_prep.sh -b /home/data/hisat_tags_output_SRR1616919.sorted.bam -r NC_000006.12:29600000-33500000 -o test --path /opt/samtools/1.3.1/bin/
+
 ### Install all python packages
 
 `pip3 install -r requirements.txt`
