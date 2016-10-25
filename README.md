@@ -150,8 +150,12 @@ Tools for HLA genotyping typically re-align the raw reads in order to identify t
 To obtain the reads roughly aligned to these genes we need to define the region and specify it during the alignment process.
 The MHC complex consists of more than 200 genes located close together on chromosome 6.
 
-    chr6 29600000 33500000
-
+      BAM=/home/data/hisat_tags_output_SRR1616919.sorted.bam
+      REGION=NC_000006.12:29600000-33500000
+      OUT=`basename "$BAM" .sorted.bam`
+      
+      # extract reads overlapping with MHC locus and turn them into two fastq files
+      samtools view -h $BAM $REGION | samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq -
 
 ### Install all python packages
 
