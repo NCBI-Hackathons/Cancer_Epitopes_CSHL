@@ -5,11 +5,11 @@ from __future__ import print_function, division, absolute_import
 # import argparse
 # import sys
 # from sys import exit, stdin
-
+import warnings
 from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
 from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
-
+import sys
 
 # import pepdata
 import pandas as pd
@@ -117,12 +117,13 @@ def predict_peptide_effects(peptides, alleles=None):
             valid_alleles = None
         method = dt.iloc[i]["name"]
         # TODO - use try, except
-        results.append(EpitopePredictorFactory(method).predict(peptides, alleles=valid_alleles))
+        try:
+            results.append(EpitopePredictorFactory(method).predict(peptides, alleles=valid_alleles))
+        except:
+            print("Unable to run ", method, ": ", sys.exc_info()[0])
 
     df = results[0].merge_results(results[1:]).reset_index()
     dfm = pd.melt(df, id_vars=["Seq", "Method"], var_name="allele", value_name="score")
     dfm = dfm[dfm["score"].notnull()]
     return dfm
-
-
 
