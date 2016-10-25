@@ -6,8 +6,8 @@ from __future__ import print_function, division, absolute_import
 # import sys
 # from sys import exit, stdin
 
-# from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
-# from Fred2.IO import read_lines, read_fasta
+from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
+from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
 
 
@@ -67,7 +67,8 @@ def predictor_info(method):
     return retdict
 
 
-def valid_predictors(alleles=None):
+def valid_predictors():
+    methods = EpitopePredictorFactory.available_methods().keys()
     dt = pd.DataFrame([predictor_info(method) for method in methods])
 
     dt = dt[[9 in elems for elems in dt["supportedLength"]]]
