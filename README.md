@@ -19,13 +19,16 @@ SRA_ID -1> RNAseq -2> BAM -3> vcf
 taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL)
 
 
-### Getting the background + sample 'epitope' sequence: `VCF-to-FASTA`
+### Getting the peptide sequences: `VCF-to-FASTA`
 
 vcf -> peptide sequences (mutated and unmutated)
 
-Format table:
-chr, strand, start, end, mutated_sequence, background_sequence, ?Transcript_ID/Gene_ID
+1. annotate VCF using VEP
+2. focus on variants with non-synonymosu changes
+3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide
 
+##### Output:
+chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID
 
 ### Predict the immunogenicity change introduced by the mutation (`FRED2`)
 
