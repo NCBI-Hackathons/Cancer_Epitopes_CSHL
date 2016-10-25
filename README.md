@@ -38,10 +38,12 @@ chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Ge
 - filter on expression
 - filter/sort on the delta
 - OptiTope as implemented in FRED2
+    * OptiTope tries to _identify peptides that elicit a broad and potent immune response in the target population_, therefore a common allele weighs more than an uncommon allele
 
 ### Check if the top variants are known cancer variants 
 
 - Use ClinVar
+- vcf from ICGC
 
 
 ## Requirements 
@@ -105,6 +107,14 @@ Variant Effect Predictor requires a few modules and programs which are currently
     wget 'https://github.com/griffithlab/pVAC-Seq/archive/master.zip' 
     unzip master.zip
     cp pVAC-Seq-master/pvacseq/VEP_plugins/Wildtype.pm /home/data/vep/Plugins 
+
+### Define MHC locus for HLA genotyping
+
+Tools for HLA genotyping typically re-align the raw reads in order to identify the HLA type from RNA-seq.
+To obtain the reads roughly aligned to these genes we need to define the region and specify it during the alignment process.
+The MHC complex consists of more than 200 genes located close together on chromosome 6.
+
+    chr6 29600000 33500000
 
 ### Downstream plugin 
 
