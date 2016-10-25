@@ -19,9 +19,7 @@ Format table:
 chr, strand, start, end, mutated_sequence, background_sequence, ?Transcript_ID/Gene_ID
 
 
-### Predict the immunogenicity change introduced by the mutation
-
-- check what the previous group has done
+### Predict the immunogenicity change introduced by the mutation (`FRED2`)
 
 ### Variant prioritization
 
