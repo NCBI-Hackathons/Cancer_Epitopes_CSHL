@@ -1,5 +1,15 @@
 # Cancer_Epitopes_CSHL
 
+## Plan
+
+Goal: given a SRA ID, prioritize and quantify variants with respect to immunogenicity (single score) + variant annotation
+
+- use pvacseq to generate the sequences around variants (wt/mutant)
+- use FRED2 to make binding predictions
+- given the different prediction score, make one immunogenicity score
+
+-------------------------
+
 ## Pipeline 
 
 ### Getting the variant calls: `SRA-to-VCF`
@@ -7,8 +17,6 @@
 SRA_ID -1> RNAseq -2> BAM -3> vcf 
 
 taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL)
-
-* annotate with VEP?
 
 
 ### Getting the background + sample 'epitope' sequence: `VCF-to-FASTA`
@@ -31,14 +39,6 @@ chr, strand, start, end, mutated_sequence, background_sequence, ?Transcript_ID/G
 ### Check if the top variants are known cancer variants 
 
 - Use ClinVar
-
-## Plan
-
-Goal: given a SRA ID, prioritize and quantify variants with respect to immunogenicity (single score) + variant annotation
-
-- use pvacseq to generate the sequences around variants (wt/mutant)
-- use FRED2 to make binding predictions
-- given the different prediction score, make one immunogenicity score
 
 
 ## Installation
