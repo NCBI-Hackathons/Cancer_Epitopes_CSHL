@@ -190,7 +190,7 @@ The MHC complex consists of more than 200 genes located close together on chromo
              --output_file /home/data/imm/hisat_tags_output_SRR1616919.sorted.annotated.vcf  & 
 
 
-### 2) Generate FASTA with pVACSeq 
+### 2) Generate FASTA with pVACSeq and write to csv
 
     cd $HOME  
     git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
@@ -198,14 +198,7 @@ The MHC complex consists of more than 200 genes located close together on chromo
     source activate python3 
     
     cd $HOME/Cancer_Epitopes_CSHL/src   
-    python -c 'import generate_fasta; print(generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2",21,9))'  
-
-
-### 2B) Write to file 
-
-    python -c 'import generate_fasta; \
-     generate_fasta.generate_fasta("/home/devsci7/test.output.2", \
-     "/home/devsci7/step2.fasta", 21, 9)' 
+    python -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2", "/home/devsci7/step2.csv", 21,9)'  
 
 
 ### Copy file over 
