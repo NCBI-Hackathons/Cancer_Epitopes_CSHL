@@ -23,7 +23,7 @@ taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultra
 
 vcf -> peptide sequences (mutated and unmutated)
 
-1. annotate VCF using VEP
+1. annotate VCF using VEP (&#x1F534;)
 2. focus on variants with non-synonymosu changes
 3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide
 
