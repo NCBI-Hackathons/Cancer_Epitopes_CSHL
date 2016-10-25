@@ -164,29 +164,14 @@ The MHC complex consists of more than 200 genes located close together on chromo
 
 ### Download and Install Binding Prediction Software to run with FRED2
 
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHC
-
-http://www.cbs.dtu.dk/services/doc/netMHC-4.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan
-
-http://www.cbs.dtu.dk/services/doc/netMHCpan-3.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCII
-
-http://www.cbs.dtu.dk/services/doc/netMHCII-2.2.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan
-
-http://www.cbs.dtu.dk/services/doc/netMHCIIpan-3.0.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?pickpocket
-
-http://www.cbs.dtu.dk/services/doc/pickpocket-1.1.readme
-
-http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan
-
-http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
+|Software|Download Link|Installation Instructions|
+|--------|-------------|-------------------------|
+|netMHC|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHC|http://www.cbs.dtu.dk/services/doc/netMHC-4.0.readme|
+|netMHCpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan|http://www.cbs.dtu.dk/services/doc/netMHCpan-3.0.readme|
+|netMHCII|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCII|http://www.cbs.dtu.dk/services/doc/netMHCII-2.2.readme|
+|netMHCIIpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan|http://www.cbs.dtu.dk/services/doc/netMHCIIpan-3.0.readme|
+|PickPocket|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?pickpocket|http://www.cbs.dtu.dk/services/doc/pickpocket-1.1.readme|
+|netCTLpan|http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan|http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme|
 
 ### Install all R packages
 
