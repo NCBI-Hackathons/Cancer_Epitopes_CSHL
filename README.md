@@ -22,12 +22,12 @@ taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultra
 
 vcf -> peptide sequences (mutated and unmutated)
 
-1. annotate VCF using VEP *done* 
-2. focus on variants with non-synonymosu changes *done* 
-3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide *done* 
+1. annotate VCF using VEP **done** 
+2. focus on variants with non-synonymosu changes **done** 
+3. extract FASTA sequence of 9mers surrounding the variant position within an affected peptide **done**
 
 ##### Output:
-chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID *running* 
+chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Gene_ID **running**
 
 ### Predict the immunogenicity change introduced by the mutation (`FRED2`)
 
