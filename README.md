@@ -54,5 +54,12 @@ Goal: given a SRA ID, prioritize and quantify variants with respect to immunogen
 - given the different prediction score, make one immunogenicity score
 
 
+## Installation
 
+Install all python packages with
+
+pip3 install -r requirements.txt
+pip2 install -r requirements_python2.txt
+
+Install all R packages
 
