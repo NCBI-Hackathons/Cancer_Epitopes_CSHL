@@ -1,34 +1,30 @@
 #!/usr/bin/env python2
 
 from __future__ import print_function, division, absolute_import
-import numpy as np
-import argparse
-import sys
-from sys import exit, stdin
+# import numpy as np
+# import argparse
+# import sys
+# from sys import exit, stdin
 
-from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
-from Fred2.IO import read_lines, read_fasta
+# from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
+# from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
-#from nose.tools import eq_
+
 
 # import pepdata
 import pandas as pd
 
-# 1.
-peptides = [Peptide("SYFPEITHI"), Peptide("FIASNGVKL"), Peptide("LLGATCMFV")]
+# # 1.
+# peptides = [Peptide("SYFPEITHI"), Peptide("FIASNGVKL"), Peptide("LLGATCMFV")]
+# proteins = [Protein("SYFPEITHI"), Protein("FIASNGVKL"), Protein("LLGATCMFV")]
+# alleles = ['A*02:16', 'B*45:01']
+# peptide3 = generate_peptides_from_proteins(proteins, 9)
 
-proteins = [Protein("SYFPEITHI"), Protein("FIASNGVKL"), Protein("LLGATCMFV")]
-peptide3 = generate_peptides_from_proteins(proteins, 9)
+def predictor_info(method):
+    """
+    Get the information about different predictors
+    """
 
-
-peptide3 = generate_peptides_from_proteins(proteins, 8)
-
-methods = EpitopePredictorFactory.available_methods().keys()
-dir(EpitopePredictorFactory(methods[0]))
-
-method = methods[0]
-
-def get_predictor_info(method):
     predictor = EpitopePredictorFactory(method)
     try:
         is_in_path = predictor.is_in_path()
@@ -70,5 +66,62 @@ def get_predictor_info(method):
     }
     return retdict
 
-pd.DataFrame([get_predictor_info(method) for method in methods])
+
+def valid_predictors(alleles=None):
+    dt = pd.DataFrame([predictor_info(method) for method in methods])
+
+    dt = dt[[9 in elems for elems in dt["supportedLength"]]]
+    dt = dt[dt["type"].notnull()]
+    dt = dt[dt["is_in_path"].isnull()]
+    dt = dt[dt["name"] != "epidemix"]
+
+    return dt
+
+
+def predict_peptide_effects(peptides, alleles=None):
+    """
+    Predict the peptide effect for all the available methods on the machine
+    args:
+    -----
+        peptides (list of Peptides): Usually an output from read_fasta
+        alleles (list of chars): Alleles for which to run the predictors
+
+    results:
+    --------
+        pd.DataFrame: Tidy pd.DataFrame. If the method is unable to predict
+                      for a particular value the rows are not present.
+
+    examples:
+    >>> peptides = [Peptide("SYFPEITHI"), Peptide("FIASNGVKL"), Peptide("LLGATCMFV")]
+    >>> alleles = ['A*02:16', 'B*45:01']
+    >>> predict_peptide_effects(peptides, alleles = alleles).head()
+                               Seq    Method   allele       score
+    0  (F, I, A, S, N, G, V, K, L)       arb  A*02:16  594.691144
+    1  (F, I, A, S, N, G, V, K, L)       smm  A*02:16  159.768074
+    2  (F, I, A, S, N, G, V, K, L)  smmpmbec  A*02:16  211.977614
+    4  (F, I, A, S, N, G, V, K, L)   unitope  A*02:16    0.527849
+    5  (L, L, G, A, T, C, M, F, V)       arb  A*02:16    6.784222
+    """
+    dt = valid_predictors()
+    results = []
+    for i in range(len(dt)):
+        # subset to valid alleles
+        if alleles is not None:
+            valid_alleles = dt.iloc[i]["supportedAlleles"].intersection(alleles)
+
+            if len(valid_alleles) == 0:
+                continue
+            valid_alleles = [Allele(al) for al in valid_alleles]
+        else:
+            valid_alleles = None
+        method = dt.iloc[i]["name"]
+        # TODO - use try, except
+        results.append(EpitopePredictorFactory(method).predict(peptides, alleles=valid_alleles))
+
+    df = results[0].merge_results(results[1:]).reset_index()
+    dfm = pd.melt(df, id_vars=["Seq", "Method"], var_name="allele", value_name="score")
+    dfm = dfm[dfm["score"].notnull()]
+    return dfm
+
+
 
