@@ -46,10 +46,37 @@ chr, strand, start, end, mutated_sequence, background_sequence, Transcript_ID/Ge
 
 ## Installation
 
-Install all python packages with
+### Install all python packages
 
-pip3 install -r requirements.txt
-pip2 install -r requirements_python2.txt
+`pip3 install -r requirements.txt`
 
-Install all R packages
+`pip2 install -r requirements_python2.txt`
+
+### Download and Install Binding Prediction Software to run with FRED2
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHC
+
+http://www.cbs.dtu.dk/services/doc/netMHC-4.0.readme
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCpan
+
+http://www.cbs.dtu.dk/services/doc/netMHCpan-3.0.readme
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCII
+
+http://www.cbs.dtu.dk/services/doc/netMHCII-2.2.readme
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netMHCIIpan
+
+http://www.cbs.dtu.dk/services/doc/netMHCIIpan-3.0.readme
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?pickpocket
+
+http://www.cbs.dtu.dk/services/doc/pickpocket-1.1.readme
+
+http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan
+
+http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
+
+### Install all R packages
 
