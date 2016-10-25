@@ -2,28 +2,16 @@
 
 ## Pipeline 
 
-### Getting the variant calls
+### Getting the variant calls: `SRA-to-VCF`
 
 SRA_ID -1> RNAseq -2> BAM -3> vcf 
 
-1: download
-- ncbi-vdb `prefetch` tool 
+taken care of by the [UltraFastHackers](https://github.com/NCBI-Hackathons/Ultrafast_Mapping_CSHL)
+
+* annotate with VEP?
 
 
-2: alignment
-- streaming mapper?
-- BWA (RNAseq) / STAR
-
-3: variant calling
-- HC in RNAseq mode
-- filtering:
-   - quality
-   - ?sanity check the expression profile of some genes
-   
-4: annotate with VEP
-
-
-### Getting the background + sample 'epitope' sequence 
+### Getting the background + sample 'epitope' sequence: `VCF-to-FASTA`
 
 vcf -> peptide sequences (mutated and unmutated)
 
@@ -40,6 +28,7 @@ chr, strand, start, end, mutated_sequence, background_sequence, ?Transcript_ID/G
 - check the MAF's of variants (shouldn't be frequent)
 - filter on expression
 - filter/sort on the delta
+- OptiTope as implemented in FRED2
 
 ### Check if the top variants are known cancer variants 
 
