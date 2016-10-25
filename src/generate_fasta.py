@@ -4,6 +4,7 @@ import tempfile
 import csv
 import shutil
 import yaml
+import pandas
 
 def generate_fasta(input_vcf, output_fasta, peptide_sequence_length, epitope_length):
     tsv_file = tempfile.NamedTemporaryFile()
@@ -27,7 +28,7 @@ def generate_fasta(input_vcf, output_fasta, peptide_sequence_length, epitope_len
         output_fasta + '.key'
     ])
 
-def generate_fasta_dataframe(input_vcf, peptide_sequence_length, epitope_length):
+def generate_fasta_dataframe(input_vcf, csv_file, peptide_sequence_length, epitope_length):
     fasta_file = tempfile.NamedTemporaryFile()
     generate_fasta(input_vcf, fasta_file.name, peptide_sequence_length, epitope_length)
     fasta_file_key_path = fasta_file.name + '.key'
@@ -48,4 +49,12 @@ def generate_fasta_dataframe(input_vcf, peptide_sequence_length, epitope_length)
                 dataframe[variant_id] = {}
             dataframe[variant_id][type] = sequence
 
-    return dataframe
+    flattened_dataframe = []
+    for (variant_id, sequences) in dataframe.items():
+        flattened_dataframe.append({
+            'ID': variant_id,
+            'WT': sequences['WT'],
+            'MT': sequences['MT'],
+        })
+
+    pandas.DataFrame.from_dict(flattened_dataframe).to_csv(csv_file, index=False)
