@@ -106,16 +106,25 @@ Variant Effect Predictor requires a few modules and programs which are currently
     unzip master.zip
     cp pVAC-Seq-master/pvacseq/VEP_plugins/Wildtype.pm /home/data/vep/Plugins 
 
-#### Test WT-Plugin 
+### Downstream plugin 
+
+    cd  cd /home/data/vep/Plugins 
+    wget https://github.com/Ensembl/VEP_plugins/archive/release/86.zip
+    unzip 86.zip
+    mv VEP_plugins-release-86/Downstream.pm  . 
+    rm -rf VEP_plugins-release-86/
+
+#### Test both plugins
  
     perl variant_effect_predictor.pl \
        --input_file /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  \
        --format vcf --output_file $HOME/short.test.annotated --vcf --symbol \
        --terms SO --offline  --force_overwrite \
-       --plugin Wildtype --dir /home/data/vep 
+       --plugin Wildtype --plugin Downstream --dir /home/data/vep 
 
+####
 
-
+ 
 
 ### Install all python packages
 
@@ -150,4 +159,36 @@ http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan
 http://www.cbs.dtu.dk/services/doc/netCTLpan-1.1.readme
 
 ### Install all R packages
+
+
+## Sharpen up : Run the pipline
+
+### 1) Annotate RNAseq VCF   
+ 
+    perl variant_effect_predictor.pl \
+       --input_file /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  \
+       --format vcf --output_file $HOME/short.test.annotated --vcf --symbol \
+       --terms SO --offline  --force_overwrite \
+       --plugin Wildtype --plugin Downstream --dir /home/data/vep  
+
+### 2) Generate FASTA with pVACSeq 
+ 
+    git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
+ 
+    source activate python3 
+    
+    cd src  
+    python -c 'import generate_fasta; print(generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2",21,9))'  
+
+
+### 2B) Write to file 
+
+    python -c 'import generate_fasta; \
+     generate_fasta.generate_fasta("/home/devsci7/test.output.2", \
+     "/home/devsci7/step2.fasta", 21, 9)' 
+
+
+### Copy file over 
+
+    cp  /home/devsci7/step2.fasta   /home/data/imm 
 
