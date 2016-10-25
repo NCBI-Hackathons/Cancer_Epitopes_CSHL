@@ -60,7 +60,7 @@ def generate_fasta_dataframe(input_vcf, csv_file, peptide_sequence_length, epito
                 dataframe[tsv_index][type] = sequence
                 tsv_entry = tsv_entries[tsv_index]
                 if 'variant_id' not in dataframe[tsv_index]:
-                    variant_id = '.'.join([tsv_entry['chromosome_name'], tsv_entry['start'], tsv_entry['stop'], tsv_entry['reference'], tsv_entry['variant']])
+                    variant_id = '~'.join([tsv_entry['chromosome_name'], tsv_entry['start'], tsv_entry['stop'], tsv_entry['reference'], tsv_entry['variant']])
                     dataframe[tsv_index]['variant_id'] = variant_id
 
     flattened_dataframe = []
