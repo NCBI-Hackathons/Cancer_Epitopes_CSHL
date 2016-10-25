@@ -64,12 +64,12 @@ Variant Effect Predictor requires a few modules and programs which are currently
     wget 'https://github.com/Ensembl/ensembl-tools/archive/release/86.zip'  
     unzip 86.zip 
     cd  ensembl-tools-release-86/variant_effect_predictor/ 
-    perl INSTALL.pl  
-    
-~~~~  
-** TODO: copy vep + libraries to /usr/local 
-** setup PERL5LIB so VEP libs are included  
+    perl INSTALL.pl   
 
+    cp variant_effect_predictor.pl /usr/local/bin 
+    chmod a+x  /usr/local/bin/variant_effect_predictor.pl 
+
+~~~~   
 
 #### Test your installation  
 
@@ -80,29 +80,42 @@ Variant Effect Predictor requires a few modules and programs which are currently
       --force_overwrite 
 
 
+#### Copy VEP modules over 
+
+     cp -rn  ensembl-tools-release-86/scripts/variant_effect_predictor/Bio/  /usr/local/share/perl/5.18.2/
+     chmod -R a+x /usr/local/share/perl/5.18.2/Bio 
+     chmod -R a+r /usr/local/share/perl/5.18.2/Bio 
+    
 #### Install cache files for better peformance 
 
-    cd $HOME/.vep 
+    mkdir -p /home/data/vep
+    cd       /home/data/vep
     wget ftp://ftp.ensembl.org/pub/release-86/variation/VEP/homo_sapiens_vep_86_GRCh38.tar.gz    
-    tar -xzvf homo_sapiens_vep_86_GRCh38.tar.gz 
 
     perl variant_effect_predictor.pl --input_file $HOME/test.vcf \
      --format vcf --output_file test.output --vcf --symbol --terms SO --offline \
-      --force_overwrite 
+      --force_overwrite  --dir /home/data/vep
 
 
-**TODO** : install chache files globally -  in data dir ? 
+**TODO** : Copy cache files over - from $HOME/.vep - install chache files globally in /home/data/vep 
 
 #### Install pvacSeq's WT plugin  
 
-    mkdir $HOME/tmp 
-    cd $HOME/tmp   
+    mkdir -p /home/data/vep/Plugins 
     wget 'https://github.com/griffithlab/pVAC-Seq/archive/master.zip' 
     unzip master.zip
-    mkdir -p $HOME/.vep/Plugins
-    cp Bio/EnsEMBL/Variation/Utils//Wildtype.pm /home/devsci7/.vep/Plugins/
+    cp pVAC-Seq-master/pvacseq/VEP_plugins/Wildtype.pm /home/data/vep/Plugins 
 
 #### Test WT-Plugin 
+ 
+    perl variant_effect_predictor.pl \
+       --input_file /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  \
+       --format vcf --output_file $HOME/short.test.annotated --vcf --symbol \
+       --terms SO --offline  --force_overwrite \
+       --plugin Wildtype --dir /home/data/vep 
+
+
+
 
 ### Install all python packages
 
