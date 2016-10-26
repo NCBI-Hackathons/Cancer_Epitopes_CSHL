@@ -3,14 +3,14 @@
 Given a protein FASTA file, compute immunogenicity for all posible 9-mer peptides.
 
 Usage:
-       fred2_background.py [--alleles=<alleles_list> --top_N=N] FILE_IN FILE_OUT
+       fred2_background.py [--alleles=<alleles_list> --top_N=N] --input=FILE_IN --output=FILE_OUT
        fred2_background.py -h | --help
 
 Arguments:
-  FILE_IN      Input fasta file, can be retrieved from:
+  --input=FILE_IN      Input fasta file, can be retrieved from:
                ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/pep/Homo_sapiens.GRCh38.pep.all.fa.gz
 
-  FILE_OUT     Output csv file
+  --output=FILE_OUT    Output csv file
 
 Options:
   --top_N=N                  Number of top N proteins to compute the background for. [Default all].
@@ -49,8 +49,8 @@ if __name__ == "__main__":
         alleles = arguments["--alleles"].split(",")
     else:
         alleles = None
-    file_in = arguments["FILE_IN"]
-    file_out = arguments["FILE_OUT"]
+    file_in = arguments["--input"]
+    file_out = arguments["--output"]
     
     print("read fasta")
     proteins = read_fasta(file_in, id_position=0, in_type=Protein)

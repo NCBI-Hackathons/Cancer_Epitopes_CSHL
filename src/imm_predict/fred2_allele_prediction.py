@@ -3,12 +3,12 @@
 Compute the predictions for reference and alternative allele
 
 Usage:
-       fred2_allele_prediction.py [--alleles=<alleles_list>] FILE_IN FILE_OUT
+       fred2_allele_prediction.py [--alleles=<alleles_list>] --input=FILE_IN --output=FILE_OUT
        fred2_allele_prediction.py -h | --help
 
 Arguments:
-  FILE_IN      Input csv file
-  FILE_OUT     Output csv file
+  --input=FILE_IN       Input csv file
+  --output=FILE_OUT     Output csv file
 
 Options:
   --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:
@@ -110,8 +110,8 @@ if __name__ == "__main__":
     else:
         alleles = None
 
-    file_in = arguments["FILE_IN"]
-    file_out = arguments["FILE_OUT"]
+    file_in = arguments["--input"]
+    file_out = arguments["--output"]
     dt = pd.read_csv(file_in)
     print("chop the peptides around a variant")
     dt2 = sliding_window(dt, 9)

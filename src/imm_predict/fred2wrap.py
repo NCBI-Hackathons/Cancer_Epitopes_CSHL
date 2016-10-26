@@ -60,7 +60,7 @@ def predictor_info(method):
 
 
 def valid_predictors(supported_length = 9,
-                     exclude_predictors = ["epidemix", "unitope"]):
+                     exclude_predictors = ["epidemix", "unitope", "netctlpan"]):
     """
     Get the infomation for all predictors and keep only
     the relevant ones.
