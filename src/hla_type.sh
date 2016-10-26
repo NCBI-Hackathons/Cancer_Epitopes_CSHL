@@ -1,24 +1,25 @@
 #!/bin/bash
 
-function bam2hla_fastq() {
+function bam2hla() {
   echo "Usage: $0 -b SRR1616919.sorted.bam -r NC_000006.12:29600000-33500000 -o test --path /opt/samtools/1.3.1/bin/
     -b,     --BAM               BAM file. Required.
     -r,     --region            Region for which reads will be extracted in this format: <chr:start-end> . Optional.
     -o,     --output            Prefix for output files. Required.
-    -p,     --path              Path to samtools installation. Optional."
+    -ps,    --path_samtools     Path to samtools installation. Optional. E.g. /opt/samtools/1.3.1/bin/
+    -po,    --path_optitype     Path to Optitype. Optional. E.g. /opt/samtools/1.3.1/bin/"
     }
 
 function exitWithError() {
   echo -e "$1\n" #| tee -a $logfile
   if [ ! -z "$2" ]; then echo "$2"; fi
-  bam2hla_fastq
+  bam2hla
   exit 1
 }
 
 function exitWithError2() {
   echo -e "$1\n" #| tee -a $logfile
   if [ ! -z "$2" ]; then echo "$2"; fi
- # bam2hla_fastq
+ # bam2hla
   exit 1
 }
 
@@ -31,7 +32,9 @@ function checkExitStatus() {
 BAM=""
 REGION=""
 OUT=""
-PATH=""
+PATH_S=""
+PATH_O=""
+
 
 # Parse command line arguments
 if [ $# -eq 0 ]; then
@@ -49,8 +52,11 @@ until [ -z "$1" ]; do
     -o | --output)
       OUT=${2%/}
       shift; shift;;
-    -p | --path)
-      PATH=${2%/}
+    -ps | --path_samtools)
+      PATH_S=${2%/}
+      shift; shift;;
+    -po | --path_optitype)
+      PATH_O=${2%/}
       shift; shift;;
     -*)
       exitWithError "Invalid option ($2).";;
@@ -61,4 +67,15 @@ done
 
 
 # extract reads overlapping with MHC locus and turn them into two fastq files
-${PATH}/samtools view -h $BAM $REGION | ${PATH}/samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq -
+${PATH_S}/samtools view -h $BAM $REGION | ${PATH_S}/samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq -
+
+# run OptiType for HLA prediction
+mkdir hlatyping
+python ${PATH_O}/OptiTypePipeline.py --input ${OUT}_read1.fq ${OUT}_read2.fq -r -o hlatyping
+
+folder=`ls hlatyping/`
+ALLELES=`egrep "\*" hlatyping/${folder}/${folder}_result.tsv | cut -f 2-7 | sed 's/\s/,/g'`
+
+
+echo "$ALLELES"
+
