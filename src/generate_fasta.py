@@ -5,56 +5,71 @@ import csv
 import shutil
 import yaml
 import pandas
+import os
 
-def generate_fasta(input_vcf, output_fasta, peptide_sequence_length, epitope_length):
-    tsv_file = tempfile.NamedTemporaryFile()
-    lib.convert_vcf.main([input_vcf, tsv_file.name])
+def generate_fasta(input_vcf, peptide_sequence_length, epitope_length):
+    temp_dir = tempfile.mkdtemp()
+    tsv_file_path = os.path.join(temp_dir, 'tmp.tsv')
+    lib.convert_vcf.main([input_vcf, tsv_file_path])
 
-    tsv_file_copy = tempfile.NamedTemporaryFile(mode='r')
-    shutil.copy(tsv_file.name, tsv_file_copy.name)
-    reader = csv.DictReader(tsv_file_copy, delimiter='\t')
-    filtered_tsv_file = tempfile.NamedTemporaryFile('w')
-    writer = csv.DictWriter(filtered_tsv_file, fieldnames=reader.fieldnames, delimiter='\t')
-    writer.writeheader()
-    for entry in reader:
-        if entry['variant_type'] == 'missense':
-            writer.writerow(entry)
+    with open(tsv_file_path, 'r') as tsv_file:
+        reader = csv.DictReader(tsv_file, delimiter='\t')
+        filtered_tsv_file_path = os.path.join(temp_dir, 'tmp.filtered.tsv')
+        with open(filtered_tsv_file_path, 'w') as filtered_tsv_file:
+            writer = csv.DictWriter(filtered_tsv_file, fieldnames=reader.fieldnames, delimiter='\t')
+            writer.writeheader()
+            for entry in reader:
+                if entry['variant_type'] == 'missense':
+                    writer.writerow(entry)
 
     lib.generate_fasta.main([
-        filtered_tsv_file.name,
+        filtered_tsv_file_path,
         str(peptide_sequence_length),
         str(epitope_length),
-        output_fasta,
-        output_fasta + '.key'
+        os.path.join(temp_dir, 'tmp.fasta'),
+        os.path.join(temp_dir, 'tmp.fasta.key'),
     ])
 
+    return temp_dir
+
 def generate_fasta_dataframe(input_vcf, csv_file, peptide_sequence_length, epitope_length):
-    fasta_file = tempfile.NamedTemporaryFile()
-    generate_fasta(input_vcf, fasta_file.name, peptide_sequence_length, epitope_length)
-    fasta_file_key_path = fasta_file.name + '.key'
+    output_dir = generate_fasta(input_vcf, peptide_sequence_length, epitope_length)
+    fasta_file_path = os.path.join(output_dir, 'tmp.fasta')
+    fasta_file_key_path = fasta_file_path + '.key'
+    tsv_file_path = os.path.join(output_dir, 'tmp.filtered.tsv')
 
     with open(fasta_file_key_path) as fasta_file_key:
         keys = yaml.load(fasta_file_key)
 
-    fasta_file_copy = tempfile.NamedTemporaryFile(mode='r')
-    shutil.copy(fasta_file.name, fasta_file_copy.name)
+    tsv_entries = {}
+    with open(tsv_file_path) as tsv_file:
+        reader = csv.DictReader(tsv_file, delimiter='\t')
+        for line in reader:
+            tsv_entries[line['index']] = line
+
     dataframe = {}
-    for line in fasta_file_copy:
-        key      = line.rstrip().replace(">","")
-        sequence = fasta_file_copy.readline().rstrip()
-        ids      = keys[int(key)]
-        for id in ids:
-            (type, variant_id) = id.split('.', 1)
-            if variant_id not in dataframe:
-                dataframe[variant_id] = {}
-            dataframe[variant_id][type] = sequence
+    with open(fasta_file_path, 'r') as fasta_file:
+        for line in fasta_file:
+            key      = line.rstrip().replace(">","")
+            sequence = fasta_file.readline().rstrip()
+            ids      = keys[int(key)]
+            for id in ids:
+                (type, tsv_index) = id.split('.', 1)
+                if tsv_index not in dataframe:
+                    dataframe[tsv_index] = {}
+                dataframe[tsv_index][type] = sequence
+                tsv_entry = tsv_entries[tsv_index]
+                if 'variant_id' not in dataframe[tsv_index]:
+                    variant_id = '.'.join([tsv_entry['chromosome_name'], tsv_entry['start'], tsv_entry['stop'], tsv_entry['reference'], tsv_entry['variant']])
+                    dataframe[tsv_index]['variant_id'] = variant_id
 
     flattened_dataframe = []
-    for (variant_id, sequences) in dataframe.items():
+    for (tsv_index, values) in dataframe.items():
         flattened_dataframe.append({
-            'ID': variant_id,
-            'WT': sequences['WT'],
-            'MT': sequences['MT'],
+            'ID': tsv_index,
+            'variant_id': values['variant_id'],
+            'WT': values['WT'],
+            'MT': values['MT'],
         })
 
     pandas.DataFrame.from_dict(flattened_dataframe).to_csv(csv_file, index=False)
