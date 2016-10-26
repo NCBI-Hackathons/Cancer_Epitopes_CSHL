@@ -8,13 +8,13 @@
 |epidemix 1.0 | position-specific scoring matrices. The matrices are statistically computed based on the positive training set of SVMHC. Sequence weighting and pseudo-count correction are applied to obtain the frequencies used to generate the matrices. | [Feldhahn, et al., 2009](10.1093/bioinformatics/btp409)  |MHC-I binding|
 |hammer 1.0| based on position-specific scoring matrices and predicts binding peptides for MHC class II | [Sturniolo, et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10385319) |MHC-II binding | 
 |netctlpan 1.1 | ??? | (Stranzl, et al., 2010) | T-cell epitope |
-| netmhc 3.0a | ??? | (Lundegaard, et al., 2008) |MHC-I binding |
-|netmhcii 2.2 | ??? | (Nielsen, et al., 2007) | MHC-II binding |
-|netmhciipan 3.0,3.1 | ??? |  (Karosiene, et al., 2013) | MHC-II binding |
-|netmhcpan 2.4,2.8 | ??? |(Hoof, et al., 2009)  |MHC-I binding | 
-| pickpocket 1.1 | ??? |(Zhang, et al., 2009)  |MHC-I binding | 
-|smm 1.0 | ??? |  (Peters and Sette, 2005) |MHC-I binding | 
-| smmpmbec 1.0 | ??? | (Kim, et al., 2009) |MHC-I binding | 
+| netmhc 3.0a | binding affinity | (Lundegaard, et al., 2008) |MHC-I binding |
+|netmhcii 2.2 | binding affinity | (Nielsen, et al., 2007) | MHC-II binding |
+|netmhciipan 3.0,3.1 | binding affinity |  (Karosiene, et al., 2013) | MHC-II binding |
+|netmhcpan 2.4,2.8 | binding affinity |(Hoof, et al., 2009)  |MHC-I binding | 
+| pickpocket 1.1 | binding affinity |(Zhang, et al., 2009)  |MHC-I binding | 
+|smm 1.0 | binding affinity |  (Peters and Sette, 2005) |MHC-I binding | 
+| smmpmbec 1.0 | binding affinity | (Kim, et al., 2009) |MHC-I binding | 
 | svmhc 1.0| support vector machine classification to predict MHC-binding peptides. The method is trained on known MHC-binding peptides from the SYFPEITHI database | [Dönnes and Elofsson, 2002](dx.doi.org/10.1093/nar/gkl284)  |MHC-I binding | 
 | syfpeithi 1.0 | **position-specific scoring matrices**; the matrices are manually generated based on expert knowledge and the occurrence of amino acids in naturally processed MHC ligands from the SYFPEITHI database |[Rammensee, et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10602881)  |T-cell epitope | 
 |tepitopepan 1.0 |  First, each HLA-DR binding pocket is represented by amino acid residues that have close contact with the corresponding peptide binding core residues. Then the pocket similarity between two HLA-DR molecules is calculated as the sequence similarity of the residues. Finally, for an uncharacterized HLA-DR molecule, the binding specificity of each pocket is computed as a weighted average in **pocket binding specificities** over HLA-DR molecules characterized by TEPITOPE.| [(Zhang, et al., 2012)](dx.doi.org/10.1371/journal.pone.0030483) | MHC-II binding |
