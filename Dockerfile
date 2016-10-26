@@ -1,6 +1,6 @@
 FROM continuumio/miniconda 
 
-MAINTAINER Michael Heuer <heuermh@acm.org>
+MAINTAINER Jan Vogel <jan.vogelde@gmail.com>
 
 
 USER root
