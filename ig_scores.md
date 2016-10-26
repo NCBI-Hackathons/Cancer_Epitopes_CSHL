@@ -7,7 +7,7 @@
 |comblibsidney 1.0 | ??? | (Sidney, et al., 2008)  |MHC-I binding | 
 |epidemix 1.0 | position-specific scoring matrices. The matrices are statistically computed based on the positive training set of SVMHC. Sequence weighting and pseudo-count correction are applied to obtain the frequencies used to generate the matrices. | [Feldhahn, et al., 2009](10.1093/bioinformatics/btp409)  |MHC-I binding|
 |hammer 1.0| based on position-specific scoring matrices and predicts binding peptides for MHC class II | [Sturniolo, et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10385319) |MHC-II binding | 
-|netctlpan 1.1 | ??? | (Stranzl, et al., 2010) | T-cell epitope |
+|netctlpan 1.1 | The NetCTLpan prediction value is defined as a weighted sum of the three individual prediction values for MHC class I affinity, TAP transport efficiency, and C-terminal proteasomal cleavage | [Stranzl, et al., 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2875469/) | T-cell epitope |
 | netmhc 3.0a | binding affinity | (Lundegaard, et al., 2008) |MHC-I binding |
 |netmhcii 2.2 | binding affinity | (Nielsen, et al., 2007) | MHC-II binding |
 |netmhciipan 3.0,3.1 | Here, we present the first pan-specific method capable of **predicting peptide binding** to any HLA class II molecule with a defined protein sequence |  [Karosiene, et al., 2013](https://www.ncbi.nlm.nih.gov/pubmed/23900783) | MHC-II binding |
