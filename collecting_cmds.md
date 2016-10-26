@@ -41,5 +41,6 @@ python3 -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe(${ANN
 
 # Compute immunogenicity for each peptide
 
-python2 ./src/imm_predict/fred2_allele_prediction.py --input=${OUT_PREFIX}_pvacseq_table.csv --output=${OUT_PREFIX}_variant_immunogenicity.csv
+python2 fred2_allele_prediction.py --input=${OUT_PREFIX}_pvacseq_table.csv \
+      --output=${OUT_PREFIX}_variant_immunogenicity.csv
 ```
