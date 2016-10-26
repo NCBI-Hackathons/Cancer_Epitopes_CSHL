@@ -1,5 +1,6 @@
 
-## Notes how to use Docker
+## Notes how to use Docker 
+
 Here are some notes how to use docker, and how to work with it. 
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
 for example, you can create a Docker container for BWA ( where BWA plus dependencies is installed).
@@ -11,24 +12,33 @@ Download the BWA docker, and then you can run BWA (BWA runs in docker container)
      sudo docker pull alexcoppe/bwa  
      sudo docker run alexcoppe/bwa -help
 
-### How to start
+Well done - you ran alexcoppes BWA docker image. You can run bwa with this command:  
+
+     sudo docker run alexcoppe/bwa -help
+
+### How to start with Docker... 
 Create a file called **Dockerfile** and add this : 
 
 	cat Dockerfile 
 	FROM continuumio/miniconda
 	MAINTAINER Michael Heuer <heuermh@acm.org>
 
-Then, build your Docker image with this command : 
+You find various example docker files on www.dockerhub.com, for specific use cases. For example,
+search for a docker-image for **VEP** or **BWA**.
+
+### Create / build your docker image
+We build a docker image from your Docker file. 
 
        sudo docker build -t ncbihackathon/immsnp .
 
-## Start docker image :  
+## Now start docker image :  
 
 
-	   sudo docker run -i -t ncbihackathon/immsnp   
+       sudo docker build -t ncbihackathon/immsnp . 
 
-	   sudo docker run ncbihackathon/immsnp -h 
+       sudo docker run -i -t ncbihackathon/immsnp    
 
+       sudo docker run ncbihackathon/immsnp -h 
 
 
 ## I sometimes see this Error msg: 
