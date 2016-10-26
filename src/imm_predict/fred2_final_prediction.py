@@ -23,6 +23,7 @@ from subprocess import call
 from urllib import urlretrieve
 import pandas as pd
 from docopt import docopt
+import pickle
 
 if __name__ == "__main__":
     # get the methods
