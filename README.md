@@ -181,8 +181,8 @@ This is now all done using a bash script.
 
 
 ## Sharpen up : Run the pipline
-
-### 1) Annotate RNAseq VCF   
+	
+### 1) Annotate RNAseq VCF 
  
     nohup  variant_effect_predictor.pl \
        --input_file /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  \
@@ -205,7 +205,75 @@ This is now all done using a bash script.
     python -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2", "/home/devsci7/step2.csv", 21,9)'  
 
 
+### 3) Compute immunogenicity for each peptide 
+
+Run the script: `src/imm_predict/fred2_allele_prediction.py`. 
+
+Example:
+
+```bash
+python2 ./src/imm_predict/fred2_allele_prediction.py \
+        ./pvacseq_table.csv ./variant_immunogenicity.csv
+```
+
+Documentation:
+
+```
+Compute the predictions for a reference and alternative allele                                           
+                                                                                                       
+Usage:                                                                                                 
+       fred2_allele_prediction.py [--alleles=<alleles_list>] FILE_IN FILE_OUT                          
+       fred2_allele_prediction.py -h | --help                                                          
+                                                                                                       
+Arguments:                                                                                             
+  FILE_IN      Input csv file                                                                          
+  FILE_OUT     Output csv file                                                                         
+                                                                                                       
+Options:                                                                                               
+  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:                 
+                             --allleles="B*27:20,B*83:01,A*32:15"     
+```
+
+### Compute the background protein immunogenicity
+
+Run the script: `src/imm_predict/fred2_background.py`. 
+
+Example:
+
+```bash
+python2 ./src/imm_predict/fred2_background.py \
+        ./Homo_sapiens.GRCh38.pep.all.fixheader.fa ./background_peptides.csv
+```
+		 
+
+Documentation:
+
+```
+Given a protein FASTA file, compute immunogenicity for all posible 9-mer peptides.                     
+                                                                                                       
+Usage:                                                                                                 
+       fred2_background.py [--alleles=<alleles_list> --top_N=N] FILE_IN FILE_OUT                       
+       fred2_background.py -h | --help                                                                 
+                                                                                                       
+Arguments:                                                                                             
+  FILE_IN    Input fasta file, can be retrieved from:                                                
+	         ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/pep/Homo_sapiens.GRCh38.pep.all.fa.gz
+                                                                                                       
+  FILE_OUT     Output csv file                                                                         
+                                                                                                       
+Options:                                                                                               
+  --top_N=N                  Number of top N proteins to compute the background for. [Default all].    
+  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:                 
+                             --allleles="B*27:20,B*83:01,A*32:15"  
+```
+
+
 ### Copy file over 
 
     cp  /home/devsci7/step2.fasta   /home/data/imm 
 
+
+
+## TODO
+
+- should we put all the executable scripts into ./bin ?

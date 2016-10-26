@@ -8,7 +8,7 @@ Usage:
 
 Arguments:
   FILE_IN      Input fasta file, can be retrieved from:
-               ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/pep/Homo_sapiens.GRCh38.pep.all.fixheader.fa.gz
+               ftp://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/pep/Homo_sapiens.GRCh38.pep.all.fa.gz
 
   FILE_OUT     Output csv file
 
