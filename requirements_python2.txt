@@ -4,3 +4,4 @@ pandas
 sklearn
 pickle
 future
+scipy
