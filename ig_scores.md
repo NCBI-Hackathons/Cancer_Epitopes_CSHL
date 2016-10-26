@@ -17,6 +17,6 @@
 | smmpmbec 1.0 | ??? | (Kim, et al., 2009) |MHC-I binding | 
 | svmhc 1.0| ??? | (Dönnes and Elofsson, 2002)  |MHC-I binding | 
 | syfpeithi 1.0 | ??? |(Rammensee, et al., 1999)  |T-cell epitope | 
-|tepitopepan 1.0 | ??? | [(Zhang, et al., 2012)](dx.doi.org/10.1371/journal.pone.0030483) | MHC-II binding |
+|tepitopepan 1.0 |  First, each HLA-DR binding pocket is represented by amino acid residues that have close contact with the corresponding peptide binding core residues. Then the pocket similarity between two HLA-DR molecules is calculated as the sequence similarity of the residues. Finally, for an uncharacterized HLA-DR molecule, the binding specificity of each pocket is computed as a weighted average in **pocket binding specificities** over HLA-DR molecules characterized by TEPITOPE.| [(Zhang, et al., 2012)](dx.doi.org/10.1371/journal.pone.0030483) | MHC-II binding |
 | unitope 1.0| ??? | (Toussaint, et al., 2011) | T-cell epitope  |
 
