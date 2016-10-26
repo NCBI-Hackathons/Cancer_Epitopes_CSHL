@@ -6,7 +6,7 @@
 | bimas 1.0 | log-transformed **binding affinities** relative to a reference peptide | [Parker, et al., 1994](https://www.ncbi.nlm.nih.gov/pubmed/8254189)  |MHC-I binding | 
 |comblibsidney 1.0 | ??? | (Sidney, et al., 2008)  |MHC-I binding | 
 |epidemix 1.0 | position-specific scoring matrices. The matrices are statistically computed based on the positive training set of SVMHC. Sequence weighting and pseudo-count correction are applied to obtain the frequencies used to generate the matrices. | [Feldhahn, et al., 2009](10.1093/bioinformatics/btp409)  |MHC-I binding|
-|hammer 1.0| ??? | (Sturniolo, et al., 1999) |MHC-II binding | 
+|hammer 1.0| based on position-specific scoring matrices and predicts binding peptides for MHC class II | [Sturniolo, et al., 1999](https://www.ncbi.nlm.nih.gov/pubmed/10385319) |MHC-II binding | 
 |netctlpan 1.1 | ??? | (Stranzl, et al., 2010) | T-cell epitope |
 | netmhc 3.0a | ??? | (Lundegaard, et al., 2008) |MHC-I binding |
 |netmhcii 2.2 | ??? | (Nielsen, et al., 2007) | MHC-II binding |
