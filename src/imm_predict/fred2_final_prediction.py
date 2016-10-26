@@ -38,16 +38,18 @@ if __name__ == "__main__":
     this_file = os.path.dirname(os.path.realpath(__file__))
     output_model = this_file + "/../../" + "/data/log_reg_model.pickle"
 
+    print("load the model")
     fit = pickle.load(open(output_model, 'rb'))
+    print("loaded")
     model = fit["model"]
     methods = fit["features"]
-    
     colnames = dt.columns.values.tolist()
     idx = [col for col in colnames if col not in ["method", "WT_score", "MT_score"]]
     # pivot the table:
     dt_wide = dt.pivot_table(index = idx, columns = "method",
                              values = ["WT_score", "MT_score"]).reset_index(None)
 
+    print("generate the prediction score")
     # generate the prediction score
     wt = dt_wide["WT_score"][methods]
     mt = dt_wide["MT_score"][methods]
@@ -63,6 +65,7 @@ if __name__ == "__main__":
     final_score = np.empty(not_none.shape)
     final_score[:] = np.NAN
     final_score[np.where(not_none)] = final_score_notnone
+    print("final score done")
 
     # append to the final table
     del dt_wide["WT_score"]
