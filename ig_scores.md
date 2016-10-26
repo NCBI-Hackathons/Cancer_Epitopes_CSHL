@@ -5,7 +5,7 @@
 | arb 1.0 | Average Relative Binding (ARB) matrix methods that directly **predict IC(50)** values allowing combination of searches involving different peptide sizes and alleles into a single global prediction| [Bui, et al., 2005](10.1007/s00251-005-0798-y)|MHC-I binding |
 | bimas 1.0 | log-transformed **binding affinities** relative to a reference peptide | [Parker, et al., 1994](https://www.ncbi.nlm.nih.gov/pubmed/8254189)  |MHC-I binding | 
 |comblibsidney 1.0 | ??? | (Sidney, et al., 2008)  |MHC-I binding | 
-|epidemix 1.0 | ??? | (Feldhahn, et al., 2009)  |MHC-I binding|
+|epidemix 1.0 | position-specific scoring matrices. The matrices are statistically computed based on the positive training set of SVMHC. Sequence weighting and pseudo-count correction are applied to obtain the frequencies used to generate the matrices. | [Feldhahn, et al., 2009](10.1093/bioinformatics/btp409)  |MHC-I binding|
 |hammer 1.0| ??? | (Sturniolo, et al., 1999) |MHC-II binding | 
 |netctlpan 1.1 | ??? | (Stranzl, et al., 2010) | T-cell epitope |
 | netmhc 3.0a | ??? | (Lundegaard, et al., 2008) |MHC-I binding |
