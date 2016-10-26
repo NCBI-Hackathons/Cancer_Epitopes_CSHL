@@ -33,16 +33,9 @@ PATH_OPTITYPE=/opt/optitype/OptiTypePipeline.py
 
 
 ```
-# Get Fastq from BAM for HLA typing
-# output: ${OUT_PREFIX}_read1.fq and ${OUT_PREFIX}_read2.fq
-bash bam2hla_fastq -b $BAM -r ${MHC_LOCUS} -o ${OUT_PREFIX} --path ${PATH_SAMTOOLS}
-# run OptiType for HLA prediction
-mkdir hlatyping
-python2 ${PATH_OPTITYPE} --input ${OUT_PREFIX}_read1.fq ${OUT_PREFIX}_read2.fq -r -o hlatyping
-
-FOLD=`ls hlatyping/`
-ALLELES=`egrep "\*" hlatyping/${FOLD}/${FOLD}_result.tsv | cut -f 2-7 | sed 's/\s/,/g'`
-
+# HLA typing
+# result: comma-separated list of alleles
+ALLELES=`bash hla_type.sh -b /home/data/hisat_tags_output_SRR1616919_hg38.sorted.bam -r chr6:29600000-33500000 -o test2 -ps /opt/samtools/1.3.1/bin/ -po /opt/optitype/`
 
 # Annotate RNAseq VCF
 variant_effect_predictor.pl \
