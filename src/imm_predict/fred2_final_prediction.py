@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     # TODO - get the absolute path
     this_file = os.path.dirname(os.path.realpath(__file__))
-    output_model = this_file + "../../" + "/data/log_reg_model.pickle"
+    output_model = this_file + "/../../" + "/data/log_reg_model.pickle"
 
     fit = pickle.load(open(output_model, 'rb'))
     model = fit["model"]
