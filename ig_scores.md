@@ -2,7 +2,7 @@
 
 | Tool | Score meaning | DOI to publication | Type |
 |------|---------------|--------------------|------|
-| arb 1.0 | ??? | (Bui, et al., 2005)|MHC-I binding |
+| arb 1.0 | Average Relative Binding (ARB) matrix methods that directly **predict IC(50)** values allowing combination of searches involving different peptide sizes and alleles into a single global prediction| [Bui, et al., 2005](10.1007/s00251-005-0798-y)|MHC-I binding |
 | bimas 1.0 | ??? | (Parker, et al., 1994)  |MHC-I binding | 
 |comblibsidney 1.0 | ??? | (Sidney, et al., 2008)  |MHC-I binding | 
 |epidemix 1.0 | ??? | (Feldhahn, et al., 2009)  |MHC-I binding|
