@@ -1,29 +1,20 @@
 #!/usr/bin/env python2
+"""
+Wrapper functions for Fred2 package.
+"""
+
 
 from __future__ import print_function, division, absolute_import
-# import numpy as np
-# import argparse
-# import sys
-# from sys import exit, stdin
-import warnings
 from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
 from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
 import sys
 import time
-
-# import pepdata
 import pandas as pd
-
-# # 1.
-# peptides = [Peptide("SYFPEITHI"), Peptide("FIASNGVKL"), Peptide("LLGATCMFV")]
-# proteins = [Protein("SYFPEITHI"), Protein("FIASNGVKL"), Protein("LLGATCMFV")]
-# alleles = ['A*02:16', 'B*45:01']
-# peptide3 = generate_peptides_from_proteins(proteins, 9)
 
 def predictor_info(method):
     """
-    Get the information about different predictors
+    Get all the information about a particular predictor/method from Fred2
     """
 
     predictor = EpitopePredictorFactory(method)
@@ -68,15 +59,30 @@ def predictor_info(method):
     return retdict
 
 
-def valid_predictors():
+def valid_predictors(supported_length = 9,
+                     exclude_predictors = ["epidemix", "unitope"]):
+    """
+    Get the infomation for all predictors and keep only
+    the relevant ones.
+
+    Args:
+       supported_length (int): Supported peptide input length.
+       exclude_predictors (list of chars): List of methods to remove in addition
+    """
+
     methods = EpitopePredictorFactory.available_methods().keys()
     dt = pd.DataFrame([predictor_info(method) for method in methods])
-
-    dt = dt[[9 in elems for elems in dt["supportedLength"]]]
-    dt = dt[dt["type"].notnull()]
+    n_init = len(dt)
+    
+    dt = dt[[supported_length in elems for elems in dt["supportedLength"]]]
+    dt = dt[dt["type"].notnull()] # we should know where it was trained
     dt = dt[dt["is_in_path"].isnull() | dt["is_in_path"]]
-    dt = dt[dt["name"] != "epidemix"]
-    dt = dt[dt["name"] != "unitope"] # too long runtime
+
+    for excl_predictor in exclude_predictors:
+        dt = dt[dt["name"] != excl_predictor]
+
+    print("removed {0} methods from Fred2. {1} remain".\
+          format(n_init - len(dt), len(dt)))
 
     return dt
 
@@ -84,17 +90,16 @@ def valid_predictors():
 def predict_peptide_effects(peptides, alleles=None):
     """
     Predict the peptide effect for all the available methods on the machine
-    args:
-    -----
+
+    Args:
         peptides (list of Peptides): Usually an output from read_fasta
         alleles (list of chars): Alleles for which to run the predictors
 
-    results:
-    --------
+    Returns:
         pd.DataFrame: Tidy pd.DataFrame. If the method is unable to predict
                       for a particular value the rows are not present.
 
-    examples:
+    Example:
     >>> peptides = [Peptide("SYFPEITHI"), Peptide("FIASNGVKL"), Peptide("LLGATCMFV")]
     >>> alleles = ['A*02:16', 'B*45:01']
     >>> predict_peptide_effects(peptides, alleles = alleles).head()
@@ -118,7 +123,7 @@ def predict_peptide_effects(peptides, alleles=None):
         else:
             valid_alleles = None
         method = dt.iloc[i]["name"]
-        print("running for method: ", method)
+        print("method: ", method)
         # TODO - use try, except
         t0 = time.time()
 
@@ -134,4 +139,3 @@ def predict_peptide_effects(peptides, alleles=None):
     dfm = dfm[dfm["score"].notnull()]
     dfm.rename(columns={'Seq': 'peptide', 'Method': 'method'}, inplace=True)
     return dfm
-
