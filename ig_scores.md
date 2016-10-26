@@ -10,7 +10,7 @@
 |netctlpan 1.1 | ??? | (Stranzl, et al., 2010) | T-cell epitope |
 | netmhc 3.0a | binding affinity | (Lundegaard, et al., 2008) |MHC-I binding |
 |netmhcii 2.2 | binding affinity | (Nielsen, et al., 2007) | MHC-II binding |
-|netmhciipan 3.0,3.1 | binding affinity |  (Karosiene, et al., 2013) | MHC-II binding |
+|netmhciipan 3.0,3.1 | Here, we present NetMHCpan-2.0, a method that generates quantitative predictions of the affinity of any peptide-MHC class I interaction |  [Karosiene, et al., 2013](https://www.ncbi.nlm.nih.gov/pubmed/19002680) | MHC-II binding |
 |netmhcpan 2.4,2.8 | binding affinity |(Hoof, et al., 2009)  |MHC-I binding | 
 | pickpocket 1.1 | For MHC molecules with known specificities, we established a library of pocket-residues and corresponding binding specificities. The binding specificity for a novel MHC molecule is calculated as the average of the specificities of MHC molecules in this library weighted by the similarity of their pocket-residues to the query. This PickPocket method is demonstrated to accurately predict **MHC-peptide binding** for a broad range of MHC alleles, including human and non-human species. |[Zhang, et al., 2009](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2732311/)  |MHC-I binding | 
 |smm 1.0 | binding affinity |  (Peters and Sette, 2005) |MHC-I binding | 
