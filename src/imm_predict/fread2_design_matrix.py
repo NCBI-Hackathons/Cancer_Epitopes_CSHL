@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
 
     dt = pd.read_table(file_in)
-    peptides = [Peptide(peptide) for peptide in dt["peptide"]]
+    peptides = [Peptide(peptide) for peptide in dt["Sequence"]]
     res = fred2wrap.predict_peptide_effects(peptides, alleles = alleles)
     res["peptide"] = [peptide.tostring() for peptide in res["peptide"]]
     
