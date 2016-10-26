@@ -1,20 +1,34 @@
 #!/usr/bin/env python2
+"""
+Compute the predictions for reference and alternative allele
+
+Usage:
+       fred2_allele_prediction.py [--alleles=<alleles_list>] FILE_IN FILE_OUT
+       fred2_allele_prediction.py -h | --help
+
+Arguments:
+  FILE_IN      Input csv file
+  FILE_OUT     Output csv file
+
+Options:
+  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:
+                             --allleles="B*27:20,B*83:01,A*32:15"
+"""
+
 # read in the vcf file
-import sys
+import sys, os
 # sys.path.append("/home/avsec/Cancer_Epitopes_CSHL/src")
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../")
 from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
 from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
 from imm_predict import fred2wrap
 from subprocess import call
-import sys
-import os
 from urllib import urlretrieve
 import pandas as pd
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../")
+from docopt import docopt
 
-
-def sliding_window(dt, window_size = 9):
+def sliding_window(dt, peptide_length = 9):
     """
     Given a datatable:
     >>> dt.head()
@@ -42,11 +56,18 @@ def sliding_window(dt, window_size = 9):
     10  APTTV  SPTTV        10  IGLV6-57_ENST00000390285_2.missense.63S/A
     """
     dt2_list  = [window(dt.iloc[i]["MT"],
-                        dt.iloc[i]["WT"] , window_size = window_size).assign(ID= dt.iloc[i]["ID"]) for i in xrange(len(dt))]
+                        dt.iloc[i]["WT"] , window_size = peptide_length).\
+                 assign(ID= dt.iloc[i]["ID"]).\
+                        assign(variant_id= dt.iloc[i]["variant_id"]) \
+                        for i in xrange(len(dt))]
+                 
     dt2 = pd.concat(dt2_list)
     return dt2[dt2["MT"] != dt2["WT"]]
 
 def window(MT_seq, WT_seq, window_size=5):
+    """
+    Chop two sequences with a sliding window
+    """
     if len(MT_seq) != len(WT_seq):
         raise Exception("len(MT_seq) != len(WT_seq)")
     pos = []
@@ -63,11 +84,14 @@ def window(MT_seq, WT_seq, window_size=5):
 
 
 def append_score(dt2):
+    """
+    Given a choped sequence (output from sliding_window()),
+    append the immunogenicity scores
+    """
     peptides_to_compute = [Peptide(peptide) for peptide in set(list(dt2["MT"]) + list(dt2["WT"]))]
     res = fred2wrap.predict_peptide_effects(peptides_to_compute)
-    res["peptide"] = [peptide.tostring() for peptide in res["peptide"]]
+    res["peptide"] = [str(peptide) for peptide in res["peptide"]]
 
-    print("write to csv")
     full = pd.merge(dt2, res, how = 'left', left_on = "WT", right_on = "peptide")
     full = full.rename(columns={'score': 'WT_score'})
     del full["peptide"]
@@ -77,12 +101,24 @@ def append_score(dt2):
     del full["peptide"]
     return full
 
+
 if __name__ == "__main__":
-    save_directory = "/home/data/peptides/"
-    filename = "test.tsv"
-    fullfilename = save_directory + filename
-    dt = pd.read_csv(fullfilename)
+    arguments = docopt(__doc__)
+
+    if arguments["--alleles"]:
+        alleles = arguments["--alleles"].split(",")
+    else:
+        alleles = None
+
+    file_in = arguments["FILE_IN"]
+    file_out = arguments["FILE_OUT"]
+    dt = pd.read_csv(file_in)
+    print("chop the peptides around a variant")
     dt2 = sliding_window(dt, 9)
+
+    print("append the immunogenicity score")
     full = append_score(dt2)
 
-    full.to_csv("/tmp/fred2_result_ase.csv", index = False)
+    print("writing to csv")
+    full.to_csv(file_out, index = False)
+    
