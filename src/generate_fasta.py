@@ -1,13 +1,27 @@
 #!python3
+"""
+Extract mutant and wildtype peptide sequences for missense variants in a VCF file
+
+Usage:
+        generate_fasta.py --input=FILE_IN --output=FILE_OUT --peptide_sequence_length=INT
+        generate_fasta.py -h | --help
+
+Arguments:
+  --input=FILE_IN                   VEP-annotated input VCF file
+  --output=FILE_OUT                 Output csv file with peptide sequences
+  --peptide_sequence_length=INT     Length to use for extracting peptide sequences
+"""
+
+from docopt import docopt
 from pvacseq import lib
 import tempfile
 import csv
-import shutil
 import yaml
 import pandas
 import os
+import shutil
 
-def generate_fasta(input_vcf, peptide_sequence_length, epitope_length):
+def generate_fasta(input_vcf, peptide_sequence_length):
     temp_dir = tempfile.mkdtemp()
     tsv_file_path = os.path.join(temp_dir, 'tmp.tsv')
     lib.convert_vcf.main([input_vcf, tsv_file_path])
@@ -25,18 +39,18 @@ def generate_fasta(input_vcf, peptide_sequence_length, epitope_length):
     lib.generate_fasta.main([
         filtered_tsv_file_path,
         str(peptide_sequence_length),
-        str(epitope_length),
+        "9",
         os.path.join(temp_dir, 'tmp.fasta'),
         os.path.join(temp_dir, 'tmp.fasta.key'),
     ])
 
     return temp_dir
 
-def generate_fasta_dataframe(input_vcf, csv_file, peptide_sequence_length, epitope_length):
-    output_dir = generate_fasta(input_vcf, peptide_sequence_length, epitope_length)
-    fasta_file_path = os.path.join(output_dir, 'tmp.fasta')
+def generate_fasta_csv(input_vcf, csv_file, peptide_sequence_length):
+    temp_output_dir = generate_fasta(input_vcf, peptide_sequence_length)
+    fasta_file_path = os.path.join(temp_output_dir, 'tmp.fasta')
     fasta_file_key_path = fasta_file_path + '.key'
-    tsv_file_path = os.path.join(output_dir, 'tmp.filtered.tsv')
+    tsv_file_path = os.path.join(temp_output_dir, 'tmp.filtered.tsv')
 
     with open(fasta_file_key_path) as fasta_file_key:
         keys = yaml.load(fasta_file_key)
@@ -73,3 +87,9 @@ def generate_fasta_dataframe(input_vcf, csv_file, peptide_sequence_length, epito
         })
 
     pandas.DataFrame.from_dict(flattened_dataframe).to_csv(csv_file, index=False)
+
+    shutil.rmtree(temp_output_dir)
+
+if __name__ == "__main__":
+    arguments = docopt(__doc__)
+    generate_fasta_csv(arguments['--input'],arguments['--output'],arguments['--peptide_sequence_length'])
