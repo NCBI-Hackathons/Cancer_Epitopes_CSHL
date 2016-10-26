@@ -22,6 +22,12 @@ Then, build your Docker image with this command :
 
        sudo docker build -t ncbihackathon/immsnp .
 
+## Start docker image :  
+
+
+	   sudo docker run -i -t ncbihackathon/immsnp   
+
+	   sudo docker run ncbihackathon/immsnp -h 
 
 
 
@@ -57,10 +63,6 @@ Execute the command in the folder where the dockerfile is.
 ###  The re 
 
 	   sudo docker images  
-
-	   sudo docker run -i -t ncbihackathon/immsnp   
-
-	   sudo docker run ncbihackathon/immsnp -h 
 
 
            
