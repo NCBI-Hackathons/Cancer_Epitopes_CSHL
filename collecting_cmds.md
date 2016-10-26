@@ -3,6 +3,16 @@ Please just dump the commands for the different parts of the pipeline in here.
 ### defining variables that may be used by more then one script
 
 ```
+export PATH="/opt/python/anaconda2/bin:$PATH"
+export PATH="/opt/netMHC-4.0/Linux_x86_64/bin/:$PATH"
+export PATH="/opt/netCTLpan-1.1/Linux_x86_64/bin/:$PATH"
+export PATH="/opt/netMHCII-2.2/Linux_x86_64/bin/:$PATH"
+export PATH="/opt/netMHCIIpan-3.1/:$PATH"
+export PATH="/opt/netMHCpan-3.0/Linux_x86_64/bin/:$PATH"
+export PATH="/opt/pickpocket-1.1/:$PATH"
+export PATH="/opt/optitype/:/opt/glpk/4.6.0/bin/:$PATH"
+
+
 BAM=SRR1616919.sorted.bam
 OUT_PREFIX=hisat_tags_output_SRR1616919
 MHC_LOCUS=NC_000006.12:29600000-33500000

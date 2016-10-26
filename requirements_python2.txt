@@ -1,2 +1,6 @@
 git+https://github.com/FRED-2/Fred2
 docopt
+pandas
+sklearn
+pickle
+future
