@@ -1,28 +1,39 @@
+FROM continuumio/miniconda 
+
+MAINTAINER Michael Heuer <heuermh@acm.org>
 
 
-# Dockerfile
+USER root
+RUN apt-get update && apt-get install -y \
+curl g++ gawk git m4 make patch ruby tcl  libarchive-zip-perl  libdbd-mysql-perl  libjson-perl 
 
-FROM heuermh/vep MAINTAINER Jan Vogel <jan.vogelde@gmail.com>
+RUN apt-get install -y build-essential default-jdk gfortran texinfo unzip \
+	libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev libmysqlclient-dev
 
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+RUN useradd -m -s /bin/bash linuxbrew
+RUN echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
-RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
- libglib2.0-0 libxext6 libsm6 libxrender1 \
- git mercurial subversion
+USER linuxbrew
+WORKDIR /home/linuxbrew
+ENV PATH /home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
+ENV SHELL /bin/bash
+RUN yes |ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+RUN brew doctor || true
 
- RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
- wget --quiet https://repo.continuum.io/miniconda/Miniconda2-4.1.11-Linux-x86_64.sh -O ~/miniconda.sh && \
- /bin/bash ~/miniconda.sh -b -p /opt/conda && \
- rm ~/miniconda.sh 
+RUN brew tap homebrew/science \
+  && brew install htslib \
+  && brew tap chapmanb/homebrew-cbl \
+  && brew install vep  
 
-RUN apt-get install -y curl grep sed dpkg && \
- TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` && \
- curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb && \
- dpkg -i tini.deb && \
- rm tini.deb && \
- apt-get clean 
+USER root
+RUN pip install git+https://github.com/FRED-2/Fred2
+RUN pip install docopt
 
-ENV PATH /opt/conda/bin:$PATH ENTRYPOINT [ "/usr/bin/tini", "--" ] 
-CMD [ "/bin/bash" ]
+RUN conda create --name python3 python=3.5 
+RUN ["/bin/bash","-c","source activate python3;  pip install numpy pandas pvacseq docopt && source deactivate"]
+
+ENTRYPOINT [ "/usr/bin/tini", "--" ] 
+CMD [ "/bin/bash" ] 
+
 
 
