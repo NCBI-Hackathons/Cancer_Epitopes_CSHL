@@ -76,6 +76,7 @@ if __name__ == "__main__":
                groupby(by = ['ID', 'variant_id']).first().\
                reset_index().sort('immscore', ascending=False)
     del dt_final["index"]
+    del dt_final["position"]
 
     print("writing to csv")
     dt_final.to_csv(file_out, index = False)
