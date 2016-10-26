@@ -37,7 +37,7 @@ variant_effect_predictor.pl \
          --output_file ${OUT_PREFIX}.annotated.vcf
 
 # Generate FASTA with pVACSeq and write to csv
-python3 -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe(${ANNOTATED_VCF}, ${SEQUENCE_CSV}, 21, 9)' 
+python3 generate_fasta.py --input=${OUT_PREFIX}.annotated.vcf --output=${OUT_PREFIX}_pvacseq_table.csv --peptide_sequence_length=21
 
 # Compute immunogenicity for each peptide
 
