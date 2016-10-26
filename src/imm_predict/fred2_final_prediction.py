@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     final_score = np.empty(not_none.shape)
     final_score[:] = np.NAN
-    final_score[not_none] = final_score_notnone
+    final_score[np.where(not_none)] = final_score_notnone
 
     # append to the final table
     del dt_wide["WT_score"]
