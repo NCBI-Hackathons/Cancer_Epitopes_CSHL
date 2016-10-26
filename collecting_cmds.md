@@ -22,24 +22,25 @@ PATH_SAMTOOLS=/opt/samtools/1.3.1/bin/
 
 
 ```
+# Get Fastq from BAM for HLA typing
 # output: ${OUT_PREFIX}_read1.fq and ${OUT_PREFIX}_read2.fq
 bash bam2hla_fastq -b $BAM -r ${MHC_LOCUS} -o ${OUT_PREFIX} --path ${PATH_SAMTOOLS} 
 
 # Annotate RNAseq VCF
-nohup  variant_effect_predictor.pl \
+variant_effect_predictor.pl \
    --input_file $VCF \
     --format vcf \
      --terms SO --offline  --force_overwrite \
       --plugin Wildtype --plugin Downstream  \
        --dir ${PATH_VEP}   --vcf --symbol \
         --fork 16  --coding_only --no_intergenic \
-         --output_file ${OUT_PREFIX}.annotated.vcf  & 
+         --output_file ${OUT_PREFIX}.annotated.vcf
 
-
-```
-
-from inside ${repo}/src
-
-```
+# Generate FASTA with pVACSeq and write to csv
 python3 -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe(${ANNOTATED_VCF}, ${SEQUENCE_CSV}, 21, 9)' 
+
+# Compute immunogenicity for each peptide
+
+python2 fred2_allele_prediction.py --input=${OUT_PREFIX}_pvacseq_table.csv \
+      --output=${OUT_PREFIX}_variant_immunogenicity.csv
 ```
