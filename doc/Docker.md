@@ -3,8 +3,7 @@
 
 Here are some notes how to use docker, and how to work with it. 
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
-for example, you can create a Docker container for BWA ( where BWA plus dependencies is installed).
-This enables you to run BWA ( or see the BWA help page ) with this command:  
+Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline that we developed during the hackathon. 
 
 ## How to run the immunogenicity docker image on Mac OS X 
 
@@ -12,24 +11,29 @@ This enables you to run BWA ( or see the BWA help page ) with this command:
 
        https://docs.docker.com/engine/installation/mac/ 
 
-2) Clone this github repo 
-To build our image, we need the **Dockerfile** out of our github repo 
+2) Clone the immSNP github repo 
+
+To build the image, you will need the **Dockerfile** which is also part of our github repo. 
 
        git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL 
 
 3) Run **docker build** 
-Note: You have to be in the same directory where our Cancer_Epitopes_CSHL 
-[Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile) is. 
+
+`docker build` needs to know where the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile) is.
+
+So, you can either build it after going into the corresponding directory:
  
        cd  Cancer_Epitopes_CSHL/
        docker build -t ncbihackathon/immunogenicity . 
 
-Another way to build the image is to hand over a path to the directory where the **Dockerfile** is :
+Another way to build the image is to define the path to the directory containing the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile):
 
-       docker build -t ncbihackathon/immunogenicity    Cancer_Epitopes_CSHL/
+       docker build -t ncbihackathon/immsnp  Cancer_Epitopes_CSHL/
 
+The `-t` option will define the repository name to be applied to the resulting image in case of success [1](https://www.mankier.com/1/docker-build). 
 
 5) Check if the build was successful 
+
 List all docker images: 
 
        docker images 
