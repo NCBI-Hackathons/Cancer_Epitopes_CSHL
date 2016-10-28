@@ -51,11 +51,14 @@ The following command starts the docker image and let's you "jump" directly into
 
        docker run -i -t ncbihackathon/immsnp    
 
-### List all running docker containers 
+You're automatically thrown into the docker environment.
+Check this, e.g., via `pwd`:
 
-Open a different terminal session, then type:
-
-       docker ps 
+	$ pwd
+	/home/linuxbrew
+       cd $HOME; 
+#         ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/test_data/input.vcf
+	
 
 ### Stop the container 
 
@@ -82,6 +85,13 @@ Download the BWA docker, and then you can run BWA (BWA runs in docker container)
 Well done - you ran alexcoppes BWA docker image. You can run bwa with this command:  
 
      docker run alexcoppe/bwa -help
+
+### List all running docker containers 
+
+Open a different terminal session, then type:
+
+       docker ps 
+
 
 ### How to make your own Docker instance 
 
