@@ -69,4 +69,10 @@ until [ -z "$1" ]; do
     *)
       break;;
   esac
-done
+done 
+
+
+
+(source activate python3 && generate_fasta.py --input=${BAM} --output=pvacseq_table${$BAM} --peptide_sequence_length=21)
+
+

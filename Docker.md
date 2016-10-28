@@ -31,6 +31,10 @@ We build a docker image from your Docker file.
 
        sudo docker build -t ncbihackathon/immsnp .
 
+       docker pull tweep/immunogenicity
+
+       docker build -t tweep/immunogenicity
+
 ## Now start docker image :  
 
 
