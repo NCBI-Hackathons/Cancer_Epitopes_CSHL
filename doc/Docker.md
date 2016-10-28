@@ -2,7 +2,7 @@ Here are some notes how to use docker, and how to work with it.
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
 Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline that we developed during the hackathon. 
 
-## How to run the immuSNP docker image 
+## How to run the immSNP docker image 
 
 ### Download + install the Mac OS X [or whatever is appropriate for your OS] docker app 
 
@@ -133,22 +133,5 @@ For example, search for a docker-image for **VEP** or **BWA**.
 
 #### Solution  
 
-	 sudo usermod -aG docker devsci7 
-	 sudo usermod -aG docker devsci8 
-	 sudo usermod -aG docker devsci9 
-	 sudo usermod -aG docker devsci10 
-
-sudo docker build -t ncbihackathon/immsnp . "
-
-Execute the command in the folder where the dockerfile is.  
-
-      cd 
-      sudo docker build -t ncbihackathon/immsnp .   
-
-
-###  The re 
-
-	   sudo docker images  
-
-
+	 usermod -aG docker devsci7
            
