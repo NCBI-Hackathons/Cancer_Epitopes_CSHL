@@ -82,7 +82,8 @@ RUN ["/bin/bash","-c","source activate python3;  pip install numpy pandas pvacse
 ENV PATH /home/linuxbrew/Cancer_Epitopes_CSHL/src:/usr/local/bin/OptiType/:$PATH
 
 
-#USER linuxbrew
+USER linuxbrew
 RUN cd /home/linuxbrew && git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
 ENTRYPOINT [ "/usr/bin/tini", "--" ] 
 CMD [ "/bin/bash" ] 
+
