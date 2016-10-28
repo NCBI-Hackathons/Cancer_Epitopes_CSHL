@@ -44,21 +44,25 @@ This step will take a couple of minutes.
 List all docker images: 
 
        docker images 
+       
+You should see something like that:
+![dockimage](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/dockresult.png)
 
-### Run the docker image **i**nteractively 
+### Run the docker image _i_nteractively 
 
-This starts the docker image and let's you "jump" directly into the container: 
+The following command starts the docker image and let's you "jump" directly into the container: 
 
-       sudo docker run -i -t ncbihackathon/immsnp    
+       docker run -i -t ncbihackathon/immsnp    
 
 ### List all running docker containers 
 
        docker ps 
 
-### Stop a container 
+### Stop the container 
 
       docker stop  ncbihackathon/immsnp
 
+------------------------------------------------------------------------------
 
 ## Additional docker notes...
 
