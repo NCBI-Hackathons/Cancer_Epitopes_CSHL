@@ -7,7 +7,7 @@ USER root
 RUN apt-get update && apt-get install -y \
 curl g++ gawk git m4 make patch ruby tcl bzip2 libarchive-zip-perl  libdbd-mysql-perl  libjson-perl cmake libncurses5-dev
 
-RUN apt-get install -y build-essential default-jdk gfortran texinfo unzip samtools \
+RUN apt-get install -y build-essential default-jdk gfortran texinfo unzip \
 	libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev libmysqlclient-dev
 
 RUN useradd -m -s /bin/bash linuxbrew
@@ -42,7 +42,7 @@ RUN ./configure && make all all-htslib && make install install-htslib
 # FRED 2  
 RUN apt-get update && apt-get install -y vim software-properties-common \
 && apt-get update && apt-get install -y \
-    gcc-4.9 g++-4.9 coinor-cbc zlib1g-dev libbz2-dev \
+    gcc-4.9 g++-4.9 coinor-cbc \
 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9 \
 && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get purge 
 
