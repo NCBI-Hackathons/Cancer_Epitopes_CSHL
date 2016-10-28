@@ -68,12 +68,12 @@ done
 
 # extract reads overlapping with MHC locus and turn them into two fastq files
 echo "# bam2fq" >> ${OUT}.log
-${PATH_S}/samtools view -h $BAM $REGION | ${PATH_S}/samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq - 2>>${OUT}.log
+${PATH_S}samtools view -h $BAM $REGION | ${PATH_S}samtools bam2fq -1 ${OUT}_read1.fq -2 ${OUT}_read2.fq - 2>>${OUT}.log
 
 # run OptiType for HLA prediction
 echo "# running Optitype" >> ${OUT}.log
 if [ ! -d "${OUT}_hlatyping" ]; then mkdir ${OUT}_hlatyping; fi
-python2 ${PATH_O}/OptiTypePipeline.py --input ${OUT}_read1.fq ${OUT}_read2.fq -r -o ${OUT}_hlatyping 2>>${OUT}.log
+python2 ${PATH_O}OptiTypePipeline.py --input ${OUT}_read1.fq ${OUT}_read2.fq -r -o ${OUT}_hlatyping 2>>${OUT}.log
 
 folder=`ls -tm "${OUT}"_hlatyping/ | head -n 1 |  awk -F "," '{print $1}'`
 ALLELES=`egrep "\*" "${OUT}"_hlatyping/${folder}/${folder}_result.tsv | cut -f 2-7 | sed 's/\s/,/g'`
