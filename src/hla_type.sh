@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function bam2hla() {
-  echo "Usage: $0 -b SRR1616919.sorted.bam -r NC_000006.12:29600000-33500000 -o test --path /opt/samtools/1.3.1/bin/
+  echo "Usage: $0 -b /home/data/hisat_tags_output_SRR1616919_hg38.sorted.bam -r chr6:29600000-33500000 -o test -ps /opt/samtools/1.3.1/bin/ -po /opt/optitype/
     -b,     --BAM               BAM file. Required.
     -r,     --region            Region for which reads will be extracted in this format: <chr:start-end> . Optional.
     -o,     --output            Prefix for output files. Required.
