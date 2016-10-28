@@ -68,6 +68,16 @@ You should see some messages that indicate that the pipeline is running.
 Most likely it will look something like that:
 ![testresult](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/testresult.png)
 
+
+### Working on the immSNP pipeline
+
+If you want to modify the immSNP pipeline while being inside the docker image, simply modify the files in the git repo, commit and __push__ changes.
+Then, exit the container (type `exit` or see below) and re-start the container.
+Make sure to pull the updated git repo into the container since the image we built will still have the repo in the state that it was in when we built it.
+
+If you wanted to add permanent changes to the immSNP Docker container (e.g., installing a new program), these would have to be defined within the Dockerfile.
+
+
 ### Stop the container 
 
 Most docker containers can be stopped so:
