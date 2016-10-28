@@ -4,7 +4,7 @@
 #
 # Usage: 
 #        cd $HOME; 
-#         ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/test_data/input.vcf
+#         ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/data/test_data/input.vcf
 # 
 
 
