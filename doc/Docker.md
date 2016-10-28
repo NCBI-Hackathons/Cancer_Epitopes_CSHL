@@ -53,11 +53,18 @@ The following command starts the docker image and let's you "jump" directly into
 
 ### List all running docker containers 
 
+Open a different terminal session, then type:
+
        docker ps 
 
 ### Stop the container 
 
-      docker stop  ncbihackathon/immsnp
+Most docker containers can be stopped so:
+
+	exit
+      	docker stop <IMAGE-TAG>
+
+In our case, the docker image will stop as soon as you type `exit`, so need for the `docker stop` command.
 
 ------------------------------------------------------------------------------
 
