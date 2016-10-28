@@ -1,13 +1,10 @@
-
-## Notes how to use Docker 
-
 Here are some notes how to use docker, and how to work with it. 
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
 Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline that we developed during the hackathon. 
 
-## How to run the immuSNP docker image on Mac OS X 
+## How to run the immuSNP docker image 
 
-### Download + install the Mac OS X docker app 
+### Download + install the Mac OS X [or whatever is appropriate for your OS] docker app 
 
        https://docs.docker.com/engine/installation/mac/ 
        
