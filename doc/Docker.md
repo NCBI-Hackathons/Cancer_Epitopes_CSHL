@@ -24,7 +24,7 @@ To build the image, you will need the **Dockerfile** which is also part of our g
 So, you can either build it after going into the corresponding directory:
  
        cd  Cancer_Epitopes_CSHL/
-       docker build -t ncbihackathon/immunogenicity . 
+       docker build -t ncbihackathon/immsnp . 
 
 Or just define the path to the directory containing the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile):
 
