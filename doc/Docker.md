@@ -24,9 +24,9 @@ Note: You have to be in the same directory where our Cancer_Epitopes_CSHL
        cd  Cancer_Epitopes_CSHL/
        docker build -t ncbihackathon/immunogenicity . 
 
-Another way to build the image is: 
+Another way to build the image is to hand over a path to the directory where the **Dockerfile** is :
 
-       docker build -t ncbihackathon/immunogenicity Cancer_Epitopes_CSHL/Dockerfile 
+       docker build -t ncbihackathon/immunogenicity    Cancer_Epitopes_CSHL/
 
 
 5) Check if the build was successful 
