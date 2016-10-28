@@ -5,7 +5,7 @@ Here are some notes how to use docker, and how to work with it.
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
 Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline that we developed during the hackathon. 
 
-## How to run the immunogenicity docker image on Mac OS X 
+## How to run the immuSNP docker image on Mac OS X 
 
 1) Download + install the Mac OS X docker app 
 
@@ -17,7 +17,7 @@ To build the image, you will need the **Dockerfile** which is also part of our g
 
        git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL 
 
-3) Run **docker build** 
+3) Build the docker image
 
 `docker build` needs to know where the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile) is.
 
