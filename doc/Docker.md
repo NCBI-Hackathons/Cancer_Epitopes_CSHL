@@ -86,25 +86,7 @@ At first, create a file called **Dockerfile** and add this :
 You find various example docker files on www.dockerhub.com, for specific use cases.
 For example, search for a docker-image for **VEP** or **BWA**.
 
-### Create / build your docker image
-We build a docker image from your Docker file. 
-
-       sudo docker build -t ncbihackathon/immsnp .
-
-       docker pull tweep/immunogenicity
-
-
-## Now start docker image :  
-
-
-       sudo docker build -t ncbihackathon/immsnp . 
-
-       sudo docker run -i -t ncbihackathon/immsnp    
-
-       sudo docker run ncbihackathon/immsnp -h 
-
-
-## I sometimes see this Error msg: 
+### I sometimes see this Error msg: 
 
      docker build -t bla Dockerfile
      FATA[0000] The Dockerfile (Dockerfile) must be within the build context (Dockerfile)
@@ -113,17 +95,12 @@ We build a docker image from your Docker file.
      FATA[0000] Get http:///var/run/docker.sock/v1.18/info: dial unix /var/run/docker.sock: permission denied. 
      Are you trying to connect to a TLS-enabled daemon
 
-### Solution  
+#### Solution  
 
 	 sudo usermod -aG docker devsci7 
 	 sudo usermod -aG docker devsci8 
 	 sudo usermod -aG docker devsci9 
-	 sudo usermod -aG docker devsci10
-
-## Build a Docker image  
-- Write a file called Dockerfile 
-  (you seei examples on dockerhub) 
-- then run docker build in the dircetory where the Dockefile is. 
+	 sudo usermod -aG docker devsci10 
 
 sudo docker build -t ncbihackathon/immsnp . "
 
