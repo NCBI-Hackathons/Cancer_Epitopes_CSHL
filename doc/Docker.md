@@ -56,9 +56,17 @@ Check this, e.g., via `pwd`:
 
 	$ pwd
 	/home/linuxbrew
-       cd $HOME; 
-#         ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/test_data/input.vcf
 	
+### Run the immSNP pipeline
+
+Within the docker image, type:
+
+       cd $HOME
+       ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/data/test_data/input.vcf
+
+You should see some messages that indicate that the pipeline is running.
+Most likely it will look something like that:
+![testresult](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/testresult.png)
 
 ### Stop the container 
 
