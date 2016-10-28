@@ -1,13 +1,10 @@
-
-## Notes how to use Docker 
-
 Here are some notes how to use docker, and how to work with it. 
 The main idea of Docker, as far as I understand it, is to create "containers" for commands or programs. 
 Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline that we developed during the hackathon. 
 
-## How to run the immuSNP docker image on Mac OS X 
+## How to run the immuSNP docker image 
 
-### Download + install the Mac OS X docker app 
+### Download + install the Mac OS X [or whatever is appropriate for your OS] docker app 
 
        https://docs.docker.com/engine/installation/mac/ 
        
@@ -27,7 +24,7 @@ To build the image, you will need the **Dockerfile** which is also part of our g
 So, you can either build it after going into the corresponding directory:
  
        cd  Cancer_Epitopes_CSHL/
-       docker build -t ncbihackathon/immunogenicity . 
+       docker build -t ncbihackathon/immsnp . 
 
 Or just define the path to the directory containing the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile):
 
@@ -44,21 +41,32 @@ This step will take a couple of minutes.
 List all docker images: 
 
        docker images 
+       
+You should see something like that:
+![dockimage](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/dockresult.png)
 
-### Run the docker image **i**nteractively 
+### Run the docker image _i_nteractively 
 
-This starts the docker image and let's you "jump" directly into the container: 
+The following command starts the docker image and let's you "jump" directly into the container: 
 
-       sudo docker run -i -t ncbihackathon/immsnp    
+       docker run -i -t ncbihackathon/immsnp    
 
 ### List all running docker containers 
 
+Open a different terminal session, then type:
+
        docker ps 
 
-### Stop a container 
+### Stop the container 
 
-      docker stop  ncbihackathon/immsnp
+Most docker containers can be stopped so:
 
+	exit
+      	docker stop <IMAGE-TAG>
+
+In our case, the docker image will stop as soon as you type `exit`, so need for the `docker stop` command.
+
+------------------------------------------------------------------------------
 
 ## Additional docker notes...
 
