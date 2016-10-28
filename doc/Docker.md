@@ -7,17 +7,20 @@ Here, we have build a Docker container that bundles the wrappers and tools neede
 
 ## How to run the immuSNP docker image on Mac OS X 
 
-1) Download + install the Mac OS X docker app 
+### Download + install the Mac OS X docker app 
 
        https://docs.docker.com/engine/installation/mac/ 
+       
+If Docker is up and running, you should see the Docker icon.
+![icon](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/dockrun.png)
 
-2) Clone the immSNP github repo 
+### Clone the immSNP github repo 
 
 To build the image, you will need the **Dockerfile** which is also part of our github repo. 
 
        git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL 
 
-3) Build the docker image
+### Build the docker image
 
 `docker build` needs to know where the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile) is.
 
@@ -26,54 +29,62 @@ So, you can either build it after going into the corresponding directory:
        cd  Cancer_Epitopes_CSHL/
        docker build -t ncbihackathon/immunogenicity . 
 
-Another way to build the image is to define the path to the directory containing the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile):
+Or just define the path to the directory containing the [Dockerfile](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/Dockerfile):
 
        docker build -t ncbihackathon/immsnp  Cancer_Epitopes_CSHL/
 
 The `-t` option will define the repository name to be applied to the resulting image in case of success [1](https://www.mankier.com/1/docker-build). 
 
-5) Check if the build was successful 
+This step will take a couple of minutes.
+
+![dockinstall.png](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/dockinstall.png)
+
+### Check if the build was successful 
 
 List all docker images: 
 
        docker images 
 
+### Run the docker image **i**nteractively 
 
-4) Run the docker image **i**nteractively 
 This starts the docker image and let's you "jump" directly into the container: 
 
        sudo docker run -i -t ncbihackathon/immsnp    
 
-5) List all running docker containers 
+### List all running docker containers 
 
        docker ps 
 
-6) Stop a container 
+### Stop a container 
 
       docker stop  ncbihackathon/immsnp
 
 
 ## Additional docker notes...
-Additional notes below - here's also the [docker manpage](https://www.mankier.com/1/docker) which has some useful info. 
-## Run a docker from dockerhub 
+
+Additional notes below - here's also the [docker manpage](https://www.mankier.com/1/docker) which has lots of useful tips and trick and comprehensive Docker documentation. 
+
+### Run a docker from dockerhub 
+
 Download the BWA docker, and then you can run BWA (BWA runs in docker container) 
 
-     sudo docker pull alexcoppe/bwa  
-     sudo docker run alexcoppe/bwa -help
+     docker pull alexcoppe/bwa  
+     docker run alexcoppe/bwa -help
 
 Well done - you ran alexcoppes BWA docker image. You can run bwa with this command:  
 
-     sudo docker run alexcoppe/bwa -help
+     docker run alexcoppe/bwa -help
 
-### How to start with Docker... 
+### How to make your own Docker instance 
+
 At first, create a file called **Dockerfile** and add this : 
 
 	cat Dockerfile 
 	FROM continuumio/miniconda
 	MAINTAINER Michael Heuer <heuermh@acm.org>
 
-You find various example docker files on www.dockerhub.com, for specific use cases. For example,
-search for a docker-image for **VEP** or **BWA**.
+You find various example docker files on www.dockerhub.com, for specific use cases.
+For example, search for a docker-image for **VEP** or **BWA**.
 
 ### Create / build your docker image
 We build a docker image from your Docker file. 
