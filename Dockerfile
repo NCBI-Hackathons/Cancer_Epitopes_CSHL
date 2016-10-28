@@ -5,7 +5,7 @@ MAINTAINER Jan Vogel <jan.vogelde@gmail.com>
 
 USER root
 RUN apt-get update && apt-get install -y \
-curl g++ gawk git m4 make patch ruby tcl  libarchive-zip-perl  libdbd-mysql-perl  libjson-perl cmake
+curl g++ gawk git m4 make patch ruby tcl bzip2 libarchive-zip-perl  libdbd-mysql-perl  libjson-perl cmake libncurses5-dev
 
 RUN apt-get install -y build-essential default-jdk gfortran texinfo unzip samtools \
 	libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev libmysqlclient-dev
@@ -28,6 +28,16 @@ RUN brew tap homebrew/science \
 USER root
 RUN pip install git+https://github.com/FRED-2/Fred2
 RUN pip install docopt numpy pyomo pysam matplotlib tables  pandas  future 
+
+# FROM https://hub.docker.com/r/ljishen/samtools/~/dockerfile/
+ENV SAMTOOLS_VERSION 1.3.1
+WORKDIR /root
+RUN mkdir samtools \
+    && curl -fsSL https://github.com/samtools/samtools/releases/download/$SAMTOOLS_VERSION/samtools-$SAMTOOLS_VERSION.tar.bz2 \
+        | tar -jxC samtools --strip-components=1
+
+WORKDIR /root/samtools
+RUN ./configure && make all all-htslib && make install install-htslib
 
 # FRED 2  
 RUN apt-get update && apt-get install -y vim software-properties-common \
@@ -81,6 +91,8 @@ RUN ["/bin/bash","-c","source activate python3;  pip install numpy pandas pvacse
 
 ENV PATH /home/linuxbrew/Cancer_Epitopes_CSHL/src:/usr/local/bin/OptiType/:$PATH
 
+# Clean Up
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #USER linuxbrew
 RUN cd /home/linuxbrew && git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
