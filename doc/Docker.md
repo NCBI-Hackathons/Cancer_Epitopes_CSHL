@@ -61,7 +61,7 @@ Check this, e.g., via `pwd`:
 
 Within the docker image, type:
 
-       cd $HOME
+       cd /home/linuxbrew/
        ./Cancer_Epitopes_CSHL/bin/test.sh Cancer_Epitopes_CSHL/data/test_data/input.vcf
 
 You should see some messages that indicate that the pipeline is running.
