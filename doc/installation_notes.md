@@ -1,11 +1,13 @@
 Installation notes
 ================================
 
+__Content__
 
 * [Python](#python)
 * [Variant Effect Predictor (VEP)](#VEP)
 * [FRED2 dependencies](#fred2)
 
+====================================================
 
 Python 2.7 and 3 packages <a name="python"></a>
 --------------------------
