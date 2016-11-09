@@ -12,7 +12,7 @@ Arguments:
 
 Options:
   --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:
-                             --allleles="B*27:20,B*83:01,A*32:15"
+                             --alleles="B*27:20,B*83:01,A*32:15"
 """
 
 # read in the vcf file
