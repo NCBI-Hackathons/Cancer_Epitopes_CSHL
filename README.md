@@ -10,9 +10,17 @@ Goal: given an SRA ID, prioritize and quantify variants with respect to immunoge
 
 -------------------------
 
+1. [Annotate VCF](#anno)
+2. [Extract peptide sequences](#pvac)
+3. [Define sample's MHC alleles](#mhc)
+4. [Collect MHC-peptide affinity predictions](#fred2)
+5. [Add our own classifier score](#new)
 
+![workflow](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/Workflow.png)
 
-### 1) Annotate RNAseq VCF 
+-------------------------
+
+## 1) Annotate RNAseq VCF <a name="anno"></a> 
  
     nohup  variant_effect_predictor.pl \
        --input_file /home/data/vcf/hisat_tags_output_SRR1616919.sorted.vcf  \
@@ -24,8 +32,12 @@ Goal: given an SRA ID, prioritize and quantify variants with respect to immunoge
              --output_file /home/data/imm/hisat_tags_output_SRR1616919.sorted.annotated.vcf  & 
 
 
-### 2a) Generate FASTA with pVACSeq and write to csv
+## 2a) Generate FASTA with `pVACSeq` and write to csv <a name="pvac"></a> 
 
+The genome information stored in the vcf file need to be translated into corresponding peptide sequences.
+For this, we use parts of `pVacSeq`, which generates a csv file with 21-mers surrounding the mutation (both, WT and mutant form)
+
+```
     cd $HOME  
     git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
  
@@ -33,9 +45,9 @@ Goal: given an SRA ID, prioritize and quantify variants with respect to immunoge
     
     cd $HOME/Cancer_Epitopes_CSHL/src   
     python -c 'import generate_fasta; generate_fasta.generate_fasta_dataframe("/home/devsci7/test.output.2", "/home/devsci7/step2.csv", 21,9)'  
+```
 
-
-### 2b) Define MHC locus for HLA genotyping
+### 2b) Define MHC locus for HLA genotyping <a name="mhc"></a> 
 
 Tools for HLA genotyping typically re-align the raw reads in order to identify the HLA type from RNA-seq.
 To obtain the reads roughly aligned to these genes we need to define the region and specify it during the alignment process.
@@ -47,54 +59,50 @@ These reads are then re-aligned and analyzed by [OptiType](http://dx.doi.org/10.
         -r NC_000006.12:29600000-33500000 -o test --path /opt/samtools/1.3.1/bin/
 
 
-### 3) Compute immunogenicity for each peptide 
+### 3) Compute immunogenicity for each peptide <a name="fred2"></a> 
 
-Run the script: `src/imm_predict/fred2_allele_prediction.py`. 
+Run the script: `src/imm_predict/fred2_allele_prediction.py` to compute the MHC binding affinity predictions for each reference and alternative allele.   
 
-Example:
+#### Example
 
 ```bash
 python2 ./src/imm_predict/fred2_allele_prediction.py \
         ./pvacseq_table.csv ./variant_immunogenicity.csv
 ```
 
-Documentation:
+#### Usage
 
 ```
-Compute the predictions for a reference and alternative allele                                           
-                                                                                                       
-Usage:                                                                                                 
        fred2_allele_prediction.py [--alleles=<alleles_list>] FILE_IN FILE_OUT                          
        fred2_allele_prediction.py -h | --help                                                          
-                                                                                                       
-Arguments:                                                                                             
-  FILE_IN      Input csv file                                                                          
-  FILE_OUT     Output csv file                                                                         
-                                                                                                       
-Options:                                                                                               
-  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:                 
-                             --allleles="B*27:20,B*83:01,A*32:15"     
+                                                         
 ```
 
-### Compute the background protein immunogenicity
+| Argument | Explanation |
+|----------|-------------|
+| FILE IN (req.)  | Input csv file with... ??? |
+| FILE OUT (req.) | Name for output csv file |                                                                         
+| alleles | Comma separated list of target alleles, e.g., `--alleles="B*27:20,B*83:01,A*32:15" ` [Default: use all] |                             
 
-Given a FASTA file with all human proteins, compute the  immunogenicity for all posible 9-mer peptides.  
+
+#### Compute the background protein immunogenicity [optional]
+
+> This needs some discussion and perhaps work?
+
+
+Given a FASTA file with all human proteins, compute the  immunogenicity for all posible 9-mer peptides. 
+
+**NOTE**: This will take a very long time to compute! 
                    
 Script: `src/imm_predict/fred2_background.py`. 
 
-#### Usage:  
+##### Usage:  
 
 ```                                                                                               
        fred2_background.py [--alleles=<alleles_list> --top_N=N] FILE_IN FILE_OUT                       
        fred2_background.py -h | --help   
 ```
 
-#### Example:
-
-```bash
-python2 ./src/imm_predict/fred2_background.py \
-        ./Homo_sapiens.GRCh38.pep.all.fixheader.fa ./background_peptides.csv
-```
 
 | Argument | Explanation |
 |----------|-------------|
@@ -104,8 +112,20 @@ python2 ./src/imm_predict/fred2_background.py \
 | alleles | Comma separated list of target alleles, e.g., `--alleles="B*27:20,B*83:01,A*32:15" ` [Default: use all] |                
 
 
+##### Example:
+
+```bash
+python2 ./src/imm_predict/fred2_background.py \
+        ./Homo_sapiens.GRCh38.pep.all.fixheader.fa ./background_peptides.csv
+```
+
+
 ### Copy file over ????
 
     cp  /home/devsci7/step2.fasta   /home/data/imm 
 
 
+## 4. Add additional score <a name="new"></a> 
+
+* based on difference mut/WT
+* classifier learnt on peptides with reported immunogenic cancer neoantigens (WT sequences without immunogenicity)
