@@ -1,4 +1,4 @@
-# Cancer_Epitopes_CSHL
+# Cancer Epitopes CSHL
 
 ## Plan
 
@@ -17,6 +17,13 @@ Goal: given an SRA ID, prioritize and quantify variants with respect to immunoge
 5. [Add our own classifier score](#new)
 
 ![workflow](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/images/Workflow.png)
+
+More info:
+
+* [Meaning of the different immunogenicity scores returned by FRED2](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/ig_scores.md)
+* [How to run and work with the Docker image](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/Docker.md)
+* [Notes on individual installations](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/installation_notes.md)
+
 
 -------------------------
 
