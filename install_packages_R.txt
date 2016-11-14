@@ -1,0 +1,7 @@
+googlesheets
+dplyr
+data.table
+ggplot2
+tidyr
+magrittr
+stringdist
