@@ -138,3 +138,5 @@ python2 ./src/imm_predict/fred2_background.py \
 
 * based on difference mut/WT
 * classifier learnt on peptides with reported immunogenic cancer neoantigens (WT sequences without immunogenicity)
+
+[Collection of training sets](https://docs.google.com/spreadsheets/d/1zE5Hkxpjl9jVeJWD1OwyvBBlzsAM3xNAUOh42JoVs7g/edit?usp=sharing)
