@@ -108,3 +108,4 @@ HSP70-2,SLFEGIDIYT,NA,SLFEGIDFYT,"Gaudin et al., 1999 (http://www.jimmunol.org/c
 HHAT,FLEGNEVGKTY,NA,FLGGNEVGKTY,"Kawagami et al., 2001  (http://www.jimmunol.org/content/166/4/2871.long)",HLA-A*01,MHC _Class_I,immune_response,NA,TIL1362 secreted high amounts of IFN-γ when stimulated with COS cells transfected with both the 8B6 fragment and HLA-A1 cDNA,NA
 N-ras,ILDTAGREEY,NA,ILDTAGQEEY,"Linard et al., 2002 (http://www.jimmunol.org/content/168/9/4802.long)",HLA-A*01:01,MHC _Class_I,immune_response,NA,induce specific CTL expansion from PBL,NA
 Prdx5,LLLDDLLVSI,NA,LLLDDSLVSI,"Sensi et al., 2005 (http://cancerres.aacrjournals.org/content/65/2/632.long)",HLA-A*02:01,MHC _Class_I,immune_response,NA,T cell recognition,NA
+NFYC,QQITKTEV,NA,QQITQTEV,"Takenoyama et al., 2006 (http://onlinelibrary.wiley.com/doi/10.1002/ijc.21594/full)",HLA-B*52:01,NA,NA,NA,CTL recognition,NA

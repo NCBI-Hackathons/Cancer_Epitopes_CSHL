@@ -41,6 +41,9 @@ dt_ctrain_binder_vs_nbinder <- ctrain %>% gs_read(ws = 2, verbose = FALSE) %>% a
 ##'
 ##' ### training_sets.xlsx
 
+##' Consider only non NA sequences with unique rows
+dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[!is.na(wt_sequence) & !is.na(mutant_sequence)] %>% unique
+
 ##' Both have to have the same length
 dt_ctrain_m_vs_wt[, nchar(mutant_sequence) != nchar(wt_sequence)] %>% sum
 dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[nchar(mutant_sequence) == nchar(wt_sequence)]
@@ -48,9 +51,6 @@ dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[nchar(mutant_sequence) == nchar(wt_sequen
 ##' It should be a single-nucleotide substitution SNV (they should differ only at one base)
 dt_ctrain_m_vs_wt[,stringdist(mutant_sequence, wt_sequence)] %>% table(useNA = "always")
 dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[stringdist(mutant_sequence, wt_sequence) == 1 ]
-
-##' Only non NA sequences with unique rows
-dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[!is.na(wt_sequence) & !is.na(mutant_sequence)] %>% unique
 
 ##'
 ##' ## Exploratory analysis
