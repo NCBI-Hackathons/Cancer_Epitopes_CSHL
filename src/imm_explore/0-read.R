@@ -66,7 +66,7 @@ dt_ctrain_m_vs_wt[wt_sequence %in% wt_sequence[duplicated(wt_sequence)]]
 
 ##'
 ##' - All are binders, immune_response
-dt_ctrain_m_vs_wt[, .(binder, type)] %>% table(useNA = "always")
+dt_ctrain_m_vs_wt[, .(binding_to)] %>% table(useNA = "always")
 
 ##' - Number of peptides with the concentration value
 dt_ctrain_m_vs_wt[, is.na(concentration_nM)] %>% table(useNA = "always")

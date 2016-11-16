@@ -1,111 +1,163 @@
-gene,mutant_sequence,concentration_nM,wt_sequence,reference,allele,binding_to,type,binder,identified_by,X11
-CSNK1A1,GLFGDIYLA,6,GSFGDIYLA,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0406,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-CSNK1A1,GLFGDIYLAI,12,GSFGDIYLAI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0407,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-GAS7,SLADEAEVYL,12,SLADEAEVHL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0408,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-HAUS3,ILNAMIAKI,34,ILNAMITKI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0409,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-PLEKHM2,LTDDRLFTCY,3,LTDDRLFTCH,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0410,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-PPP1R3B,YTDFHCQYV,49,YTDFPCQYV,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0411,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-PPP1R3B,YTDFHCQYVK,100,YTDFPCQYVK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0412,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-MATN2,KTLTSVFQK,5,ETLTSVFQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0413,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-MATN2,KTLTSVFQKK,9,ETLTSVFQKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0414,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-CDK12,CILGKLFTK,33,CILGELFTK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0415,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-CDK12,CILGKLFTKK,45,CILGELFTKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0416,MHC _Class_I,immune_response,yes,IFNgamma release,NA
-CDKNA2,KMIGNHLWV,3.18 (logIC50),EMIGNHLWV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-TKT,AMFWSVPTV,2.35 (logIC50),AMFRSVPTV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-TMEM48,CLNEYHLFL,3.09 (logIC50),CLNEYHLFF,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-AKAP13,KLMNIQQKL,3.07 (logIC50),KLMNIQQQL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-OR8B3,QLSCISTYV,3.10 (logIC50),QLSCTSTYV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-SEC24A,FLYNLLTRV,2.6 (logIC50),FLYNPLTRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-EXOC8,IILVAVPHV,3.6 (logIC50),IILVAVQHV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-MRPS5,HLYASLSRV,3.28 (logIC50),HPYASLSRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-PABC1,MLGEQLFPL,2.35 (logIC50),MLGERLFPL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,immune_response,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-CASP8,ELLVRINRL,60.55,ELLFRINRL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B08:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-KRAS,GADGVGKSAL,445.13,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*05:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-KRAS,GADGVGKSAL,747.54,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*08:02,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-SKIV2L,MLFSHGLVK,6.96,MLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-SKIV2L,EMLFSHGLVK,314.13,EMLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-API5,RLLQCTQQAV,36.48,RLLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-API5,LLQCTQQAV,63.06,LLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-PHLPP1,ILCETCLIV,76.48,ILCGTCLIV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-ZFYVE27,EHEGSGPEL,1874.13,EREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-ZFYVE27,SEHEGSGPEL,3279.14,SEREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,immune_response,yes,reactive in co-culture experiments; IFNgamma release,NA
-BCL2A1,DYLQYVLQI,NA,DYLQCVLQI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*24:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-CTSH,ATLPLLCAR,NA,ATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*31:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-CTSH,WATLPLLCAR,NA,WATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*33:03,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-DPH1,SVLPEVDVW,NA,SLLPEVDVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*57:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-HMHA1,VLHDDLLEA,NA,VLRDDLLEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-MYO1G,YIGEVLVSV,NA,YIGEVLVSM,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-AKAP13,VTEPGTAQY,NA,VMEPGTAQY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-KIAA0020,RTLDKVLEV,NA,PTLDKVLEV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-HMHB1,EEKRGSLHVW,NA,EEKRGSLYVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-HEATR1,ISKERAEAL,NA,ISKERAGAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-C19ORF48,CIPPDSLLFPA,NA,CIPPDTLLFPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-TOR3A,SVAPALALFPA,NA,SVAPALALSPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-ARHGDIB,LPRACWREA,NA,LPRACWPEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-BCAT2,QPRRALLFVIL,NA,QPTRALLFVIL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-C16ORF,RPCPSVGLSFL,NA,WPCPSVGLSFL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-C19ORF48,TAWPGAPEV,NA,TAWPGAPGV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*51:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-CCL4,CADPSETWV,NA,CADPSESWV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-CLYBL,SLAAYIPRL,NA,SLAADIPRL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-CYBA,STMERWGQKY,NA,STMERWGQKH,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-C*03:03,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-EBI3,RPRARYYIQV,NA,RPRARYYVQV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-TYMP,RPHAIRRPLAL,NA,RPRAIRRPLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-ERAP1,HPRQEQIAL,NA,HPPQEQIAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-ERAP1,HPRQEQIALLA,NA,HPPQEQIALLA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-FUCA2,RLRQVGSWL,NA,RLRQMGSWL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-GLE1,GQVRLRALY,NA,GQIRLRALY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*15:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-GSTP1,DLRCKYVSL,NA,DLRCKYISL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-MOB3A,CPRPGTWTC,NA,SPRPGTWTC,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-NCAPD3,WLQGVVPVV,NA,WLRGVVPVV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-NDC80,HLEEQIPKV,NA,HLEEQIAKV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-NUP133,SEDLILCRL,NA,SEDLILCQL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-OAS1,ETDDPRRYQKY,NA,ETDDPRTYQKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-PDCD11,GPDSSKTFLCL,NA,GPDSSKTLLCL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-PFAS,APGHTRRKL,NA,ASGHTRRKL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-PNP,TQAQIFDYSEI,NA,TQAQIFDYGEI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*13:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-PRCP,FMWDVAEDLKA,NA,FMWDVAEELKA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-SON,SETKQRTVL,NA,SETKQCTVL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-SRGN,ESSVQGYPTRR,NA,ESSVQGYPTQR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*68:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-SWAP70,MEQLEQLEL,NA,MEQLEELEL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-TMEM8A,RPRSVTIQPLL,NA,RPRSVTVQPLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",BHLA-*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-TTK,RLHDGRVFV,NA,RLHEGRVFV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-USP15,MPSHLRNILL,NA,MPSHLRNTLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-WNK1,RTLSPEIITV,NA,RTLSPEMITV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-ZDHHC6,RPRYWILLVKI,NA,RPRHWILLVKI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-ZNFX1,NEIEDVWQLDL,NA,NEIEDVWHLDL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-P2RX7,WFHHCHPKY,NA,WFHHCRPKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*29:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-SLC1A5,AEATANGGLAL,NA,AEPTANGGLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:02,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-SP110,SLPRGTSTPK,NA,SLPGGTSTPK,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*03:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-KIAA1551,QLLNSVLTL,NA,QLPNSVLTL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,immune_response,yes,identified as natural T-cell ligands by forward approaches,NA
-MED15,DANSFLQSV,10,DANPFLQSV,"Kalaora et al., 2016 (10.18632/oncotarget.6960)",HLA-B*51:01,MHC _Class_I,immune_response,yes,IFNgamma production,NA
-SIRT2,KIFSEVTLK,NA,KIFSEVTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,immune_response,yes,NA,NA
-GPNMB,TLDWLLQTPK,NA,TLGWLLQTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,immune_response,yes,NA,NA
-SNRP116,KILDAVVAQK,NA,KILDAVVAQE,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,immune_response,yes,NA,NA
-RBAF600,RPHVPESAF,NA,GPHVPESAF,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*07021,MHC _Class_I,immune_response,yes,NA,NA
-SNRPD1,SHETVIIEL,NA,SHETVTIEL,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*3801,MHC _Class_I,immune_response,yes,NA,NA
-MUM-3,EAFIQPITR,NA,EASIQPITR,"Baurain et al., 2000 (10.4049/​jimmunol.164.11.6057 )",HLA-A*28012,MHC _Class_I,immune_response,yes,T cell stimulation,NA
-TRAPPC1,SELFRSGLDSY,NA,SELFRSRLDSY,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-B*44,NA,immune_response,yes,T cell stimulation,NA
-TRAPPC1,FRSGLDSYV,NA,FRSRLDSYV,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-Cw*6,NA,immune_response,yes,T cell stimulation,NA
-CLPP,ILDKVLVHL,NA,ILDKVLVHP,"Corbiere et al., 2011 (10.1158/0008-5472.CAN-10-2693)",HLA-A*2,MHC _Class_I,immune_response,yes,sensitize HLA-A2+ EBV-transformed B cells to lysis by CTL,NA
-MUM-1,EEKLIVVLF,NA,EEKLSVVLF,"Coulie et al., 1995 (http://www.pnas.org/content/92/17/7976.long)",HLA-B*44:02,MHC _Class_I,immune_response,yes,sensitize HLA-B44+ B cells to lysis by CTL,NA
-K-ras,VVVGAVGVG,NA,VVVGAGGVG,"Gjertsen et al., 1997 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0215(19970904)72:5%3C784::AID-IJC14%3E3.0.CO;2-9/epdf)",HLA-B*35,MHC _Class_I,immune_response,yes,lysis by CTL,NA
-LPGAT1,AEPINIQTW,NA,AEPIDIQTW,"Gueguen et al., 1998 (http://www.jimmunol.org/content/160/12/6188.long)",HLA-B*44:03,MHC _Class_I,immune_response,yes,lysis by CTL,NA
-MYO1B,KINKNPKYK,5,EINKNPKYK,"Zorn, Hercend, 1999 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1521-4141(199902)29:02%3C592::AID-IMMU592%3E3.0.CO;2-2/epdf)",HLA-A*03:01,MHC _Class_I,immune_response,yes,sensitize LCL to lysis by V g 16+T cells,NA
-OS-9,KELEGILLL,NA,KELEGILLP,"Vigneron et al., 2002 (http://cancerimmunolres.aacrjournals.org/content/canimmarch/2/1/9)",HLA-B*440,MHC _Class_I,NA,yes,tested for their ability to sensitize LG2-EBV cells to lysis by anti-LG2-C CTLs,NA
-EEF2,ETVSEQSNV,NA,ETVSEESNV,"Hogan et al., 1998 (https://www.ncbi.nlm.nih.gov/pubmed/9823325)",HLA-A*68:02,MHC _Class_I,immune_response,yes,lysis by CTL,NA
-p53,VVPCEPPEV,NA,VVPYEPPEV,"Ito et al.,  2007 (10.1002/ijc.22584)",HLA-A*0201,MHC _Class_I,immune_response,yes,IFNgamma secretion,"the p53 T150R, V157F and E271K peptides failed ex vivo to yield anti-peptide CD8+ T cell effectors; The p53 mutant S149C and Y220H peptides also appear capable of inducing anti-wt p53 peptide CD8+ T cell effectors"
-ME1,FLDEFMEGV,2,FLDEFMEAV,"Karanikas et al., 2001 (http://cancerres.aacrjournals.org/content/61/9/3718.long)",HLA-A*0201,MHC _Class_I,immune_response,yes,lysis by CTL,NA
-ACTN4,FIASNGVKLV,NA,FIASLGVKLV,"Echchakir et al., 2001 (http://cancerres.aacrjournals.org/content/61/10/4078.long)",HLA-A*02,MHC _Class_I,immune_response,NA,recognition by the CTLs,NA
-HSP70-2,SLFEGIDIYT,NA,SLFEGIDFYT,"Gaudin et al., 1999 (http://www.jimmunol.org/content/162/3/1730.long)",HLA-A*02:01,MHC _Class_I,immune_response,NA,stimulate TNF release,NA
-HHAT,FLEGNEVGKTY,NA,FLGGNEVGKTY,"Kawagami et al., 2001  (http://www.jimmunol.org/content/166/4/2871.long)",HLA-A*01,MHC _Class_I,immune_response,NA,TIL1362 secreted high amounts of IFN-γ when stimulated with COS cells transfected with both the 8B6 fragment and HLA-A1 cDNA,NA
-N-ras,ILDTAGREEY,NA,ILDTAGQEEY,"Linard et al., 2002 (http://www.jimmunol.org/content/168/9/4802.long)",HLA-A*01:01,MHC _Class_I,immune_response,NA,induce specific CTL expansion from PBL,NA
-Prdx5,LLLDDLLVSI,NA,LLLDDSLVSI,"Sensi et al., 2005 (http://cancerres.aacrjournals.org/content/65/2/632.long)",HLA-A*02:01,MHC _Class_I,immune_response,NA,T cell recognition,NA
-NFYC,QQITKTEV,NA,QQITQTEV,"Takenoyama et al., 2006 (http://onlinelibrary.wiley.com/doi/10.1002/ijc.21594/full)",HLA-B*52:01,NA,NA,NA,CTL recognition,NA
+gene,mutant_sequence,concentration_nM,wt_sequence,reference,allele,binding_to,immune_response,binder,identified_by,X11
+CSNK1A1,GLFGDIYLA,6,GSFGDIYLA,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0406,MHC _Class_I,yes,yes,IFNgamma release,NA
+CSNK1A1,GLFGDIYLAI,12,GSFGDIYLAI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0407,MHC _Class_I,yes,yes,IFNgamma release,NA
+GAS7,SLADEAEVYL,12,SLADEAEVHL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0408,MHC _Class_I,yes,yes,IFNgamma release,NA
+HAUS3,ILNAMIAKI,34,ILNAMITKI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0409,MHC _Class_I,yes,yes,IFNgamma release,NA
+PLEKHM2,LTDDRLFTCY,3,LTDDRLFTCH,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0410,MHC _Class_I,yes,yes,IFNgamma release,NA
+PPP1R3B,YTDFHCQYV,49,YTDFPCQYV,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0411,MHC _Class_I,yes,yes,IFNgamma release,NA
+PPP1R3B,YTDFHCQYVK,100,YTDFPCQYVK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0412,MHC _Class_I,yes,yes,IFNgamma release,NA
+MATN2,KTLTSVFQK,5,ETLTSVFQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0413,MHC _Class_I,yes,yes,IFNgamma release,NA
+MATN2,KTLTSVFQKK,9,ETLTSVFQKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0414,MHC _Class_I,yes,yes,IFNgamma release,NA
+CDK12,CILGKLFTK,33,CILGELFTK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0415,MHC _Class_I,yes,yes,IFNgamma release,NA
+CDK12,CILGKLFTKK,45,CILGELFTKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0416,MHC _Class_I,yes,yes,IFNgamma release,NA
+CDKNA2,KMIGNHLWV,3.18 (logIC50),EMIGNHLWV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+TKT,AMFWSVPTV,2.35 (logIC50),AMFRSVPTV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+TMEM48,CLNEYHLFL,3.09 (logIC50),CLNEYHLFF,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+AKAP13,KLMNIQQKL,3.07 (logIC50),KLMNIQQQL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+OR8B3,QLSCISTYV,3.10 (logIC50),QLSCTSTYV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+SEC24A,FLYNLLTRV,2.6 (logIC50),FLYNPLTRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+EXOC8,IILVAVPHV,3.6 (logIC50),IILVAVQHV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+MRPS5,HLYASLSRV,3.28 (logIC50),HPYASLSRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+PABC1,MLGEQLFPL,2.35 (logIC50),MLGERLFPL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
+CASP8,ELLVRINRL,60.55,ELLFRINRL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B08:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+KRAS,GADGVGKSAL,445.13,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*05:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+KRAS,GADGVGKSAL,747.54,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*08:02,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+SKIV2L,MLFSHGLVK,6.96,MLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+SKIV2L,EMLFSHGLVK,314.13,EMLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+API5,RLLQCTQQAV,36.48,RLLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+API5,LLQCTQQAV,63.06,LLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+PHLPP1,ILCETCLIV,76.48,ILCGTCLIV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+ZFYVE27,EHEGSGPEL,1874.13,EREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+ZFYVE27,SEHEGSGPEL,3279.14,SEREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
+BCL2A1,DYLQYVLQI,NA,DYLQCVLQI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*24:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+CTSH,ATLPLLCAR,NA,ATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*31:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+CTSH,WATLPLLCAR,NA,WATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*33:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+DPH1,SVLPEVDVW,NA,SLLPEVDVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*57:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+HMHA1,VLHDDLLEA,NA,VLRDDLLEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+MYO1G,YIGEVLVSV,NA,YIGEVLVSM,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+AKAP13,VTEPGTAQY,NA,VMEPGTAQY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+KIAA0020,RTLDKVLEV,NA,PTLDKVLEV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+HMHB1,EEKRGSLHVW,NA,EEKRGSLYVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+HEATR1,ISKERAEAL,NA,ISKERAGAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+C19ORF48,CIPPDSLLFPA,NA,CIPPDTLLFPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+TOR3A,SVAPALALFPA,NA,SVAPALALSPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+ARHGDIB,LPRACWREA,NA,LPRACWPEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+BCAT2,QPRRALLFVIL,NA,QPTRALLFVIL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+C16ORF,RPCPSVGLSFL,NA,WPCPSVGLSFL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+C19ORF48,TAWPGAPEV,NA,TAWPGAPGV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*51:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+CCL4,CADPSETWV,NA,CADPSESWV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+CLYBL,SLAAYIPRL,NA,SLAADIPRL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+CYBA,STMERWGQKY,NA,STMERWGQKH,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-C*03:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+EBI3,RPRARYYIQV,NA,RPRARYYVQV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+TYMP,RPHAIRRPLAL,NA,RPRAIRRPLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+ERAP1,HPRQEQIAL,NA,HPPQEQIAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+ERAP1,HPRQEQIALLA,NA,HPPQEQIALLA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+FUCA2,RLRQVGSWL,NA,RLRQMGSWL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+GLE1,GQVRLRALY,NA,GQIRLRALY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*15:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+GSTP1,DLRCKYVSL,NA,DLRCKYISL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+MOB3A,CPRPGTWTC,NA,SPRPGTWTC,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+NCAPD3,WLQGVVPVV,NA,WLRGVVPVV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+NDC80,HLEEQIPKV,NA,HLEEQIAKV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+NUP133,SEDLILCRL,NA,SEDLILCQL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+OAS1,ETDDPRRYQKY,NA,ETDDPRTYQKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+PDCD11,GPDSSKTFLCL,NA,GPDSSKTLLCL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+PFAS,APGHTRRKL,NA,ASGHTRRKL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+PNP,TQAQIFDYSEI,NA,TQAQIFDYGEI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*13:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+PRCP,FMWDVAEDLKA,NA,FMWDVAEELKA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+SON,SETKQRTVL,NA,SETKQCTVL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+SRGN,ESSVQGYPTRR,NA,ESSVQGYPTQR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*68:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+SWAP70,MEQLEQLEL,NA,MEQLEELEL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+TMEM8A,RPRSVTIQPLL,NA,RPRSVTVQPLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",BHLA-*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+TTK,RLHDGRVFV,NA,RLHEGRVFV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+USP15,MPSHLRNILL,NA,MPSHLRNTLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+WNK1,RTLSPEIITV,NA,RTLSPEMITV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+ZDHHC6,RPRYWILLVKI,NA,RPRHWILLVKI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+ZNFX1,NEIEDVWQLDL,NA,NEIEDVWHLDL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+P2RX7,WFHHCHPKY,NA,WFHHCRPKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*29:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+SLC1A5,AEATANGGLAL,NA,AEPTANGGLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+SP110,SLPRGTSTPK,NA,SLPGGTSTPK,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*03:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+KIAA1551,QLLNSVLTL,NA,QLPNSVLTL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
+MED15,DANSFLQSV,10,DANPFLQSV,"Kalaora et al., 2016 (10.18632/oncotarget.6960)",HLA-B*51:01,MHC _Class_I,yes,yes,IFNgamma production,NA
+SIRT2,KIFSEVTLK,NA,KIFSEVTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
+GPNMB,TLDWLLQTPK,NA,TLGWLLQTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
+SNRP116,KILDAVVAQK,NA,KILDAVVAQE,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
+RBAF600,RPHVPESAF,NA,GPHVPESAF,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*07021,MHC _Class_I,yes,yes,NA,NA
+SNRPD1,SHETVIIEL,NA,SHETVTIEL,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*3801,MHC _Class_I,yes,yes,NA,NA
+MUM-3,EAFIQPITR,NA,EASIQPITR,"Baurain et al., 2000 (10.4049/​jimmunol.164.11.6057 )",HLA-A*28012,MHC _Class_I,yes,yes,T cell stimulation,NA
+TRAPPC1,SELFRSGLDSY,NA,SELFRSRLDSY,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-B*44,MHC _Class_I,yes,yes,T cell stimulation,NA
+TRAPPC1,FRSGLDSYV,NA,FRSRLDSYV,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-C*6,MHC _Class_I,yes,yes,T cell stimulation,NA
+CLPP,ILDKVLVHL,NA,ILDKVLVHP,"Corbiere et al., 2011 (10.1158/0008-5472.CAN-10-2693)",HLA-A*2,MHC _Class_I,yes,yes,sensitize HLA-A2+ EBV-transformed B cells to lysis by CTL,NA
+MUM-1,EEKLIVVLF,NA,EEKLSVVLF,"Coulie et al., 1995 (http://www.pnas.org/content/92/17/7976.long)",HLA-B*44:02,MHC _Class_I,yes,yes,sensitize HLA-B44+ B cells to lysis by CTL,NA
+K-ras,VVVGAVGVG,NA,VVVGAGGVG,"Gjertsen et al., 1997 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0215(19970904)72:5%3C784::AID-IJC14%3E3.0.CO;2-9/epdf)",HLA-B*35,MHC _Class_I,yes,yes,lysis by CTL,NA
+LPGAT1,AEPINIQTW,NA,AEPIDIQTW,"Gueguen et al., 1998 (http://www.jimmunol.org/content/160/12/6188.long)",HLA-B*44:03,MHC _Class_I,yes,yes,lysis by CTL,NA
+MYO1B,KINKNPKYK,5,EINKNPKYK,"Zorn, Hercend, 1999 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1521-4141(199902)29:02%3C592::AID-IMMU592%3E3.0.CO;2-2/epdf)",HLA-A*03:01,MHC _Class_I,yes,yes,sensitize LCL to lysis by V g 16+T cells,NA
+OS-9,KELEGILLL,NA,KELEGILLP,"Vigneron et al., 2002 (http://cancerimmunolres.aacrjournals.org/content/canimmarch/2/1/9)",HLA-B*440,MHC _Class_I,yes,yes,tested for their ability to sensitize LG2-EBV cells to lysis by anti-LG2-C CTLs,NA
+EEF2,ETVSEQSNV,NA,ETVSEESNV,"Hogan et al., 1998 (https://www.ncbi.nlm.nih.gov/pubmed/9823325)",HLA-A*68:02,MHC _Class_I,yes,yes,lysis by CTL,NA
+p53,VVPCEPPEV,NA,VVPYEPPEV,"Ito et al.,  2007 (10.1002/ijc.22584)",HLA-A*0201,MHC _Class_I,yes,yes,IFNgamma secretion,"the p53 T150R, V157F and E271K peptides failed ex vivo to yield anti-peptide CD8+ T cell effectors; The p53 mutant S149C and Y220H peptides also appear capable of inducing anti-wt p53 peptide CD8+ T cell effectors"
+ME1,FLDEFMEGV,2,FLDEFMEAV,"Karanikas et al., 2001 (http://cancerres.aacrjournals.org/content/61/9/3718.long)",HLA-A*0201,MHC _Class_I,yes,yes,lysis by CTL,NA
+ACTN4,FIASNGVKLV,NA,FIASLGVKLV,"Echchakir et al., 2001 (http://cancerres.aacrjournals.org/content/61/10/4078.long)",HLA-A*02,MHC _Class_I,yes,NA,recognition by the CTLs,NA
+HSP70-2,SLFEGIDIYT,NA,SLFEGIDFYT,"Gaudin et al., 1999 (http://www.jimmunol.org/content/162/3/1730.long)",HLA-A*02:01,MHC _Class_I,yes,NA,stimulate TNF release,NA
+HHAT,FLEGNEVGKTY,NA,FLGGNEVGKTY,"Kawagami et al., 2001  (http://www.jimmunol.org/content/166/4/2871.long)",HLA-A*01,MHC _Class_I,yes,NA,TIL1362 secreted high amounts of IFN-γ when stimulated with COS cells transfected with both the 8B6 fragment and HLA-A1 cDNA,NA
+N-ras,ILDTAGREEY,NA,ILDTAGQEEY,"Linard et al., 2002 (http://www.jimmunol.org/content/168/9/4802.long)",HLA-A*01:01,MHC _Class_I,yes,NA,induce specific CTL expansion from PBL,NA
+Prdx5,LLLDDLLVSI,NA,LLLDDSLVSI,"Sensi et al., 2005 (http://cancerres.aacrjournals.org/content/65/2/632.long)",HLA-A*02:01,MHC _Class_I,yes,NA,T cell recognition,NA
+NFYC,QQITKTEV,NA,QQITQTEV,"Takenoyama et al., 2006 (http://onlinelibrary.wiley.com/doi/10.1002/ijc.21594/full)",HLA-B*52:01,MHC _Class_I,yes,NA,CTL recognition,NA
+HSDL,CYMEAVAL,NA,CYMEALAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,yes,NA,CTL recognition,NA
+CDK4,ACDPHSGHFV,NA,ARDPHSGHFV,"Wolfel et al., 1995 (http://science.sciencemag.org/content/269/5228/1281.full.pdf+html)",HLA-A*2,MHC _Class_I,yes,immune_response,CTL recognition,NA
+ATR,KLYEEPLLK,NA,KLYEEPLSK,"van Rooij et al., 2013 (http://ascopubs.org/doi/full/10.1200/JCO.2012.47.7521)",HLA-A*03:01,MHC _Class_I,yes,NA,T cell recognition,NA
+GAPDH,GIVEGLITTV,NA,GIVEGLMTTV,"Zhou et al., 2005 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2175172/)",HLA-A*02:01,MHC _Class_I,yes,NA,T cell recognition,NA
+KIAA1440,QTACEVLDY,NA,QTTCEVLDY,"Zhou et al., 2005 (http://cancerres.aacrjournals.org/content/65/3/1079?ijkey=80d7823264de4bb00a0aebcf1952b70f216be77d&keytype2=tf_ipsecsha)",HLA-A*01:01,MHC _Class_I,yes,NA,TNFalpha release,NA
+CSNK1A1,FQLNQSFEI,NA,SQLNQSFEI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+UNC13A,RMLDKNPEV,NA,RMLDKNPES,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+CAMKK2,HLMDGDLGL,NA,NLMDGDLGL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+WDR47,MLFLRFCYI,NA,MLFLRFRYI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+BRCA2,YLTSLACVEI,NA,YPTSLACVEI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+RRP1B,LLADQNFKFI,NA,LLADQNLKFI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+HAUS3,AMIAKISNEL,NA,AMITKISNEL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+NOTCH2,ALGTLLHTNV,NA,ALGTLLHTNL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+UNC13A,SVVDVFFQL,NA,SVVDVFSQL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+PLCB1,FSDKKVGTY,NA,LSDKKVGTY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+HEG1,HSEYSSFFY,NA,HSEYSSFFH,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+BAI3,CSNFLLLAY,NA,CSNFSLLAY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+UEVLD,FTGTISVMY,NA,FTGTIPVMY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+TBRG4,ATALLEYLEY,NA,ATALLEYPEY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+LRP2,WADWGHRTY,NA,WADWGHRAY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+RNPEP,VSDGFTAVM,NA,VPDGFTAVM,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
+MUC16,STFFLAHGLK,NA,STFSLAHGLK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+SALL1,MTFLGGNLVK,NA,MTFLGGNPVK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+CUL3,MSFYLREQGK,NA,MSSYLREQGK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+CUL3,KTMCECMSFY,NA,KTMCECMSSY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+SELPLG,VVLAVRLSCK,NA,VVLAVRLSRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+ATP10D,ASLDGASLEK,NA,ASPDGASLEK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+NBAS,QALRFYDYK,NA,QALRFHDYK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+AMPH,KTLKINEVK,NA,KTLKINEVE,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+KIN,AIANRIKFK,NA,AIANRIKSK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+ZNF266,HTAKDSFECK,NA,HTAKDPFECK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+KIN,KAIANRIKFK,NA,KAIANRIKSK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+ZNF667,RIHTSAKPYK,NA,RIHTSEKPYK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+AMPH,KINEVKTRK,NA,KINEVETRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+BCL11A,SLSPIEMKK,NA,SPSPIEMKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+ZNF644,KMTVVILQK,NA,KMTVVVLQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+SCG2,DVFKVIAYLK,NA,DVSKVIAYLK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+FAM19A5,QTACCACRK,NA,QTARCACRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+SALL1,LVKFPEMFQK,NA,PVKFPEMFQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
+LARP7,AVIDAYTEI,NA,AVINAYTEI,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,6,NA,NA
+MRPS17,VLLRALPVL,NA,VLLRALPVP,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,5,NA,NA
+SMOX,KLANPLPYT,NA,KLAKPLPYT,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,131,NA,NA
+SRP9,IMAHCILDL,NA,IIAHCILDL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,0,NA,NA
+ARFGEF1,FVSALCMFL,NA,FVSALRMFL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+HSD17B7,YISKCWDYA,NA,YISKCWDHA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+PRKCDBP,CLFPQTLAA,NA,CLSPQTLAA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+UTRN,QLDKCSAFV,NA,QLDQCSAFV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+ARFGEF1,QTIDNIVFL,NA,QTIDNIVFF,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+GPX8,LLSIVPCTV,NA,LLSIVLCTV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+KDM1B,IIGAGPAEL,NA,IIGAGPAGL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+PHKA2,LLSIIFFPA,NA,LLSIISFPA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
+NA,ACEVLDYFLR,NA,TCEVLDYFLR,"Zhou et al., 2005 (http://cancerres.aacrjournals.org/content/65/3/1079?ijkey=80d7823264de4bb00a0aebcf1952b70f216be77d&keytype2=tf_ipsecsha)",HLA-A*01:01,MHC _Class_I,no,NA,NA,NA
