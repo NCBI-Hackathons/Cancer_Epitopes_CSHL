@@ -3,7 +3,7 @@ How to run the immSNP docker image
 
 Here are some notes how to use docker, and how to work with it. 
 The main idea of Docker is to create "containers" that contain the environment to run certain commands or programs. 
-Here, we have build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline.
+Here, we provide a Dockerfile that you can use to build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline.
 
 1. [Install Docker](#inst)
 2. [Download Dockerfile (and other scripts)](#git)
