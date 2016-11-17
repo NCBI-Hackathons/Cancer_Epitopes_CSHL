@@ -62,7 +62,7 @@ You should see something like that:
 
 ## 4. Run the Docker image interactively <a name="dock"></a>
 
-The following command starts the Docker image and let's you "jump" directly into the container: 
+The following command starts the Docker image and lets you "jump" directly into the container: 
 
        docker run -i -t ncbihackathon/immsnp    # -t again is used to refer to the specific docker container for immSNP
 
