@@ -16,7 +16,8 @@ Arguments:
 # """
 
 # read in the vcf file
-import sys, os
+import sys
+import os
 sys.path.append("/home/avsec/Cancer_Epitopes_CSHL/src")
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../")
 from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
@@ -36,6 +37,8 @@ if __name__ == "__main__":
     if not file_in:
         file_in = os.path.expanduser("~/Cancer_Epitopes_CSHL/data/immunogenic_SNVs-training_sets.csv")
     file_out = arguments["--output"]
+    if not file_out:
+        file_out = os.path.expanduser("~/Cancer_Epitopes_CSHL/data/immunogenic_SNVs-model_data.csv")
 
     dt = pd.read_csv(file_in)
     dt = dt[dt["mutant_sequence"].notnull() & dt["wt_sequence"].notnull()]
@@ -43,14 +46,14 @@ if __name__ == "__main__":
 
     all_peptides = dt["mutant_sequence"].append(dt["wt_sequence"]).unique()
     peptides = [Peptide(peptide) for peptide in all_peptides]
-    
-    dt["allele"] = dt["allele"].str.replace("\*","").\
-                   str.replace(":","").\
-                   str.replace("(-[a-zA-Z]+)([0-9]{2})([0-9]{2})","\\1*\\2:\\3").\
-                   str.replace("w","").\
-                   str.replace("HLA-","")
 
-    # TODO 
+    dt["allele"] = dt["allele"].str.replace("\*", "").\
+        str.replace(":", "").\
+        str.replace("(-[a-zA-Z]+)([0-9]{2})([0-9]{2})", "\\1*\\2:\\3").\
+        str.replace("w", "").\
+        str.replace("HLA-", "")
+
+    # TODO
     # dt.rename(columns = {"Sequence": "peptide"}, inplace = True)
     alleles = []
     valid_alleles = []
@@ -65,9 +68,8 @@ if __name__ == "__main__":
 
     # subset invalid allele names
     dt = dt[pd.Series(valid_alleles)]
-        
 
-    res = fred2wrap.predict_peptide_effects(peptides, alleles = dt["allele"].unique().tolist())
+    res = fred2wrap.predict_peptide_effects(peptides, alleles=dt["allele"].unique().tolist())
     res["peptide"] = [peptide.tostring() for peptide in res["peptide"]]
     res["allele"] = [str(allele) for allele in res["allele"]]
 
@@ -75,14 +77,14 @@ if __name__ == "__main__":
     res = res.pivot_table(index=["peptide", "allele"],
                           columns='method',
                           values='score').reset_index(None)
-    
-    dt_merge = pd.merge(dt, res,
-                        left_on =["mutant_sequence", "allele"],
-                        right_on =["peptide", "allele"], how = "left")
-    dt_merge = pd.merge(dt_merge, res,
-                        left_on =["wt_sequence", "allele"],
-                        right_on =["peptide", "allele"], how = "left",
-                        suffixes=('_mutant', '_wt')
-    )
 
-    dt_merge.to_csv(file_out, index = False)
+    dt_merge = pd.merge(dt, res,
+                        left_on=["mutant_sequence", "allele"],
+                        right_on=["peptide", "allele"], how="left")
+    dt_merge = pd.merge(dt_merge, res,
+                        left_on=["wt_sequence", "allele"],
+                        right_on=["peptide", "allele"], how="left",
+                        suffixes=('_mutant', '_wt')
+                        )
+
+    dt_merge.to_csv(file_out, index=False)

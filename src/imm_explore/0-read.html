@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Explore the cancer immunity data (training_sets.xlsx)</h1>
 <h4 class="author"><em>Žiga Avsec</em></h4>
-<h4 class="date"><em>Mon Nov 14 23:14:50 2016</em></h4>
+<h4 class="date"><em>Mon Nov 21 22:33:37 2016</em></h4>
 
 </div>
 
@@ -126,21 +126,22 @@ $(document).ready(function () {
 <div id="read-in-all-the-google-sheets-data" class="section level2">
 <h2>Read in all the google sheets data</h2>
 <pre class="r"><code>(my_sheets &lt;- gs_ls())</code></pre>
-<pre><code>## # A tibble: 32 × 10
+<pre><code>## Source: local data frame [33 x 10]
+## 
 ##                 sheet_title        author  perm version             updated sheet_key
-##                       &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;              &lt;dttm&gt;     &lt;chr&gt;
-## 1        training_sets.xlsx susanna.sieb…    rw     new 2016-11-14 22:08:37 1zE5Hkxp…
-## 2      cancer_immunity.xlsx susanna.sieb…    rw     new 2016-11-14 22:10:16 1KdK0_8c…
-## 3   Copy of Explore example     zigaavsec    rw     new 2016-11-14 20:32:32 1qVCIozY…
-## 4         Teamausgaben.xlsx suggestio.te…    rw     new 2016-10-25 17:09:43 1QR5jpZ-…
-## 5         TUM_VK_Muster.xls    gagneurlab    rw     new 2016-10-14 11:35:30 1Igt4LYE…
-## 6    Rooms QBM Retreat 2016    qbm.office    rw     new 2016-10-10 09:11:34 1U6_bEmM…
-## 7     V1_Hypothesen_Dominik       mato12t    rw     new 2016-07-14 10:05:25 1aFGyfch…
-## 8             test_loop.csv suggestio.te…    rw     new 2016-06-28 06:13:12 1fovEuk-…
-## 9          test_loop(1).csv suggestio.te…    rw     new 2016-06-28 06:13:07 1Yd4UoHh…
-## 10 newspread - queue eine … suggestio.te…    rw     new 2016-06-28 06:09:44 1CVC8GG0…
-## # ... with 22 more rows, and 4 more variables: ws_feed &lt;chr&gt;, alternate &lt;chr&gt;, self &lt;chr&gt;,
-## #   alt_key &lt;chr&gt;</code></pre>
+##                       (chr)         (chr) (chr)   (chr)              (time)     (chr)
+## 1        training_sets.xlsx susanna.sieb…    rw     new 2016-11-21 19:38:04 1zE5Hkxp…
+## 2  QBM Christmas Party 2016 lilalinda.kr…    rw     new 2016-11-21 17:17:54 1KQxggrC…
+## 3         Teamausgaben.xlsx suggestio.te…    rw     new 2016-11-18 17:07:46 1QR5jpZ-…
+## 4      cancer_immunity.xlsx susanna.sieb…    rw     new 2016-11-14 22:45:42 1KdK0_8c…
+## 5   Copy of Explore example     zigaavsec    rw     new 2016-11-14 20:32:32 1qVCIozY…
+## 6         TUM_VK_Muster.xls    gagneurlab    rw     new 2016-10-14 11:35:30 1Igt4LYE…
+## 7    Rooms QBM Retreat 2016    qbm.office    rw     new 2016-10-10 09:11:34 1U6_bEmM…
+## 8     V1_Hypothesen_Dominik       mato12t    rw     new 2016-07-14 10:05:25 1aFGyfch…
+## 9             test_loop.csv suggestio.te…    rw     new 2016-06-28 06:13:12 1fovEuk-…
+## 10         test_loop(1).csv suggestio.te…    rw     new 2016-06-28 06:13:07 1Yd4UoHh…
+## ..                      ...           ...   ...     ...                 ...       ...
+## Variables not shown: ws_feed (chr), alternate (chr), self (chr), alt_key (chr)</code></pre>
 <ul>
 <li>cancer_immunity.xlsx</li>
 </ul>
@@ -173,8 +174,8 @@ dt_cim &lt;- cim %&gt;% gs_read(ws = 1, verbose = FALSE) %&gt;% as.data.table</c
 <p>It should be a single-nucleotide substitution SNV (they should differ only at one base)</p>
 <pre class="r"><code>dt_ctrain_m_vs_wt[,stringdist(mutant_sequence, wt_sequence)] %&gt;% table(useNA = &quot;always&quot;)</code></pre>
 <pre><code>## .
-##    1    3 &lt;NA&gt; 
-##  110    1    0</code></pre>
+##    0    1    3 &lt;NA&gt; 
+##    1  281    1    0</code></pre>
 <pre class="r"><code>dt_ctrain_m_vs_wt &lt;- dt_ctrain_m_vs_wt[stringdist(mutant_sequence, wt_sequence) == 1 ]</code></pre>
 </div>
 </div>
@@ -186,12 +187,12 @@ dt_cim &lt;- cim %&gt;% gs_read(ws = 1, verbose = FALSE) %&gt;% as.data.table</c
 <pre class="r"><code>dt_ctrain_m_vs_wt[, mutant_sequence] %&gt;% nchar %&gt;% table(useNA = &quot;always&quot;)</code></pre>
 <pre><code>## .
 ##    8    9   10   11 &lt;NA&gt; 
-##    1   64   28   17    0</code></pre>
+##   21  127   78   55    0</code></pre>
 <ul>
 <li>Number of unique sequences:</li>
 </ul>
 <pre class="r"><code>dt_ctrain_m_vs_wt %&gt;% uniqueN</code></pre>
-<pre><code>## [1] 110</code></pre>
+<pre><code>## [1] 281</code></pre>
 <ul>
 <li>Duplicated sequneces</li>
 </ul>
@@ -207,96 +208,100 @@ dt_cim &lt;- cim %&gt;% gs_read(ws = 1, verbose = FALSE) %&gt;% as.data.table</c
 ##  8:    DHX33       YLYEGGISC               NA   YLYEGGISR van der Lee et al., 2016 ... HLA-C*03:03
 ##  9:   GEMIN4       FPALRFVEV               NA   FPALRFVEE van der Lee et al., 2016 ... HLA-B*07:02
 ## 10:   GEMIN4       FPALRFVEV               NA   FPALRFVEE van der Lee et al., 2016 ... HLA-B*08:01
-##       binding_to            type binder                identified_by X11
-##  1: MHC _Class_I immune_response    yes reactive in co-culture ex...  NA
-##  2: MHC _Class_I immune_response    yes reactive in co-culture ex...  NA
-##  3: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  4: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  5: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  6: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  7: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  8: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-##  9: MHC _Class_I immune_response    yes identified as natural T-c...  NA
-## 10: MHC _Class_I immune_response    yes identified as natural T-c...  NA</code></pre>
+##       binding_to immune_response binder                identified_by X11
+##  1: MHC _Class_I             yes    yes reactive in co-culture ex...  NA
+##  2: MHC _Class_I             yes    yes reactive in co-culture ex...  NA
+##  3: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  4: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  5: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  6: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  7: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  8: MHC _Class_I             yes    yes identified as natural T-c...  NA
+##  9: MHC _Class_I             yes    yes identified as natural T-c...  NA
+## 10: MHC _Class_I             yes    yes identified as natural T-c...  NA</code></pre>
 <ul>
 <li>All are binders, immune_response</li>
 </ul>
-<pre class="r"><code>dt_ctrain_m_vs_wt[, .(binder, type)] %&gt;% table(useNA = &quot;always&quot;)</code></pre>
-<pre><code>##       type
-## binder immune_response &lt;NA&gt;
-##   yes              103    1
-##   &lt;NA&gt;               5    1</code></pre>
+<pre class="r"><code>dt_ctrain_m_vs_wt[, .(binding_to)] %&gt;% table(useNA = &quot;always&quot;)</code></pre>
+<pre><code>## .
+## MHC _Class_I         &lt;NA&gt; 
+##          281            0</code></pre>
 <ul>
 <li>Number of peptides with the concentration value</li>
 </ul>
 <pre class="r"><code>dt_ctrain_m_vs_wt[, is.na(concentration_nM)] %&gt;% table(useNA = &quot;always&quot;)</code></pre>
 <pre><code>## .
 ## FALSE  TRUE  &lt;NA&gt; 
-##    33    77     0</code></pre>
+##   152   129     0</code></pre>
 <ul>
 <li>Number of different publications/data-sources</li>
 </ul>
 <pre class="r"><code>dt_ctrain_m_vs_wt[, .N, by = reference][order(-N)]</code></pre>
-<pre><code>##                        reference  N
-##  1: van der Lee et al., 2016 ... 56
-##  2: Robbins et al., 2013 (dx.... 11
-##  3: Tran et al., 2015 (10.112... 10
-##  4: Carreno et al., 2015 (dx....  9
-##  5: Lennerz et al., 2005 (10....  5
-##  6: Chiari et al., 1999 (http...  2
-##  7: Kalaora et al., 2016 (10....  1
-##  8: Baurain et al., 2000 (10....  1
-##  9: Corbiere et al., 2011 (10...  1
-## 10: Coulie et al., 1995 (http...  1
-## 11: Gjertsen et al., 1997 (ht...  1
-## 12: Gueguen et al., 1998 (htt...  1
-## 13: Zorn, Hercend, 1999 (http...  1
-## 14: Vigneron et al., 2002 (ht...  1
-## 15: Hogan et al., 1998 (https...  1
-## 16: Ito et al.,  2007 (10.100...  1
-## 17: Karanikas et al., 2001 (h...  1
-## 18: Echchakir et al., 2001 (h...  1
-## 19: Gaudin et al., 1999 (http...  1
-## 20: Kawagami et al., 2001  (h...  1
-## 21: Linard et al., 2002 (http...  1
-## 22: Sensi et al., 2005 (http:...  1
-## 23: Takenoyama et al., 2006 (...  1
-##                        reference  N</code></pre>
+<pre><code>##                        reference   N
+##  1: Wick et al., 2014 (http:/... 120
+##  2: van der Lee et al., 2016 ...  56
+##  3: Robbins et al., 2013 (dx....  45
+##  4: Carreno et al., 2015 (dx....  21
+##  5: Tran et al., 2015 (10.112...  10
+##  6: Lennerz et al., 2005 (10....   5
+##  7: Chiari et al., 1999 (http...   2
+##  8: Zhou et al., 2005 (http:/...   2
+##  9: Kalaora et al., 2016 (10....   1
+## 10: Baurain et al., 2000 (10....   1
+## 11: Corbiere et al., 2011 (10...   1
+## 12: Coulie et al., 1995 (http...   1
+## 13: Gjertsen et al., 1997 (ht...   1
+## 14: Gueguen et al., 1998 (htt...   1
+## 15: Zorn, Hercend, 1999 (http...   1
+## 16: Vigneron et al., 2002 (ht...   1
+## 17: Hogan et al., 1998 (https...   1
+## 18: Ito et al.,  2007 (10.100...   1
+## 19: Karanikas et al., 2001 (h...   1
+## 20: Echchakir et al., 2001 (h...   1
+## 21: Gaudin et al., 1999 (http...   1
+## 22: Kawagami et al., 2001  (h...   1
+## 23: Linard et al., 2002 (http...   1
+## 24: Sensi et al., 2005 (http:...   1
+## 25: Takenoyama et al., 2006 (...   1
+## 26: Wolfel et al., 1995 (http...   1
+## 27: van Rooij et al., 2013 (h...   1
+## 28: Zhou et al., 2005 (https:...   1
+##                        reference   N</code></pre>
 <ul>
 <li>Identified by</li>
 </ul>
 <pre class="r"><code>dt_ctrain_m_vs_wt[, .N, by = identified_by][order(-N)]</code></pre>
-<pre><code>##                    identified_by  N
-##  1: identified as natural T-c... 56
-##  2:             IFNgamma release 11
-##  3: reactive in co-culture ex... 10
-##  4: HLA-A*02:01/AAS-peptide d...  9
-##  5:                           NA  5
-##  6:                 lysis by CTL  4
-##  7:           T cell stimulation  3
-##  8:          IFNgamma production  1
-##  9: sensitize HLA-A2+ EBV-tra...  1
-## 10: sensitize HLA-B44+ B cell...  1
-## 11: sensitize LCL to lysis by...  1
-## 12: tested for their ability ...  1
-## 13:           IFNgamma secretion  1
-## 14:      recognition by the CTLs  1
-## 15:        stimulate TNF release  1
-## 16: TIL1362 secreted high amo...  1
-## 17: induce specific CTL expan...  1
-## 18:           T cell recognition  1
-## 19:              CTL recognition  1</code></pre>
+<pre><code>##                    identified_by   N
+##  1:                           NA 171
+##  2: identified as natural T-c...  56
+##  3:             IFNgamma release  11
+##  4: reactive in co-culture ex...  10
+##  5: HLA-A*02:01/AAS-peptide d...   9
+##  6:                 lysis by CTL   4
+##  7:           T cell stimulation   3
+##  8:           T cell recognition   3
+##  9:              CTL recognition   3
+## 10:          IFNgamma production   1
+## 11: sensitize HLA-A2+ EBV-tra...   1
+## 12: sensitize HLA-B44+ B cell...   1
+## 13: sensitize LCL to lysis by...   1
+## 14: tested for their ability ...   1
+## 15:           IFNgamma secretion   1
+## 16:      recognition by the CTLs   1
+## 17:        stimulate TNF release   1
+## 18: TIL1362 secreted high amo...   1
+## 19: induce specific CTL expan...   1
+## 20:             TNFalpha release   1</code></pre>
 <ul>
 <li>Binding to</li>
 </ul>
 <pre class="r"><code>dt_ctrain_m_vs_wt[, .N, by = binding_to][order(-N)]</code></pre>
 <pre><code>##      binding_to   N
-## 1: MHC _Class_I 107
-## 2:           NA   3</code></pre>
+## 1: MHC _Class_I 281</code></pre>
 </div>
 <div id="save-the-model-to-csv" class="section level2">
 <h2>Save the model to csv</h2>
-<pre class="r"><code>write_csv(dt_ctrain_m_vs_wt, &quot;data/immunogenic_SNVs-training_sets.csv&quot;)</code></pre>
+<pre class="r"><code>## write_csv(dt_ctrain_m_vs_wt, &quot;data/immunogenic_SNVs-training_sets.csv&quot;)</code></pre>
 </div>
 
 
