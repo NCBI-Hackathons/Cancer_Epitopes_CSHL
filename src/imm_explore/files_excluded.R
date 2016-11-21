@@ -1,6 +1,6 @@
 ctrain <- gs_title("training_sets.xlsx")
 dt_initial <- ctrain %>% gs_read(ws = 1, verbose = FALSE) %>% as.data.table
-dt_final <- fread("~/Cancer_Epitopes_CSHL/data/immunogenic_SNVs-model_data.csv")
+dt_final <- fread("./data/immunogenic_SNVs-model_data.csv")
 
 cols <- c("mutant_sequence", "concentration_nM", "wt_sequence", "reference")
 
