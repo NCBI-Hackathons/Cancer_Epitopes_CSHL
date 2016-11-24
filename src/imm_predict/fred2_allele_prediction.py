@@ -11,8 +11,7 @@ Arguments:
   --output=FILE_OUT     Output csv file
 
 Options:
-  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:
-                             --alleles="B*27:20,B*83:01,A*32:15"
+  --alleles=<alleles_list>   Comma separated list of target alleles (e.g.: B*27:20,B*83:01) [Default use all]
 """
 
 # read in the vcf file
@@ -83,7 +82,7 @@ def window(MT_seq, WT_seq, window_size=5):
     return dt
 
 
-def append_score(dt2):
+def append_score(dt2, alleles):
     """
     Given a choped sequence (output from sliding_window()),
     append the immunogenicity scores
