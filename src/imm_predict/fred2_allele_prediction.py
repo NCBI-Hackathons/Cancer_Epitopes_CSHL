@@ -89,7 +89,7 @@ def append_score(dt2):
     append the immunogenicity scores
     """
     peptides_to_compute = [Peptide(peptide) for peptide in set(list(dt2["MT"]) + list(dt2["WT"]))]
-    res = fred2wrap.predict_peptide_effects(peptides_to_compute)
+    res = fred2wrap.predict_peptide_effects(peptides_to_compute, alleles)
     res["peptide"] = [str(peptide) for peptide in res["peptide"]]
 
     full = pd.merge(dt2, res, how = 'left', left_on = "WT", right_on = "peptide")
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     dt2 = sliding_window(dt, 9)
 
     print("append the immunogenicity score")
-    full = append_score(dt2)
+    full = append_score(dt2, alleles)
 
     print("writing to csv")
     full.to_csv(file_out, index = False)
