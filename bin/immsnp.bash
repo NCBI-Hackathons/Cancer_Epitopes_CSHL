@@ -80,14 +80,15 @@ FRED_PREDICTION=fred_${RANDOM}_variant_immunogenicity.csv
 # Definitions for the Docker image  
 SRC_FOLDER=/home/linuxbrew/Cancer_Epitopes_CSHL/src
 
+ALLELES=`bash ${SRC_FOLDER}/hla_type.sh -b "$BAM" -r chr6:29600000-33500000 -o "$OUT"_hla -ps /root/samtools/ -po /usr/local/bin/OptiType/`
 
 # Use python3 env managed by conda  
 
 source /opt/conda/bin/activate python3 
-python /home/linuxbrew/Cancer_Epitopes_CSHL/src/generate_fasta.py   --input=$INPUT_VCF  --output=$FASTA_OUTPUT --peptide_sequence_length=21
+python ${SRC_FOLDER}/generate_fasta.py --input=$INPUT_VCF --output=$FASTA_OUTPUT --peptide_sequence_length=21
 
 echo "file $FASTA_OUTPUT generated"  
 
-/home/linuxbrew/Cancer_Epitopes_CSHL/src/imm_predict/fred2_allele_prediction.py --input=$FASTA_OUTPUT  --output=${FRED_PREDICTION}
+${SRC_FOLDER}/imm_predict/fred2_allele_prediction.py --input=$FASTA_OUTPUT --output=${FRED_PREDICTION} --alleles=$ALLELES
 
 echo "file $FRED_PREDICTION has been written" 

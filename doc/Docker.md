@@ -126,6 +126,16 @@ Well done - you ran alexcoppes BWA docker image. You can run bwa with this comma
 Open a different terminal session, then type:
 
        docker ps 
+       
+       
+### Remove old containers
+
+    docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
+
+
+### Remove untagged images
+
+    docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
 
 
 ### How to make your own Docker instance 
