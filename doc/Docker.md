@@ -17,9 +17,9 @@ Here, we provide a Dockerfile that you can use to build a Docker container that 
 
 ---------------------------------------------------
 
-## 1. Prerequisite: download + install the Mac OS X [or whatever is appropriate for your set-up] Docker app  <a name="inst"></a>
+## 1. Prerequisite: download + install the Docker app  <a name="inst"></a>
 
-       https://docs.docker.com/engine/installation/mac/ 
+For Mac OS you can find it at [https://docs.docker.com/engine/installation/mac/](https://docs.docker.com/engine/installation/mac/)
        
 If Docker is up and running, you should see the Docker icon:
 
