@@ -92,7 +92,7 @@ Most docker containers can be stopped so:
 
 In our case, the docker image will stop as soon as you type `exit`, so need for the `docker stop` command.
 
-__NOTE: NO CHANGES WILL BE KEPT AFTER YOU EXIT THE DOCKER CONTAINER!__
+__NOTE: NO CHANGES WILL BE KEPT AFTER YOU EXIT THE DOCKER CONTAINER!__ (You can, however, commit the changed container to a new image with `docker commit <container ID> <image-name>` ; [info about image vs. container](http://stackoverflow.com/questions/23735149/docker-image-vs-container))
 
 ---------------------------
 
