@@ -80,12 +80,14 @@ RUN git clone https://github.com/seqan/seqan.git seqan-src \
 RUN conda create --name python3 python=3.5 
 RUN ["/bin/bash","-c","source activate python3;  pip install numpy pandas pvacseq docopt && source deactivate"] 
 
-ENV PATH /home/linuxbrew/Cancer_Epitopes_CSHL/src:/usr/local/bin/OptiType/:$PATH
+ENV PATH /home/immSNP/Cancer_Epitopes_CSHL/src:/usr/local/bin/OptiType/:$PATH
 
 # Clean Up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#USER linuxbrew
-RUN cd /home/linuxbrew && git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
+WORKDIR /root
+RUN mkdir immSNP
+WORKDIR /root/immSNP
+RUN git clone https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL.git
 ENTRYPOINT [ "/usr/bin/tini", "--" ] 
 CMD [ "/bin/bash" ] 
