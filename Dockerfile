@@ -38,8 +38,9 @@ RUN apt-get update && apt-get install -y vim software-properties-common \
 
 #HLA Typing 
 #OptiType dependecies 
-RUN curl -O https://support.hdfgroup.org/ftp/HDF5/current18/bin/linux-centos7-x86_64-gcc485/hdf5-1.8.18-linux-centos7-x86_64-gcc485-shared.tar.gz \
-    && tar -xvf hdf5-*-linux-centos7-x86_64-gcc485-shared.tar.gz \
+WORKDIR /root
+RUN wget https://support.hdfgroup.org/ftp/HDF5/current18/bin/linux-centos7-x86_64-gcc485/hdf5-1.8.18-linux-centos7-x86_64-gcc485-shared.tar.gz
+RUN tar -xvf hdf5-*-linux-centos7-x86_64-gcc485-shared.tar.gz \
     && mv hdf5-*-linux-centos7-x86_64-gcc485-shared/bin/* /usr/local/bin/ \
     && mv hdf5-*-linux-centos7-x86_64-gcc485-shared/lib/* /usr/local/lib/ \
     && mv hdf5-*-linux-centos7-x86_64-gcc485-shared/include/* /usr/local/include/ \
