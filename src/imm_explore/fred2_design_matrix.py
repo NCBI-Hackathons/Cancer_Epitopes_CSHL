@@ -20,6 +20,7 @@ import sys
 import os
 sys.path.append("/home/avsec/Cancer_Epitopes_CSHL/src")
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../")
+sys.path.append("./src/")
 from Fred2.Core import Allele, Peptide, Protein, generate_peptides_from_proteins
 from Fred2.IO import read_lines, read_fasta
 from Fred2.EpitopePrediction import EpitopePredictorFactory
@@ -35,10 +36,10 @@ if __name__ == "__main__":
 
     file_in = arguments["--input"]
     if not file_in:
-        file_in = os.path.expanduser("~/Cancer_Epitopes_CSHL/data/immunogenic_SNVs-training_sets.csv")
+        file_in = os.path.expanduser("data/immunogenic_SNVs-training_sets.csv")
     file_out = arguments["--output"]
     if not file_out:
-        file_out = os.path.expanduser("~/Cancer_Epitopes_CSHL/data/immunogenic_SNVs-model_data.csv")
+        file_out = os.path.expanduser("data/immunogenic_SNVs-model_data.csv")
 
     dt = pd.read_csv(file_in)
     dt = dt[dt["mutant_sequence"].notnull() & dt["wt_sequence"].notnull()]
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     dt = dt[pd.Series(valid_alleles)]
 
     res = fred2wrap.predict_peptide_effects(peptides, alleles=dt["allele"].unique().tolist())
-    res["peptide"] = [peptide.tostring() for peptide in res["peptide"]]
+    res["peptide"] = [str(peptide) for peptide in res["peptide"]]
     res["allele"] = [str(allele) for allele in res["allele"]]
 
     # TODO - change melt order

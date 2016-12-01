@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     file_in = arguments["--input"]
     if not file_in:
-        file_in = os.path.expanduser("~/Cancer_Epitopes_CSHL/data/binders.csv")
+        file_in = "./data/binders.csv"
     file_out = arguments["--output"]
 
     dt = pd.read_csv(file_in)

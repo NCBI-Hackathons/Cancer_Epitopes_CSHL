@@ -130,7 +130,7 @@ def predict_peptide_effects(peptides, alleles=None):
         try:
             results.append(EpitopePredictorFactory(method).predict(peptides, alleles=valid_alleles))
         except:
-            print("Error! Unable to run ", method, ": ", sys.exc_info()[0])
+            print("Error! Unable to run ", method, ": ", sys.exc_info())
         t1 = time.time()
         print("  - runtime: ", str(t1 - t0))
 
