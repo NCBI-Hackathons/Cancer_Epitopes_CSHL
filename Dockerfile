@@ -22,11 +22,9 @@ RUN pip install git+https://github.com/FRED-2/Fred2
 RUN pip install docopt numpy pyomo pysam matplotlib tables  pandas  future 
 
 # FROM https://hub.docker.com/r/ljishen/samtools/~/dockerfile/
-ENV SAMTOOLS_VERSION 1.3.1
 WORKDIR /root
-RUN mkdir samtools \
-    && curl -fsSL https://github.com/samtools/samtools/releases/download/$SAMTOOLS_VERSION/samtools-$SAMTOOLS_VERSION.tar.bz2 \
-        | tar -jxC samtools --strip-components=1
+RUN wget -O "samtools.tar.bz2" https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2 \ 
+    && tar xjf samtools.tar.bz2 && mv samtools-* samtools
 
 WORKDIR /root/samtools
 RUN ./configure && make all all-htslib && make install install-htslib
