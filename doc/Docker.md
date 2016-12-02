@@ -1,9 +1,9 @@
 How to run the immSNP docker image 
 ====================================
 
-Here are some notes how to use docker, and how to work with it. 
-The main idea of Docker is to create "containers" that contain the environment to run certain commands or programs. 
-Here, we provide a Dockerfile that you can use to build a Docker container that bundles the wrappers and tools needed to run the immSNP pipeline.
+Here are some notes how to use `docker`, and how to work with it. 
+The main idea of `docker` is to create "containers" that contain the environment to run certain commands or programs, you can think of it as a lightweight virtual machine.
+Here, we provide a Dockerfile that you can use to build a `docker` container that will contain the wrappers and tools needed to run the immSNP pipeline.
 
 1. [Install Docker](#inst)
 2. [Download Dockerfile (and other scripts)](#git)
@@ -62,7 +62,7 @@ You should see something like that:
 
 ## 4. Run the Docker image interactively <a name="dock"></a>
 
-The following command starts the Docker image and lets you "jump" directly into the container: 
+The following command starts the Docker image and lets you "jump" directly into the container (containers are runtime instances of a docker image): 
 
        docker run -i -t ncbihackathon/immsnp    # -t again is used to refer to the specific docker container for immSNP
 
@@ -90,17 +90,23 @@ Most docker containers can be stopped so:
 	exit
       	docker stop <IMAGE-TAG>
 
-In our case, the docker image will stop as soon as you type `exit`, so need for the `docker stop` command.
+In our case, the docker image will stop as soon as you type `exit`, so no need for the `docker stop` command.
 
 __NOTE: NO CHANGES WILL BE KEPT AFTER YOU EXIT THE DOCKER CONTAINER!__ (You can, however, commit the changed container to a new image with `docker commit <container ID> <image-name>` ; [info about image vs. container](http://stackoverflow.com/questions/23735149/docker-image-vs-container))
 
----------------------------
+	# list existing docker images
+	docker images
+	
+	# list containers
+	docker ps -a
+
+--------------------------------------------------------------
 
 ## Working on the immSNP pipeline <a name="mod"></a>
 
-If you want to modify the immSNP pipeline while being inside the docker image, simply modify the files in the git repo, commit and __push__ changes.
-Then, exit the container (type `exit` or see below) and re-start the container.
-Make sure to pull the updated git repo into the container since the image we built will still have the repo in the state that it was in when we built it.
+If you want to modify the immSNP pipeline while inside the docker container, simply modify the files in the git repo, commit and __push__ changes.
+Then, exit the container (type `exit` or see below) and re-initiate a new container using `docker run -t ncbihackathon/immsnp`.
+Make sure to pull the updated git repo into the container since the image will still have the repo in the state that it was in when you first built it.
 
 If you wanted to add permanent changes to the immSNP Docker container (e.g., installing a new program), these would have to be defined within the Dockerfile.
 
