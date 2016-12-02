@@ -10,6 +10,7 @@ curl g++ gawk git m4 make patch ruby tcl bzip2 libarchive-zip-perl  libdbd-mysql
 RUN apt-get install -y build-essential default-jdk gfortran texinfo unzip \
 	libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev libmysqlclient-dev
 
+# Variant effect predictor
 RUN conda install variant-effect-predictor -c bioconda
 WORKDIR /root
 RUN mkdir -p .vep/Plugins
@@ -17,11 +18,7 @@ WORKDIR /root/.vep/Plugins
 RUN wget https://raw.githubusercontent.com/griffithlab/pVAC-Seq/master/pvacseq/VEP_plugins/Wildtype.pm
 RUN wget https://raw.githubusercontent.com/Ensembl/VEP_plugins/release/86/Downstream.pm
 
-USER root
-RUN pip install git+https://github.com/FRED-2/Fred2
-RUN pip install docopt numpy pyomo pysam matplotlib tables  pandas  future 
-
-# FROM https://hub.docker.com/r/ljishen/samtools/~/dockerfile/
+# samtools
 WORKDIR /root
 RUN wget -O "samtools.tar.bz2" https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2 \ 
     && tar xjf samtools.tar.bz2 && mv samtools-* samtools
@@ -35,6 +32,9 @@ RUN apt-get update && apt-get install -y vim software-properties-common \
     gcc-4.9 g++-4.9 coinor-cbc \
 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9 \
 && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get purge 
+USER root
+RUN pip install git+https://github.com/FRED-2/Fred2
+RUN pip install docopt numpy pyomo pysam matplotlib tables  pandas  future 
 
 #HLA Typing 
 #OptiType dependecies 
