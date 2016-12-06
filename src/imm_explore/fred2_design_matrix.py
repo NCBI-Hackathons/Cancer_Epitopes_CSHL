@@ -3,7 +3,7 @@
 Generate the design matrix
 
 Usage:
-       fred2_design_matrix.py --input=FILE_IN --output=FILE_OUT
+       fred2_design_matrix.py [--input=FILE_IN --output=FILE_OUT]
        fred2_design_matrix.py -h | --help
 
 Arguments:
