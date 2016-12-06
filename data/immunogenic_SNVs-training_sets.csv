@@ -1,282 +1,285 @@
-gene,mutant_sequence,concentration_nM,wt_sequence,reference,allele,binding_to,immune_response,binder,identified_by,X11
-CSNK1A1,GLFGDIYLA,6,GSFGDIYLA,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0406,MHC _Class_I,yes,yes,IFNgamma release,NA
-CSNK1A1,GLFGDIYLAI,12,GSFGDIYLAI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0407,MHC _Class_I,yes,yes,IFNgamma release,NA
-GAS7,SLADEAEVYL,12,SLADEAEVHL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0408,MHC _Class_I,yes,yes,IFNgamma release,NA
-HAUS3,ILNAMIAKI,34,ILNAMITKI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0409,MHC _Class_I,yes,yes,IFNgamma release,NA
-PLEKHM2,LTDDRLFTCY,3,LTDDRLFTCH,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0410,MHC _Class_I,yes,yes,IFNgamma release,NA
-PPP1R3B,YTDFHCQYV,49,YTDFPCQYV,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0411,MHC _Class_I,yes,yes,IFNgamma release,NA
-PPP1R3B,YTDFHCQYVK,100,YTDFPCQYVK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0412,MHC _Class_I,yes,yes,IFNgamma release,NA
-MATN2,KTLTSVFQK,5,ETLTSVFQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0413,MHC _Class_I,yes,yes,IFNgamma release,NA
-MATN2,KTLTSVFQKK,9,ETLTSVFQKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0414,MHC _Class_I,yes,yes,IFNgamma release,NA
-CDK12,CILGKLFTK,33,CILGELFTK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0415,MHC _Class_I,yes,yes,IFNgamma release,NA
-CDK12,CILGKLFTKK,45,CILGELFTKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-Cw*0416,MHC _Class_I,yes,yes,IFNgamma release,NA
-CDKNA2,KMIGNHLWV,3.18 (logIC50),EMIGNHLWV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-TKT,AMFWSVPTV,2.35 (logIC50),AMFRSVPTV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-TMEM48,CLNEYHLFL,3.09 (logIC50),CLNEYHLFF,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-AKAP13,KLMNIQQKL,3.07 (logIC50),KLMNIQQQL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-OR8B3,QLSCISTYV,3.10 (logIC50),QLSCTSTYV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-SEC24A,FLYNLLTRV,2.6 (logIC50),FLYNPLTRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-EXOC8,IILVAVPHV,3.6 (logIC50),IILVAVQHV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-MRPS5,HLYASLSRV,3.28 (logIC50),HPYASLSRV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-PABC1,MLGEQLFPL,2.35 (logIC50),MLGERLFPL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,yes,yes,HLA-A*02:01/AAS-peptide dextramer assay,NA
-CASP8,ELLVRINRL,60.55,ELLFRINRL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*08:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-KRAS,GADGVGKSAL,445.13,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*05:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-KRAS,GADGVGKSAL,747.54,GAGGVGKSAL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-C*08:02,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-SKIV2L,MLFSHGLVK,6.96,MLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-SKIV2L,EMLFSHGLVK,314.13,EMLFSRGLVK,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*03:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-API5,RLLQCTQQAV,36.48,RLLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-API5,LLQCTQQAV,63.06,LLQCTRQAV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-PHLPP1,ILCETCLIV,76.48,ILCGTCLIV,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-A*02:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-ZFYVE27,EHEGSGPEL,1874.13,EREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-ZFYVE27,SEHEGSGPEL,3279.14,SEREGSGPEL,"Tran et al., 2015 (10.1126/science.aad1253)",HLA-B*38:01,MHC _Class_I,yes,yes,reactive in co-culture experiments; IFNgamma release,NA
-BCL2A1,DYLQYVLQI,NA,DYLQCVLQI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*24:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-BCL2A1,KEFEDDIINW,NA,KEFEDGIINW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-CTSH,ATLPLLCAR,NA,ATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*31:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-CTSH,WATLPLLCAR,NA,WATLPLLCAG,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*33:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-DPH1,SVLPEVDVW,NA,SLLPEVDVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*57:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-HMHA1,VLHDDLLEA,NA,VLRDDLLEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-MYO1G,YIGEVLVSV,NA,YIGEVLVSM,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-AKAP13,VTEPGTAQY,NA,VMEPGTAQY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-KIAA0020,RTLDKVLEV,NA,PTLDKVLEV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-HMHB1,EEKRGSLHVW,NA,EEKRGSLYVW,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*44:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-HEATR1,ISKERAEAL,NA,ISKERAGAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-C19ORF48,CIPPDSLLFPA,NA,CIPPDTLLFPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-TOR3A,SVAPALALFPA,NA,SVAPALALSPA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-APOBEC3B,KPQYHAEMCF,NA,EPQYHAEMCF,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-ARHGDIB,LPRACWREA,NA,LPRACWPEA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-BCAT2,QPRRALLFVIL,NA,QPTRALLFVIL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-C16ORF,RPCPSVGLSFL,NA,WPCPSVGLSFL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-C19ORF48,TAWPGAPEV,NA,TAWPGAPGV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*51:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-CCL4,CADPSETWV,NA,CADPSESWV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-CLYBL,SLAAYIPRL,NA,SLAADIPRL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-CYBA,STMERWGQKY,NA,STMERWGQKH,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-DHX33,YLYEGGISC,NA,YLYEGGISR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-C*03:03,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-EBI3,RPRARYYIQV,NA,RPRARYYVQV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-TYMP,RPHAIRRPLAL,NA,RPRAIRRPLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-ERAP1,HPRQEQIAL,NA,HPPQEQIAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-ERAP1,HPRQEQIALLA,NA,HPPQEQIALLA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-FUCA2,RLRQVGSWL,NA,RLRQMGSWL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-GEMIN4,FPALRFVEV,NA,FPALRFVEE,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-GLE1,GQVRLRALY,NA,GQIRLRALY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*15:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-GSTP1,DLRCKYVSL,NA,DLRCKYISL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*08:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-MOB3A,CPRPGTWTC,NA,SPRPGTWTC,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-NCAPD3,WLQGVVPVV,NA,WLRGVVPVV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-NDC80,HLEEQIPKV,NA,HLEEQIAKV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-NUP133,SEDLILCRL,NA,SEDLILCQL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-OAS1,ETDDPRRYQKY,NA,ETDDPRTYQKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*01:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-PDCD11,GPDSSKTFLCL,NA,GPDSSKTLLCL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-PFAS,APGHTRRKL,NA,ASGHTRRKL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-PNP,TQAQIFDYSEI,NA,TQAQIFDYGEI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*13:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-PRCP,FMWDVAEDLKA,NA,FMWDVAEELKA,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-SON,SETKQRTVL,NA,SETKQCTVL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-SRGN,ESSVQGYPTRR,NA,ESSVQGYPTQR,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*68:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-SWAP70,MEQLEQLEL,NA,MEQLEELEL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-TMEM8A,RPRSVTIQPLL,NA,RPRSVTVQPLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",BHLA-*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-TTK,RLHDGRVFV,NA,RLHEGRVFV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-USP15,MPSHLRNILL,NA,MPSHLRNTLL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-WNK1,RTLSPEIITV,NA,RTLSPEMITV,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-ZDHHC6,RPRYWILLVKI,NA,RPRHWILLVKI,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*07:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-ZNFX1,NEIEDVWQLDL,NA,NEIEDVWHLDL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-P2RX7,WFHHCHPKY,NA,WFHHCRPKY,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*29:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-SLC1A5,AEATANGGLAL,NA,AEPTANGGLAL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-B*40:02,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-SP110,SLPRGTSTPK,NA,SLPGGTSTPK,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*03:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-KIAA1551,QLLNSVLTL,NA,QLPNSVLTL,"van der Lee et al., 2016 (10.1371/journal.pone.0162808)",HLA-A*02:01,MHC _Class_I,yes,yes,identified as natural T-cell ligands by forward approaches,NA
-MED15,DANSFLQSV,10,DANPFLQSV,"Kalaora et al., 2016 (10.18632/oncotarget.6960)",HLA-B*51:01,MHC _Class_I,yes,yes,IFNgamma production,NA
-SIRT2,KIFSEVTLK,NA,KIFSEVTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
-GPNMB,TLDWLLQTPK,NA,TLGWLLQTPK,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
-SNRP116,KILDAVVAQK,NA,KILDAVVAQE,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-A*03011,MHC _Class_I,yes,yes,NA,NA
-RBAF600,RPHVPESAF,NA,GPHVPESAF,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*07021,MHC _Class_I,yes,yes,NA,NA
-SNRPD1,SHETVIIEL,NA,SHETVTIEL,"Lennerz et al., 2005 (10.1073/pnas.0500090102)",HLA-B*3801,MHC _Class_I,yes,yes,NA,NA
-MUM-3,EAFIQPITR,NA,EASIQPITR,"Baurain et al., 2000 (10.4049/​jimmunol.164.11.6057 )",HLA-A*28012,MHC _Class_I,yes,yes,T cell stimulation,NA
-TRAPPC1,SELFRSGLDSY,NA,SELFRSRLDSY,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-B*44,MHC _Class_I,yes,yes,T cell stimulation,NA
-TRAPPC1,FRSGLDSYV,NA,FRSRLDSYV,"Chiari et al., 1999 (http://cancerres.aacrjournals.org/content/59/22/5785)",HLA-C*6,MHC _Class_I,yes,yes,T cell stimulation,NA
-CLPP,ILDKVLVHL,NA,ILDKVLVHP,"Corbiere et al., 2011 (10.1158/0008-5472.CAN-10-2693)",HLA-A*2,MHC _Class_I,yes,yes,sensitize HLA-A2+ EBV-transformed B cells to lysis by CTL,NA
-MUM-1,EEKLIVVLF,NA,EEKLSVVLF,"Coulie et al., 1995 (http://www.pnas.org/content/92/17/7976.long)",HLA-B*44:02,MHC _Class_I,yes,yes,sensitize HLA-B44+ B cells to lysis by CTL,NA
-K-ras,VVVGAVGVG,NA,VVVGAGGVG,"Gjertsen et al., 1997 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0215(19970904)72:5%3C784::AID-IJC14%3E3.0.CO;2-9/epdf)",HLA-B*35,MHC _Class_I,yes,yes,lysis by CTL,NA
-LPGAT1,AEPINIQTW,NA,AEPIDIQTW,"Gueguen et al., 1998 (http://www.jimmunol.org/content/160/12/6188.long)",HLA-B*44:03,MHC _Class_I,yes,yes,lysis by CTL,NA
-MYO1B,KINKNPKYK,5,EINKNPKYK,"Zorn, Hercend, 1999 (http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1521-4141(199902)29:02%3C592::AID-IMMU592%3E3.0.CO;2-2/epdf)",HLA-A*03:01,MHC _Class_I,yes,yes,sensitize LCL to lysis by V g 16+T cells,NA
-OS-9,KELEGILLL,NA,KELEGILLP,"Vigneron et al., 2002 (http://cancerimmunolres.aacrjournals.org/content/canimmarch/2/1/9)",HLA-B*440,MHC _Class_I,yes,yes,tested for their ability to sensitize LG2-EBV cells to lysis by anti-LG2-C CTLs,NA
-EEF2,ETVSEQSNV,NA,ETVSEESNV,"Hogan et al., 1998 (https://www.ncbi.nlm.nih.gov/pubmed/9823325)",HLA-A*68:02,MHC _Class_I,yes,yes,lysis by CTL,NA
-p53,VVPCEPPEV,NA,VVPYEPPEV,"Ito et al.,  2007 (10.1002/ijc.22584)",HLA-A*0201,MHC _Class_I,yes,yes,IFNgamma secretion,"the p53 T150R, V157F and E271K peptides failed ex vivo to yield anti-peptide CD8+ T cell effectors; The p53 mutant S149C and Y220H peptides also appear capable of inducing anti-wt p53 peptide CD8+ T cell effectors"
-ME1,FLDEFMEGV,2,FLDEFMEAV,"Karanikas et al., 2001 (http://cancerres.aacrjournals.org/content/61/9/3718.long)",HLA-A*0201,MHC _Class_I,yes,yes,lysis by CTL,NA
-ACTN4,FIASNGVKLV,NA,FIASLGVKLV,"Echchakir et al., 2001 (http://cancerres.aacrjournals.org/content/61/10/4078.long)",HLA-A*02,MHC _Class_I,yes,NA,recognition by the CTLs,NA
-HSP70-2,SLFEGIDIYT,NA,SLFEGIDFYT,"Gaudin et al., 1999 (http://www.jimmunol.org/content/162/3/1730.long)",HLA-A*02:01,MHC _Class_I,yes,NA,stimulate TNF release,NA
-HHAT,FLEGNEVGKTY,NA,FLGGNEVGKTY,"Kawagami et al., 2001  (http://www.jimmunol.org/content/166/4/2871.long)",HLA-A*01,MHC _Class_I,yes,NA,TIL1362 secreted high amounts of IFN-γ when stimulated with COS cells transfected with both the 8B6 fragment and HLA-A1 cDNA,NA
-N-ras,ILDTAGREEY,NA,ILDTAGQEEY,"Linard et al., 2002 (http://www.jimmunol.org/content/168/9/4802.long)",HLA-A*01:01,MHC _Class_I,yes,NA,induce specific CTL expansion from PBL,NA
-Prdx5,LLLDDLLVSI,NA,LLLDDSLVSI,"Sensi et al., 2005 (http://cancerres.aacrjournals.org/content/65/2/632.long)",HLA-A*02:01,MHC _Class_I,yes,NA,T cell recognition,NA
-NFYC,QQITKTEV,NA,QQITQTEV,"Takenoyama et al., 2006 (http://onlinelibrary.wiley.com/doi/10.1002/ijc.21594/full)",HLA-B*52:01,MHC _Class_I,yes,NA,CTL recognition,NA
-HSDL,CYMEAVAL,NA,CYMEALAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,yes,NA,CTL recognition,NA
-CDK4,ACDPHSGHFV,NA,ARDPHSGHFV,"Wolfel et al., 1995 (http://science.sciencemag.org/content/269/5228/1281.full.pdf+html)",HLA-A*2,MHC _Class_I,yes,immune_response,CTL recognition,NA
-ATR,KLYEEPLLK,NA,KLYEEPLSK,"van Rooij et al., 2013 (http://ascopubs.org/doi/full/10.1200/JCO.2012.47.7521)",HLA-A*03:01,MHC _Class_I,yes,NA,T cell recognition,NA
-GAPDH,GIVEGLITTV,NA,GIVEGLMTTV,"Zhou et al., 2005 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2175172/)",HLA-A*02:01,MHC _Class_I,yes,NA,T cell recognition,NA
-KIAA1440,QTACEVLDY,NA,QTTCEVLDY,"Zhou et al., 2005 (http://cancerres.aacrjournals.org/content/65/3/1079?ijkey=80d7823264de4bb00a0aebcf1952b70f216be77d&keytype2=tf_ipsecsha)",HLA-A*01:01,MHC _Class_I,yes,NA,TNFalpha release,NA
-CSNK1A1,FQLNQSFEI,NA,SQLNQSFEI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-UNC13A,RMLDKNPEV,NA,RMLDKNPES,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-CAMKK2,HLMDGDLGL,NA,NLMDGDLGL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-WDR47,MLFLRFCYI,NA,MLFLRFRYI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-BRCA2,YLTSLACVEI,NA,YPTSLACVEI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-RRP1B,LLADQNFKFI,NA,LLADQNLKFI,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-HAUS3,AMIAKISNEL,NA,AMITKISNEL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NOTCH2,ALGTLLHTNV,NA,ALGTLLHTNL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-UNC13A,SVVDVFFQL,NA,SVVDVFSQL,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-PLCB1,FSDKKVGTY,NA,LSDKKVGTY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-HEG1,HSEYSSFFY,NA,HSEYSSFFH,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-BAI3,CSNFLLLAY,NA,CSNFSLLAY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-UEVLD,FTGTISVMY,NA,FTGTIPVMY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-TBRG4,ATALLEYLEY,NA,ATALLEYPEY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-LRP2,WADWGHRTY,NA,WADWGHRAY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-RNPEP,VSDGFTAVM,NA,VPDGFTAVM,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*0101,MHC _Class_I,no,NA,NA,NA
-MUC16,STFFLAHGLK,NA,STFSLAHGLK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-SALL1,MTFLGGNLVK,NA,MTFLGGNPVK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-CUL3,MSFYLREQGK,NA,MSSYLREQGK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-CUL3,KTMCECMSFY,NA,KTMCECMSSY,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-SELPLG,VVLAVRLSCK,NA,VVLAVRLSRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-ATP10D,ASLDGASLEK,NA,ASPDGASLEK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-NBAS,QALRFYDYK,NA,QALRFHDYK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-AMPH,KTLKINEVK,NA,KTLKINEVE,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-KIN,AIANRIKFK,NA,AIANRIKSK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-ZNF266,HTAKDSFECK,NA,HTAKDPFECK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-KIN,KAIANRIKFK,NA,KAIANRIKSK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-ZNF667,RIHTSAKPYK,NA,RIHTSEKPYK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-AMPH,KINEVKTRK,NA,KINEVETRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-BCL11A,SLSPIEMKK,NA,SPSPIEMKK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-ZNF644,KMTVVILQK,NA,KMTVVVLQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-SCG2,DVFKVIAYLK,NA,DVSKVIAYLK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-FAM19A5,QTACCACRK,NA,QTARCACRK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-SALL1,LVKFPEMFQK,NA,PVKFPEMFQK,"Robbins et al., 2013 (dx.doi.org/10.1038/nm.3161)",HLA-A*1101,MHC _Class_I,no,NA,NA,NA
-LARP7,AVIDAYTEI,NA,AVINAYTEI,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,6,NA,NA
-MRPS17,VLLRALPVL,NA,VLLRALPVP,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,5,NA,NA
-SMOX,KLANPLPYT,NA,KLAKPLPYT,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,131,NA,NA
-SRP9,IMAHCILDL,NA,IIAHCILDL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,0,NA,NA
-ARFGEF1,FVSALCMFL,NA,FVSALRMFL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-HSD17B7,YISKCWDYA,NA,YISKCWDHA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-PRKCDBP,CLFPQTLAA,NA,CLSPQTLAA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-UTRN,QLDKCSAFV,NA,QLDQCSAFV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-ARFGEF1,QTIDNIVFL,NA,QTIDNIVFF,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-GPX8,LLSIVPCTV,NA,LLSIVLCTV,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-KDM1B,IIGAGPAEL,NA,IIGAGPAGL,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-PHKA2,LLSIIFFPA,NA,LLSIISFPA,"Carreno et al., 2015 (dx.doi.org/10.1126/science.aaa3828 )",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NA,ACEVLDYFLR,NA,TCEVLDYFLR,"Zhou et al., 2005 (http://cancerres.aacrjournals.org/content/65/3/1079?ijkey=80d7823264de4bb00a0aebcf1952b70f216be77d&keytype2=tf_ipsecsha)",HLA-A*01:01,MHC _Class_I,no,NA,NA,NA
-CACNA1B,HPQASSAVGF,24.5,HPQAGSAVGF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*35:01,MHC _Class_I,no,NA,NA,NA
-COPB2,EEHAQNVSCAS,828.4,EGHAQNVSCAS,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*18:01,MHC _Class_I,no,NA,NA,NA
-CXCR4,EENANFYKIF,18.6,EENANFNKIF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*18:01,MHC _Class_I,no,NA,NA,NA
-EIF2C2,VTRRHASHQTF,83,VTRRPASHQTF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-FAM162A,ISYLMIALMVV,42.9,ISYLMIALTVV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-LRFN5,TLPQSVSKQSV,602.7,TLPQSVSKQAV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-NLRP1,FLGDINPQHSW,767.9,FLGEINPQHSW,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-NLRP4,FEFCEDDLW,717.2,FEFCEDDLR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*18:01,MHC _Class_I,no,NA,NA,NA
-PCGF5,VTECLNTFCK,28.1,VTECLHTFCK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-PCGF5,TVTECLNTFCK,45.5,TVTECLHTFCK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-PLXNB2,FMASNDEGV,234.7,FVASNDEGV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-PREX2,YLFRGRINPEV,45.3,YLFRGRINTEV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-SERPINA12,TPLVIKIDKPY,23.1,TPLVVKIDKPY,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*35:01,MHC _Class_I,no,NA,NA,NA
-SERPINA12,LPMETPLVI,48.7,LPMETPLVV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*35:01,MHC _Class_I,no,NA,NA,NA
-SLC12A1,RIYVGGKINHI,65.8,RIYVGGKINRI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-SLC23A2,SIGDYYTCAR,204.2,SIGDYYACAR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-SPATA16,YMHTDLQALHM,13.3,YMYTDLQALHM,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-SPATA16,YMHTDLQAL,14.8,YMYTDLQAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*12:03,MHC _Class_I,no,NA,NA,NA
-TNFSF14,WATSSSRVW,1097,RATSSSRVW,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*3501,MHC _Class_I,no,NA,NA,NA
-TOP2A,GPTFNCLLDM,537.3,GPTFNYLLDM,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*35:01,MHC _Class_I,no,NA,NA,NA
-TTC5,HLNRAMLHK,22,HLNRATLHK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-ACSS2,KIFIEWLK,13,KIFIEWMK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-AP1B1,FHGESTQVQL,660.6,FHDESTQVQL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*03:03,MHC _Class_I,no,NA,NA,NA
-APOB,KSEALKLFL,479.3,KAEALKLFL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*05:01,MHC _Class_I,no,NA,NA,NA
-ARL4C,SLKQKKKP,34863.7,SLKQKKKR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*15:01,MHC _Class_I,no,NA,NA,NA
-ATP2A1,SVISQLMKK,10.8,SVIRQLMKK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-ATP2A1,SVISQLMK,12.1,SVIRQLMK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-ATP2A1,VISQLMKK,45.6,VIRQLMKK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-CIC,LGVVESAK,4207.8,LGVVESGK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-CNNM2,MALTASTVPL,20.3,MALTASPVPL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*03:03,MHC _Class_I,no,NA,NA,NA
-CNNM2,VMALTASTVPL,41.3,VMALTASPVPL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*03:03,MHC _Class_I,no,NA,NA,NA
-CNNM2,ALTASTVPL,44.8,ALTASPVPL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-CNTNAP2,ATNAKDSSSR,274.1,ATNARDSSSR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-COL16A1,KAGECGLK,132.3,KAGERGLK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-DCAF12L1,VAWHSEVGLPL,65.1,VAWHSEVGLPV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*03:03,MHC _Class_I,no,NA,NA,NA
-DCAF4L2,GMLCSFQTPDA,323.5,GMLCSFQIPDA,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-DIP2A,ALFTWTNLLVV,6.9,AVFTWTNLLVV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-DIP2A,ALFTWTNLLV,8.9,AVFTWTNLLV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-DIP2A,ALFTWTNL,10,AVFTWTNL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-DIP2A,ALFTWTNLL,11.5,AVFTWTNLL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-EIF3A,SSWHNADDDR,1220.6,SSWRNADDDR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-GOLGA2,AAYQRLTSEK,24.3,AAYQQLTSEK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-GOLGA2,YVAAYQRL,31.7,YVAAYQQL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-GPR179,SADGGGLS,1101.8,SADRGGLS,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*05:01,MHC _Class_I,no,NA,NA,NA
-HIST2H2BE,GSKRAVTK,245.4,GSKKAVTK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-NUP210,SMSPVLHTENK,13.2,SMSPVLHTQNK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*11:01,MHC _Class_I,no,NA,NA,NA
-OR4A5,FLLLVAAMI,25.6,FLLLVVAMI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-OR4A5,LLVAAMIGGFV,41.9,LLVVAMIGGFV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-PHEX,KADAKALLHI,24.4,KADAKPLLHI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*05:01,MHC _Class_I,no,NA,NA,NA
-PHEX,KADAKALL,30.4,KADAKPLL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*05:01,MHC _Class_I,no,NA,NA,NA
-PHEX,KADAKALLHIL,38.1,KADAKPLLHIL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*05:01,MHC _Class_I,no,NA,NA,NA
-SEMA4D,IMVDGELY,96,VMVDGELY,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*15:01,MHC _Class_I,no,NA,NA,NA
-SPTAN1,KLCEANQQQQF,149.8,KLREANQQQQF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*15:01,MHC _Class_I,no,NA,NA,NA
-ZNF366,RSKGDIGA,9231.4,RSKGDLGA,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*03:03,MHC _Class_I,no,NA,NA,NA
-ABCD2,RFQQLDTAIRL,23.6,RFEQLDTAIRL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-ABCD2,QQLDTAIRLTL,30.8,EQLDTAIRLTL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-ABCD2,RFQQLDTAI,38.7,RFEQLDTAI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-ABCD2,WRFQQLDTAI,39,WRFEQLDTAI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-ADNP2,HSRNTHLGK,4,HSRNRHLGK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-ADNP2,HSRNTHLGKK,5,HSRNRHLGKK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-ADNP2,HSRNTHLGKKK,12,HSRNRHLGKKK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-CCDC144B,LLDNSTTGTDV,200.2,LLDNSTRGTDV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-CCDC150,KTQIKLHLSPK,5.9,KTQIKLHLSAK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-CCDC150,QIKLHLSPK,16.8,QIKLHLSAK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-COPG,GSSPFQHLEK,75.4,GSNPFQHLEK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-CPXM2,SSKKVMRTK,8.4,SNKKVMRTK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-CRTC2,SSLSSPQPQL,639.5,ASLSSPQPQL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-DNAJC11,QTRLKGSLK,7.2,QTRVKGSLK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-DNAJC11,FQDDDQTRL,44.6,FQDDDQTRV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-FAM178A,SMIPKAIESF,18.6,SMIPKARESF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-FAM178A,KAIESFLEK,22.3,KARESFLEK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-FAM178A,SMIPKAIESFL,37.3,SMIPKARESFL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-GPR112,KMVEAMATGI,13.8,KMVEAMATEI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-GRM1,KTNRIALILA,39.8,KTNRIARILA,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-GRM1,RIALILAGSK,43.3,RIARILAGSK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-HELB,RTGKAAGLL,144,PTGKAAGLL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-HMCN1,RPCPGDTTEV,3099.9,RPCPGDTTQV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-HSDL1,YMEAVALV,8.6,YMEALALV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-HSDL1,MEAVALVGAW,17.7,MEALALVGAW,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*44:03,MHC _Class_I,no,NA,NA,NA
-HSDL1,CYMEAVALV,22.6,CYMEALALV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-HSDL1,MEAVALVGAWY,26.8,MEALALVGAWY,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*44:03,MHC _Class_I,no,NA,NA,NA
-KIAA1467,EEKAASSLVSY,104.5,EQKAASSLVSY,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*44:03,MHC _Class_I,no,NA,NA,NA
-MARK2,RGRNSATSADK,7.5,RGRNSATSADE,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-NACA2,LLMSQANV,7,LVMSQANV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NACA2,KLLMSQANV,34.6,KLVMSQANV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NOX4,FWYTHNLIFVF,4.4,FWYTHNLFFVF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX5,FWYTHNLIF,4.6,FWYTHNLFF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX6,YTHNLIFVF,10.5,YTHNLFFVF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX7,YTHNLIFVFYM,18.5,YTHNLFFVFYM,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX8,FWYTHNLI,21,FWYTHNLF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX9,WYTHNLIFVF,25.7,WYTHNLFFVF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX10,IFWYTHNLIF,29.3,IFWYTHNLFF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX11,YTHNLIFV,29.4,YTHNLFFV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NOX12,FWYTHNLIFV,31.1,FWYTHNLFFV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX13,THNLIFVFYML,35,THNLFFVFYML,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-NOX14,WYTHNLIF,38.2,WYTHNLFF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-NOX15,NLIFVFYML,38.4,NLFFVFYML,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-NOX16,NLIFVFYM,46.1,NLFFVFYM,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-OR4C11,IHYTAQIILAL,15,IHSTAQIILAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-OR4C12,SLIHYTAQI,16.1,SLIHSTAQI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-OR4C13,YTAQIILAL,21.2,STAQIILAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-OR4C14,HYTAQIILAL,23.1,HYSAQIILAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-OR4C15,IHYTAQIIL,23.9,IHSTAQIIL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-OR4N4,FFCDVQQVIKL,269.2,FFCDVRQVIKL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-PRRT3,SEPQAFDVY,432.9,SEPQAFDVF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*44:03,MHC _Class_I,no,NA,NA,NA
-PTPRB,SFRQERTVPDK,40.9,SFSQERTVPDK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-RCSD1,AVKDTPHSPPG,292,AVKETPHSPPG,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-RGS6,FEDAQEHLYKL,88.4,FEDAQEHIYKL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-B*39:01,MHC _Class_I,no,NA,NA,NA
-RSL1D1,KSPNPTTPRGK,112.7,KSPNPSTPRGK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-SLC41A2,VIVGSKNTGI,4554.8,VIVGSKKTGI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-SYNPO2,VTFDWDSGLV,164,VNFDWDSGLV,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-TMEM2,YRNERRRLQEF,118.4,YRNESRRLQEF,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
-VRTN,LLGSGTSPAL,79.1,LLGSGTCPAL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-WNK1,CSRSSSLGNK,7.4,SSRSSSLGNK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-WNK2,KSKGSKCSR,33.7,KSKGSKSSR,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-ZNF41,HLLSVEYQI,31.5,HLLSVGYQI,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*02:01,MHC _Class_I,no,NA,NA,NA
-ZNF462,RTKIDEIASNL,29.6,RTRIDEIASNL,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-ZNF608,KAPTTPEPNK,92.9,KAPSTPEPNK,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-A*30:01,MHC _Class_I,no,NA,NA,NA
-ZNF780B,FYFRNDSEC,386.2,FYFRNDSEY,"Wick et al., 2014 (http://clincancerres.aacrjournals.org/content/20/5/1125)",HLA-C*14:03,MHC _Class_I,no,NA,NA,NA
+mutant_sequence,wt_sequence,allele,immune_response
+GLFGDIYLA,GSFGDIYLA,HLA-Cw*0406,yes
+GLFGDIYLAI,GSFGDIYLAI,HLA-Cw*0407,yes
+SLADEAEVYL,SLADEAEVHL,HLA-Cw*0408,yes
+ILNAMIAKI,ILNAMITKI,HLA-Cw*0409,yes
+LTDDRLFTCY,LTDDRLFTCH,HLA-Cw*0410,yes
+YTDFHCQYV,YTDFPCQYV,HLA-Cw*0411,yes
+YTDFHCQYVK,YTDFPCQYVK,HLA-Cw*0412,yes
+KTLTSVFQK,ETLTSVFQK,HLA-Cw*0413,yes
+KTLTSVFQKK,ETLTSVFQKK,HLA-Cw*0414,yes
+CILGKLFTK,CILGELFTK,HLA-Cw*0415,yes
+CILGKLFTKK,CILGELFTKK,HLA-Cw*0416,yes
+KMIGNHLWV,EMIGNHLWV,HLA-A*02:01,yes
+AMFWSVPTV,AMFRSVPTV,HLA-A*02:01,yes
+CLNEYHLFL,CLNEYHLFF,HLA-A*02:01,yes
+KLMNIQQKL,KLMNIQQQL,HLA-A*02:01,yes
+QLSCISTYV,QLSCTSTYV,HLA-A*02:01,yes
+FLYNLLTRV,FLYNPLTRV,HLA-A*02:01,yes
+IILVAVPHV,IILVAVQHV,HLA-A*02:01,yes
+HLYASLSRV,HPYASLSRV,HLA-A*02:01,yes
+MLGEQLFPL,MLGERLFPL,HLA-A*02:01,yes
+ELLVRINRL,ELLFRINRL,HLA-B*08:01,yes
+GADGVGKSAL,GAGGVGKSAL,HLA-C*05:01,yes
+GADGVGKSAL,GAGGVGKSAL,HLA-C*08:02,yes
+MLFSHGLVK,MLFSRGLVK,HLA-A*03:01,yes
+EMLFSHGLVK,EMLFSRGLVK,HLA-A*03:01,yes
+RLLQCTQQAV,RLLQCTRQAV,HLA-A*02:01,yes
+LLQCTQQAV,LLQCTRQAV,HLA-A*02:01,yes
+ILCETCLIV,ILCGTCLIV,HLA-A*02:01,yes
+EHEGSGPEL,EREGSGPEL,HLA-B*38:01,yes
+SEHEGSGPEL,SEREGSGPEL,HLA-B*38:01,yes
+DYLQYVLQI,DYLQCVLQI,HLA-A*24:02,yes
+KEFEDDIINW,KEFEDGIINW,HLA-B*44:02,yes
+KEFEDDIINW,KEFEDGIINW,HLA-B*44:03,yes
+ATLPLLCAR,ATLPLLCAG,HLA-A*31:01,yes
+WATLPLLCAR,WATLPLLCAG,HLA-A*33:03,yes
+SVLPEVDVW,SLLPEVDVW,HLA-B*57:01,yes
+VLHDDLLEA,VLRDDLLEA,HLA-A*02:01,yes
+YIGEVLVSV,YIGEVLVSM,HLA-A*02:01,yes
+VTEPGTAQY,VMEPGTAQY,HLA-A*01:01,yes
+RTLDKVLEV,PTLDKVLEV,HLA-A*02:01,yes
+EEKRGSLHVW,EEKRGSLYVW,HLA-B*44:03,yes
+ISKERAEAL,ISKERAGAL,HLA-B*08:01,yes
+CIPPDSLLFPA,CIPPDTLLFPA,HLA-A*02:01,yes
+SVAPALALFPA,SVAPALALSPA,HLA-A*02:01,yes
+KPQYHAEMCF,EPQYHAEMCF,HLA-B*07:02,yes
+KPQYHAEMCF,EPQYHAEMCF,HLA-B*08:01,yes
+LPRACWREA,LPRACWPEA,HLA-B*07:02,yes
+QPRRALLFVIL,QPTRALLFVIL,HLA-B*07:02,yes
+RPCPSVGLSFL,WPCPSVGLSFL,HLA-B*07:02,yes
+TAWPGAPEV,TAWPGAPGV,HLA-B*51:01,yes
+CADPSETWV,CADPSESWV,HLA-A*02:01,yes
+SLAAYIPRL,SLAADIPRL,HLA-A*02:01,yes
+STMERWGQKY,STMERWGQKH,HLA-A*01:01,yes
+YLYEGGISC,YLYEGGISR,HLA-A*02:01,yes
+YLYEGGISC,YLYEGGISR,HLA-C*03:03,yes
+RPRARYYIQV,RPRARYYVQV,HLA-B*07:02,yes
+RPHAIRRPLAL,RPRAIRRPLAL,HLA-B*07:02,yes
+HPRQEQIAL,HPPQEQIAL,HLA-B*07:02,yes
+HPRQEQIALLA,HPPQEQIALLA,HLA-B*07:02,yes
+RLRQVGSWL,RLRQMGSWL,HLA-B*07:02,yes
+FPALRFVEV,FPALRFVEE,HLA-B*07:02,yes
+FPALRFVEV,FPALRFVEE,HLA-B*08:01,yes
+GQVRLRALY,GQIRLRALY,HLA-B*15:01,yes
+DLRCKYVSL,DLRCKYISL,HLA-B*08:01,yes
+CPRPGTWTC,SPRPGTWTC,HLA-B*07:02,yes
+WLQGVVPVV,WLRGVVPVV,HLA-A*02:01,yes
+HLEEQIPKV,HLEEQIAKV,HLA-A*02:01,yes
+SEDLILCRL,SEDLILCQL,HLA-B*40:01,yes
+ETDDPRRYQKY,ETDDPRTYQKY,HLA-A*01:01,yes
+GPDSSKTFLCL,GPDSSKTLLCL,HLA-B*07:02,yes
+APGHTRRKL,ASGHTRRKL,HLA-B*07:02,yes
+TQAQIFDYSEI,TQAQIFDYGEI,HLA-B*13:02,yes
+FMWDVAEDLKA,FMWDVAEELKA,HLA-A*02:01,yes
+SETKQRTVL,SETKQCTVL,HLA-B*40:01,yes
+ESSVQGYPTRR,ESSVQGYPTQR,HLA-A*68:01,yes
+MEQLEQLEL,MEQLEELEL,HLA-B*40:01,yes
+RPRSVTIQPLL,RPRSVTVQPLL,BHLA-*07:02,yes
+GEPQDLCTL,GGSQDLGTL,HLA-B*40:01,yes
+RLHDGRVFV,RLHEGRVFV,HLA-A*02:01,yes
+MPSHLRNILL,MPSHLRNTLL,HLA-B*07:02,yes
+RTLSPEIITV,RTLSPEMITV,HLA-A*02:01,yes
+RPRYWILLVKI,RPRHWILLVKI,HLA-B*07:02,yes
+NEIEDVWQLDL,NEIEDVWHLDL,HLA-B*40:01,yes
+WFHHCHPKY,WFHHCRPKY,HLA-A*29:02,yes
+AEATANGGLAL,AEPTANGGLAL,HLA-B*40:02,yes
+SLPRGTSTPK,SLPGGTSTPK,HLA-A*03:01,yes
+QLLNSVLTL,QLPNSVLTL,HLA-A*02:01,yes
+DANSFLQSV,DANPFLQSV,HLA-B*51:01,yes
+KIFSEVTLK,KIFSEVTPK,HLA-A*03011,yes
+TLDWLLQTPK,TLGWLLQTPK,HLA-A*03011,yes
+KILDAVVAQK,KILDAVVAQE,HLA-A*03011,yes
+RPHVPESAF,GPHVPESAF,HLA-B*07021,yes
+SHETVIIEL,SHETVTIEL,HLA-B*3801,yes
+EAFIQPITR,EASIQPITR,HLA-A*28012,yes
+SELFRSGLDSY,SELFRSRLDSY,HLA-B*44,yes
+FRSGLDSYV,FRSRLDSYV,HLA-C*6,yes
+ILDKVLVHL,ILDKVLVHP,HLA-A*2,yes
+EEKLIVVLF,EEKLSVVLF,HLA-B*44:02,yes
+VVVGAVGVG,VVVGAGGVG,HLA-B*35,yes
+AEPINIQTW,AEPIDIQTW,HLA-B*44:03,yes
+KINKNPKYK,EINKNPKYK,HLA-A*03:01,yes
+KELEGILLL,KELEGILLP,HLA-B*440,yes
+ETVSEQSNV,ETVSEESNV,HLA-A*68:02,yes
+VVPCEPPEV,VVPYEPPEV,HLA-A*0201,yes
+FLDEFMEGV,FLDEFMEAV,HLA-A*0201,yes
+FPSDWSWCYF,FPSDS,HLA-B*35:03,yes
+FIASNGVKLV,FIASLGVKLV,HLA-A*02,yes
+SLFEGIDIYT,SLFEGIDFYT,HLA-A*02:01,yes
+FLEGNEVGKTY,FLGGNEVGKTY,HLA-A*01,yes
+ILDTAGREEY,ILDTAGQEEY,HLA-A*01:01,yes
+LLLDDLLVSI,LLLDDSLVSI,HLA-A*02:01,yes
+QQITKTEV,QQITQTEV,HLA-B*52:01,yes
+CYMEAVAL,CYMEALAL,HLA-C*14:03,yes
+ACDPHSGHFV,ARDPHSGHFV,HLA-A*2,yes
+KLYEEPLLK,KLYEEPLSK,HLA-A*03:01,yes
+GIVEGLITTV,GIVEGLMTTV,HLA-A*02:01,yes
+QTACEVLDY,QTTCEVLDY,HLA-A*01:01,yes
+FQLNQSFEI,SQLNQSFEI,HLA-A*02:01,no
+RMLDKNPEV,RMLDKNPES,HLA-A*02:01,no
+HLMDGDLGL,NLMDGDLGL,HLA-A*02:01,no
+MLFLRFCYI,MLFLRFRYI,HLA-A*02:01,no
+YLTSLACVEI,YPTSLACVEI,HLA-A*02:01,no
+LLADQNFKFI,LLADQNLKFI,HLA-A*02:01,no
+AMIAKISNEL,AMITKISNEL,HLA-A*02:01,no
+ALGTLLHTNV,ALGTLLHTNL,HLA-A*02:01,no
+SVVDVFFQL,SVVDVFSQL,HLA-A*02:01,no
+FSDKKVGTY,LSDKKVGTY,HLA-A*0101,no
+HSEYSSFFY,HSEYSSFFH,HLA-A*0101,no
+CSNFLLLAY,CSNFSLLAY,HLA-A*0101,no
+FTGTISVMY,FTGTIPVMY,HLA-A*0101,no
+ATALLEYLEY,ATALLEYPEY,HLA-A*0101,no
+WADWGHRTY,WADWGHRAY,HLA-A*0101,no
+VSDGFTAVM,VPDGFTAVM,HLA-A*0101,no
+STFFLAHGLK,STFSLAHGLK,HLA-A*1101,no
+MTFLGGNLVK,MTFLGGNPVK,HLA-A*1101,no
+MSFYLREQGK,MSSYLREQGK,HLA-A*1101,no
+KTMCECMSFY,KTMCECMSSY,HLA-A*1101,no
+VVLAVRLSCK,VVLAVRLSRK,HLA-A*1101,no
+ASLDGASLEK,ASPDGASLEK,HLA-A*1101,no
+QALRFYDYK,QALRFHDYK,HLA-A*1101,no
+KTLKINEVK,KTLKINEVE,HLA-A*1101,no
+AIANRIKFK,AIANRIKSK,HLA-A*1101,no
+HTAKDSFECK,HTAKDPFECK,HLA-A*1101,no
+KAIANRIKFK,KAIANRIKSK,HLA-A*1101,no
+RIHTSAKPYK,RIHTSEKPYK,HLA-A*1101,no
+KINEVKTRK,KINEVETRK,HLA-A*1101,no
+SLSPIEMKK,SPSPIEMKK,HLA-A*1101,no
+KMTVVILQK,KMTVVVLQK,HLA-A*1101,no
+DVFKVIAYLK,DVSKVIAYLK,HLA-A*1101,no
+QTACCACRK,QTARCACRK,HLA-A*1101,no
+LVKFPEMFQK,PVKFPEMFQK,HLA-A*1101,no
+AVIDAYTEI,AVINAYTEI,HLA-A*02:01,no
+VLLRALPVL,VLLRALPVP,HLA-A*02:01,no
+KLANPLPYT,KLAKPLPYT,HLA-A*02:01,no
+IMAHCILDL,IIAHCILDL,HLA-A*02:01,no
+FVSALCMFL,FVSALRMFL,HLA-A*02:01,no
+YISKCWDYA,YISKCWDHA,HLA-A*02:01,no
+CLFPQTLAA,CLSPQTLAA,HLA-A*02:01,no
+QLDKCSAFV,QLDQCSAFV,HLA-A*02:01,no
+QTIDNIVFL,QTIDNIVFF,HLA-A*02:01,no
+LLSIVPCTV,LLSIVLCTV,HLA-A*02:01,no
+IIGAGPAEL,IIGAGPAGL,HLA-A*02:01,no
+LLSIIFFPA,LLSIISFPA,HLA-A*02:01,no
+ACEVLDYFLR,TCEVLDYFLR,HLA-A*01:01,no
+HPQASSAVGF,HPQAGSAVGF,HLA-B*35:01,no
+EEHAQNVSCAS,EGHAQNVSCAS,HLA-B*18:01,no
+EENANFYKIF,EENANFNKIF,HLA-B*18:01,no
+VTRRHASHQTF,VTRRPASHQTF,HLA-C*12:03,no
+ISYLMIALMVV,ISYLMIALTVV,HLA-C*12:03,no
+TLPQSVSKQSV,TLPQSVSKQAV,HLA-C*12:03,no
+FLGDINPQHSW,FLGEINPQHSW,HLA-C*12:03,no
+FEFCEDDLW,FEFCEDDLR,HLA-B*18:01,no
+VTECLNTFCK,VTECLHTFCK,HLA-A*11:01,no
+TVTECLNTFCK,TVTECLHTFCK,HLA-A*11:01,no
+FMASNDEGV,FVASNDEGV,HLA-C*12:03,no
+YLFRGRINPEV,YLFRGRINTEV,HLA-C*12:03,no
+TPLVIKIDKPY,TPLVVKIDKPY,HLA-B*35:01,no
+LPMETPLVI,LPMETPLVV,HLA-B*35:01,no
+RIYVGGKINHI,RIYVGGKINRI,HLA-C*12:03,no
+SIGDYYTCAR,SIGDYYACAR,HLA-A*11:01,no
+YMHTDLQALHM,YMYTDLQALHM,HLA-C*12:03,no
+YMHTDLQAL,YMYTDLQAL,HLA-C*12:03,no
+WATSSSRVW,RATSSSRVW,HLA-B*3501,no
+GPTFNCLLDM,GPTFNYLLDM,HLA-B*35:01,no
+HLNRAMLHK,HLNRATLHK,HLA-A*11:01,no
+KIFIEWLK,KIFIEWMK,HLA-A*11:01,no
+FHGESTQVQL,FHDESTQVQL,HLA-C*03:03,no
+KSEALKLFL,KAEALKLFL,HLA-C*05:01,no
+SLKQKKKP,SLKQKKKR,HLA-B*15:01,no
+SVISQLMKK,SVIRQLMKK,HLA-A*11:01,no
+SVISQLMK,SVIRQLMK,HLA-A*11:01,no
+VISQLMKK,VIRQLMKK,HLA-A*11:01,no
+LGVVESAK,LGVVESGK,HLA-A*11:01,no
+MALTASTVPL,MALTASPVPL,HLA-C*03:03,no
+VMALTASTVPL,VMALTASPVPL,HLA-C*03:03,no
+ALTASTVPL,ALTASPVPL,HLA-A*02:01,no
+ATNAKDSSSR,ATNARDSSSR,HLA-A*11:01,no
+KAGECGLK,KAGERGLK,HLA-A*11:01,no
+VAWHSEVGLPL,VAWHSEVGLPV,HLA-C*03:03,no
+GMLCSFQTPDA,GMLCSFQIPDA,HLA-A*02:01,no
+ALFTWTNLLVV,AVFTWTNLLVV,HLA-A*02:01,no
+ALFTWTNLLV,AVFTWTNLLV,HLA-A*02:01,no
+ALFTWTNL,AVFTWTNL,HLA-A*02:01,no
+ALFTWTNLL,AVFTWTNLL,HLA-A*02:01,no
+SSWHNADDDR,SSWRNADDDR,HLA-A*11:01,no
+AAYQRLTSEK,AAYQQLTSEK,HLA-A*11:01,no
+YVAAYQRL,YVAAYQQL,HLA-A*02:01,no
+SADGGGLS,SADRGGLS,HLA-C*05:01,no
+GSKRAVTK,GSKKAVTK,HLA-A*11:01,no
+SMSPVLHTENK,SMSPVLHTQNK,HLA-A*11:01,no
+FLLLVAAMI,FLLLVVAMI,HLA-A*02:01,no
+LLVAAMIGGFV,LLVVAMIGGFV,HLA-A*02:01,no
+KADAKALLHI,KADAKPLLHI,HLA-C*05:01,no
+KADAKALL,KADAKPLL,HLA-C*05:01,no
+KADAKALLHIL,KADAKPLLHIL,HLA-C*05:01,no
+IMVDGELY,VMVDGELY,HLA-B*15:01,no
+KLCEANQQQQF,KLREANQQQQF,HLA-B*15:01,no
+RSKGDIGA,RSKGDLGA,HLA-C*03:03,no
+RFQQLDTAIRL,RFEQLDTAIRL,HLA-C*14:03,no
+QQLDTAIRLTL,EQLDTAIRLTL,HLA-B*39:01,no
+RFQQLDTAI,RFEQLDTAI,HLA-C*14:03,no
+WRFQQLDTAI,WRFEQLDTAI,HLA-B*39:01,no
+HSRNTHLGK,HSRNRHLGK,HLA-A*30:01,no
+HSRNTHLGKK,HSRNRHLGKK,HLA-A*30:01,no
+HSRNTHLGKKK,HSRNRHLGKKK,HLA-A*30:01,no
+LLDNSTTGTDV,LLDNSTRGTDV,HLA-A*02:01,no
+KTQIKLHLSPK,KTQIKLHLSAK,HLA-A*30:01,no
+QIKLHLSPK,QIKLHLSAK,HLA-A*30:01,no
+GSSPFQHLEK,GSNPFQHLEK,HLA-A*30:01,no
+SSKKVMRTK,SNKKVMRTK,HLA-A*30:01,no
+HSSKKVMRTK,HSSKKVMRTK,HLA-A*30:01,no
+SSLSSPQPQL,ASLSSPQPQL,HLA-A*30:01,no
+QTRLKGSLK,QTRVKGSLK,HLA-A*30:01,no
+FQDDDQTRL,FQDDDQTRV,HLA-B*39:01,no
+SMIPKAIESF,SMIPKARESF,HLA-C*14:03,no
+KAIESFLEK,KARESFLEK,HLA-A*30:01,no
+SMIPKAIESFL,SMIPKARESFL,HLA-A*02:01,no
+KMVEAMATGI,KMVEAMATEI,HLA-A*02:01,no
+KTNRIALILA,KTNRIARILA,HLA-A*30:01,no
+RIALILAGSK,RIARILAGSK,HLA-A*30:01,no
+RTGKAAGLL,PTGKAAGLL,HLA-A*30:01,no
+RPCPGDTTEV,RPCPGDTTQV,HLA-C*14:03,no
+YMEAVALV,YMEALALV,HLA-A*02:01,no
+MEAVALVGAW,MEALALVGAW,HLA-B*44:03,no
+CYMEAVALV,CYMEALALV,HLA-C*14:03,no
+MEAVALVGAWY,MEALALVGAWY,HLA-B*44:03,no
+EEKAASSLVSY,EQKAASSLVSY,HLA-B*44:03,no
+RGRNSATSADK,RGRNSATSADE,HLA-A*30:01,no
+LLMSQANV,LVMSQANV,HLA-A*02:01,no
+KLLMSQANV,KLVMSQANV,HLA-A*02:01,no
+FWYTHNLIFVF,FWYTHNLFFVF,HLA-C*14:03,no
+FWYTHNLIF,FWYTHNLFF,HLA-C*14:03,no
+YTHNLIFVF,YTHNLFFVF,HLA-C*14:03,no
+YTHNLIFVFYM,YTHNLFFVFYM,HLA-C*14:03,no
+FWYTHNLI,FWYTHNLF,HLA-C*14:03,no
+WYTHNLIFVF,WYTHNLFFVF,HLA-C*14:03,no
+IFWYTHNLIF,IFWYTHNLFF,HLA-C*14:03,no
+YTHNLIFV,YTHNLFFV,HLA-A*02:01,no
+FWYTHNLIFV,FWYTHNLFFV,HLA-C*14:03,no
+THNLIFVFYML,THNLFFVFYML,HLA-B*39:01,no
+WYTHNLIF,WYTHNLFF,HLA-C*14:03,no
+NLIFVFYML,NLFFVFYML,HLA-A*02:01,no
+NLIFVFYM,NLFFVFYM,HLA-A*02:01,no
+IHYTAQIILAL,IHSTAQIILAL,HLA-B*39:01,no
+SLIHYTAQI,SLIHSTAQI,HLA-A*02:01,no
+YTAQIILAL,STAQIILAL,HLA-C*14:03,no
+HYTAQIILAL,HYSAQIILAL,HLA-C*14:03,no
+IHYTAQIIL,IHSTAQIIL,HLA-B*39:01,no
+FFCDVQQVIKL,FFCDVRQVIKL,HLA-C*14:03,no
+SEPQAFDVY,SEPQAFDVF,HLA-B*44:03,no
+SFRQERTVPDK,SFSQERTVPDK,HLA-A*30:01,no
+AVKDTPHSPPG,AVKETPHSPPG,HLA-A*30:01,no
+FEDAQEHLYKL,FEDAQEHIYKL,HLA-B*39:01,no
+KSPNPTTPRGK,KSPNPSTPRGK,HLA-A*30:01,no
+VIVGSKNTGI,VIVGSKKTGI,HLA-A*02:01,no
+VTFDWDSGLV,VNFDWDSGLV,HLA-A*02:01,no
+YRNERRRLQEF,YRNESRRLQEF,HLA-C*14:03,no
+LLGSGTSPAL,LLGSGTCPAL,HLA-A*02:01,no
+CSRSSSLGNK,SSRSSSLGNK,HLA-A*30:01,no
+KSKGSKCSR,KSKGSKSSR,HLA-A*30:01,no
+HLLSVEYQI,HLLSVGYQI,HLA-A*02:01,no
+RTKIDEIASNL,RTRIDEIASNL,HLA-A*30:01,no
+KAPTTPEPNK,KAPSTPEPNK,HLA-A*30:01,no
+FYFRNDSEC,FYFRNDSEY,HLA-C*14:03,no
