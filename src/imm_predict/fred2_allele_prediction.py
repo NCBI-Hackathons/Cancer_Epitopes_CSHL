@@ -11,8 +11,7 @@ Arguments:
   --output=FILE_OUT     Output csv file
 
 Options:
-  --alleles=<alleles_list>   Comma separated list of target alleles [Default use all]:
-                             --alleles="B*27:20,B*83:01,A*32:15"
+  --alleles=<alleles_list>   Comma separated list of target alleles (e.g.: B*27:20,B*83:01) [Default use all]
 """
 
 # read in the vcf file
@@ -83,13 +82,13 @@ def window(MT_seq, WT_seq, window_size=5):
     return dt
 
 
-def append_score(dt2):
+def append_score(dt2, alleles):
     """
     Given a choped sequence (output from sliding_window()),
     append the immunogenicity scores
     """
     peptides_to_compute = [Peptide(peptide) for peptide in set(list(dt2["MT"]) + list(dt2["WT"]))]
-    res = fred2wrap.predict_peptide_effects(peptides_to_compute)
+    res = fred2wrap.predict_peptide_effects(peptides_to_compute, alleles)
     res["peptide"] = [str(peptide) for peptide in res["peptide"]]
 
     full = pd.merge(dt2, res, how = 'left', left_on = "WT", right_on = "peptide")
@@ -117,7 +116,7 @@ if __name__ == "__main__":
     dt2 = sliding_window(dt, 9)
 
     print("append the immunogenicity score")
-    full = append_score(dt2)
+    full = append_score(dt2, alleles)
 
     print("writing to csv")
     full.to_csv(file_out, index = False)
