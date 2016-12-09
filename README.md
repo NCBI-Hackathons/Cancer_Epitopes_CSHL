@@ -92,6 +92,33 @@ python2 ./src/imm_predict/fred2_allele_prediction.py \
 | alleles | Comma separated list of target alleles, e.g., `--alleles="B*27:20,B*83:01,A*32:15" ` [Default: use all] |                             
 
 
+## 4. Create and explore the training data set <a name="new"></a>
+
+* GOAL: classifier learnt on peptides with reported immunogenic cancer neoantigens (WT sequences without immunogenicity)
+
+[Collection of training sets](https://docs.google.com/spreadsheets/d/1zE5Hkxpjl9jVeJWD1OwyvBBlzsAM3xNAUOh42JoVs7g/edit?usp=sharing)
+
+To play around with the data sets, here are the current workflows:
+
+```
+# read in the data (this expects that you're in Cancer_Epitopes_CSHL;
+# just check the paths that are hard-coded at the moment within the
+# script
+Rscript --vanilla --slave src/imm_explore/0-read.R
+# this should have created data/immunogenic_SNVs-training_sets.csv
+
+export TMPDIR=/tmp/
+PYTHON=/opt/modules/i12g/anaconda/3-4.1.1/envs/python27/bin/python 
+
+# calculate the binding affinities
+PYTHON src/imm_explore/fred2_design_matrix.py \
+	--input=data/immunogenic_SNVs-training_sets.csv \
+	--output=data/immunogenic_SNVs-model_data.csv
+```
+
+-------------------------------------------------
+
+
 #### Compute the background protein immunogenicity [optional]
 
 > This needs some discussion and perhaps work?
@@ -133,10 +160,3 @@ python2 ./src/imm_predict/fred2_background.py \
 
     cp  /home/devsci7/step2.fasta   /home/data/imm 
 
-
-## 4. Add additional score <a name="new"></a> 
-
-* based on difference mut/WT
-* classifier learnt on peptides with reported immunogenic cancer neoantigens (WT sequences without immunogenicity)
-
-[Collection of training sets](https://docs.google.com/spreadsheets/d/1zE5Hkxpjl9jVeJWD1OwyvBBlzsAM3xNAUOh42JoVs7g/edit?usp=sharing)
