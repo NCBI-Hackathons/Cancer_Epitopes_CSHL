@@ -1,4 +1,4 @@
-dt_ctrain_m_vs_wt <- fread("Cancer_Epitopes_CSHL/data/training.csv")
+dt_ctrain_m_vs_wt <- fread("data/training.csv")
 
 ##' Consider only non NA sequences with unique rows
 dt_ctrain_m_vs_wt <- dt_ctrain_m_vs_wt[!is.na(wt_sequence) & !is.na(mutant_sequence)] %>% unique
@@ -24,4 +24,4 @@ dt_ctrain_m_vs_wt[, .N, immune_response]
 ##'
 ##' ## Save the model to csv
 
-write_csv(dt_ctrain_m_vs_wt, "Cancer_Epitopes_CSHL/data/immunogenic_SNVs-training_sets.csv")
+write_csv(dt_ctrain_m_vs_wt, "data/immunogenic_SNVs-training_sets.csv")
